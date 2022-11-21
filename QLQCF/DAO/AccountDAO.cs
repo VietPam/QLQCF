@@ -57,7 +57,29 @@ namespace QLQCF.DAO
 
         public DataTable GetListAccount()
         {
-            return DataProvider.Instance.ExecuteQuery("select * from account");
+            return DataProvider.Instance.ExecuteQuery("select UserName, DisplayName, Type, Picture from Account");
+        }
+
+        public bool InsertAccount(string name, string displayname, int type)
+        {
+            string query = string.Format("INSERT dbo.Account (UserName, DisplayName, Type, PassWord, Active) VALUES ( N'{0}', N'{1}', {2}, N'{3}', 1)", name, displayname, type, "1962026656160185351301320480154111117132155");
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+
+            return result > 0;
+        }
+
+        public bool UpdateAccount(string name, string displayName, int type)
+        {
+            string query = string.Format("UPDATE dbo.Account SET DisplayName = N'{1}', Type = {2} WHERE UserName = N'{0}'", name, displayName, type);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool DeleteAccount(string name)
+        {
+            string query = string.Format("DELETE FROM dbo.Account WHERE UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
         }
     }
 }

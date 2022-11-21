@@ -77,7 +77,7 @@
             this.tpAccount = new System.Windows.Forms.TabPage();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel19 = new System.Windows.Forms.Panel();
-            this.txbType = new System.Windows.Forms.ComboBox();
+            this.txbType = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
             this.panel21 = new System.Windows.Forms.Panel();
@@ -639,12 +639,11 @@
             // 
             // txbType
             // 
-            this.txbType.FormattingEnabled = true;
-            this.txbType.Location = new System.Drawing.Point(128, 15);
+            this.txbType.Location = new System.Drawing.Point(128, 16);
             this.txbType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbType.Name = "txbType";
-            this.txbType.Size = new System.Drawing.Size(218, 28);
-            this.txbType.TabIndex = 1;
+            this.txbType.Size = new System.Drawing.Size(217, 27);
+            this.txbType.TabIndex = 2;
             // 
             // label11
             // 
@@ -729,7 +728,6 @@
             this.txbUserName.Location = new System.Drawing.Point(128, 11);
             this.txbUserName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbUserName.Name = "txbUserName";
-            this.txbUserName.ReadOnly = true;
             this.txbUserName.Size = new System.Drawing.Size(217, 27);
             this.txbUserName.TabIndex = 1;
             // 
@@ -787,6 +785,7 @@
             this.btnEditAccount.TabIndex = 0;
             this.btnEditAccount.Text = "Sửa";
             this.btnEditAccount.UseVisualStyleBackColor = true;
+            this.btnEditAccount.Click += new System.EventHandler(this.btnEditAccount_Click);
             // 
             // btnDeleteAccount
             // 
@@ -797,6 +796,7 @@
             this.btnDeleteAccount.TabIndex = 0;
             this.btnDeleteAccount.Text = "Xóa ";
             this.btnDeleteAccount.UseVisualStyleBackColor = true;
+            this.btnDeleteAccount.Click += new System.EventHandler(this.btnDeleteAccount_Click);
             // 
             // btnAddAccount
             // 
@@ -807,6 +807,7 @@
             this.btnAddAccount.TabIndex = 0;
             this.btnAddAccount.Text = "Thêm";
             this.btnAddAccount.UseVisualStyleBackColor = true;
+            this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
             // fAdmin
             // 
@@ -914,7 +915,6 @@
         private TabPage tpAccount;
         private Panel panel17;
         private Panel panel19;
-        private ComboBox txbType;
         private Label label11;
         private Panel panel20;
         private Panel panel21;
@@ -931,5 +931,6 @@
         private Button btnEditAccount;
         private Button btnDeleteAccount;
         private Button btnAddAccount;
+        private TextBox txbType;
     }
 }

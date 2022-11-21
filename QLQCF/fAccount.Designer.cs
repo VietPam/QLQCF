@@ -75,7 +75,7 @@
             this.label1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(147, 24);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(322, 46);
+            this.label1.Size = new System.Drawing.Size(315, 45);
             this.label1.TabIndex = 0;
             this.label1.Text = "Thông Tin Tài Khoản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -240,6 +240,7 @@
             this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.Location = new System.Drawing.Point(58, 55);
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(508, 34);
             this.textBox1.TabIndex = 2;
             // 
@@ -261,7 +262,8 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fAccount";
-            this.Text = "fAccount";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Thông tin tài khoản";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

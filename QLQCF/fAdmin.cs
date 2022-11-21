@@ -194,5 +194,53 @@ namespace QLQCFTest
 
         }
 
+        private void btnAddAccount_Click(object sender, EventArgs e)
+        {
+            string name = txbUserName.Text;
+            string displayName = txbDisplayName.Text;
+            int type = Convert.ToInt32(txbType.Text);
+
+            if (AccountDAO.Instance.InsertAccount(name, displayName, type))
+            {
+                MessageBox.Show("Thêm tài khoản thành công!");
+                LoadListAccount();
+            }
+            else
+            {
+                MessageBox.Show("Thêm tài khoản thất bại!");
+            }
+        }
+
+        private void btnDeleteAccount_Click(object sender, EventArgs e)
+        {
+            string name = txbUserName.Text;
+
+            if (AccountDAO.Instance.DeleteAccount(name))
+            {
+                MessageBox.Show("Xóa tài khoản thành công!");
+                LoadListAccount();
+            }
+            else
+            {
+                MessageBox.Show("Xóa tài khoản thất bại!");
+            }
+        }
+
+        private void btnEditAccount_Click(object sender, EventArgs e)
+        {
+            string name = txbUserName.Text;
+            string displayName = txbDisplayName.Text;
+            int type = Convert.ToInt32(txbType.Text);
+
+            if (AccountDAO.Instance.UpdateAccount(name, displayName, type))
+            {
+                MessageBox.Show("Sửa tài khoản thành công!");
+                LoadListAccount();
+            }
+            else
+            {
+                MessageBox.Show("Sửa tài khoản thất bại!");
+            }
+        }
     }
 }
