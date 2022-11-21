@@ -103,6 +103,7 @@ namespace QLQCF
         {
             fAdmin fadmin = new fAdmin();
             fadmin.Show();
+            fadmin.acc = acc;
         }
 
         private void fTableManager_Load(object sender, EventArgs e)

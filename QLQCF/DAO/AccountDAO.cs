@@ -81,5 +81,12 @@ namespace QLQCF.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+        public bool ResetPassword(string name)
+        {
+            string query = string.Format("UPDATE dbo.Account SET PassWord = N'1962026656160185351301320480154111117132155' WHERE UserName = N'{0}'", name);
+            int result = DataProvider.Instance.ExecuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

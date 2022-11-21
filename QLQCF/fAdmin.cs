@@ -1,4 +1,5 @@
 ﻿using QLQCF.DAO;
+using QLQCF.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,8 @@ namespace QLQCFTest
 {
     public partial class fAdmin : Form
     {
+        public Account acc;
+
         BindingSource foodList = new BindingSource();
         BindingSource categoryList = new BindingSource();
         BindingSource accountList = new BindingSource();
@@ -215,6 +218,12 @@ namespace QLQCFTest
         {
             string name = txbUserName.Text;
 
+            if (this.acc.UserName.Equals(name))
+            {
+                MessageBox.Show("Không thể xóa chính bản thân!");
+                return;
+            }
+
             if (AccountDAO.Instance.DeleteAccount(name))
             {
                 MessageBox.Show("Xóa tài khoản thành công!");
@@ -240,6 +249,20 @@ namespace QLQCFTest
             else
             {
                 MessageBox.Show("Sửa tài khoản thất bại!");
+            }
+        }
+
+        private void btnResetPassWord_Click(object sender, EventArgs e)
+        {
+            string name = txbUserName.Text;
+            if (AccountDAO.Instance.ResetPassword(name))
+            {
+                MessageBox.Show("Đặt lại mật khẩu thành công!");
+                LoadListAccount();
+            }
+            else
+            {
+                MessageBox.Show("Đặt lại mật khẩu thất bại!");
             }
         }
     }

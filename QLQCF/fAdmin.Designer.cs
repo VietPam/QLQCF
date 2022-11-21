@@ -94,6 +94,7 @@
             this.btnEditAccount = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
+            this.btnResetPassWord = new System.Windows.Forms.Button();
             this.tcAdmin.SuspendLayout();
             this.tpCategory.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -185,7 +186,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 19);
+            this.label4.Location = new System.Drawing.Point(18, 14);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(76, 20);
             this.label4.TabIndex = 0;
@@ -225,7 +226,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 19);
+            this.label3.Location = new System.Drawing.Point(18, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(32, 20);
             this.label3.TabIndex = 0;
@@ -271,7 +272,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 19);
+            this.label1.Location = new System.Drawing.Point(18, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(24, 20);
             this.label1.TabIndex = 0;
@@ -618,6 +619,7 @@
             // 
             // panel17
             // 
+            this.panel17.Controls.Add(this.btnResetPassWord);
             this.panel17.Controls.Add(this.panel19);
             this.panel17.Controls.Add(this.panel20);
             this.panel17.Controls.Add(this.panel22);
@@ -809,6 +811,16 @@
             this.btnAddAccount.UseVisualStyleBackColor = true;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
+            // btnResetPassWord
+            // 
+            this.btnResetPassWord.Location = new System.Drawing.Point(186, 179);
+            this.btnResetPassWord.Name = "btnResetPassWord";
+            this.btnResetPassWord.Size = new System.Drawing.Size(159, 41);
+            this.btnResetPassWord.TabIndex = 7;
+            this.btnResetPassWord.Text = "Đặt lại mật khẩu";
+            this.btnResetPassWord.UseVisualStyleBackColor = true;
+            this.btnResetPassWord.Click += new System.EventHandler(this.btnResetPassWord_Click);
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -932,5 +944,6 @@
         private Button btnDeleteAccount;
         private Button btnAddAccount;
         private TextBox txbType;
+        private Button btnResetPassWord;
     }
 }
