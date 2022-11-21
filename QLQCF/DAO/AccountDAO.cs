@@ -54,5 +54,10 @@ namespace QLQCF.DAO
             DataProvider.Instance.ExecuteNonQuery("update Account set DisplayName='" + newDisplayName + "' where UserName='" + acc.UserName+"'");
             
         }
+
+        public DataTable GetListAccount()
+        {
+            return DataProvider.Instance.ExecuteQuery("select * from account");
+        }
     }
 }

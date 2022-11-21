@@ -16,19 +16,30 @@ namespace QLQCF
 {
     public partial class fTableManager : Form
     {
-        Account acc;
+        private Account acc;
+
+        public Account Acc { get => acc; set => acc = value; }
+
         public fTableManager(Account account)
         {
-            acc = account;
+            this.acc = account;
             InitializeComponent();
             LoadForm();
             LoadAccount();
+            ChangeAccount(acc.Type);
         }
 
-       
+        void ChangeAccount(int type)
+        {
+            if (type == 1)
+            {
+                btnAdmin.Visible = false;
+            }
+        }
+
         public void LoadAccount()
         {
-            lbDisplayUser.Text = acc.DisplayName;
+            lbDisplayUser.Text = Acc.DisplayName;
 
         }
         public void LoadForm()

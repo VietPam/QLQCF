@@ -15,6 +15,7 @@ namespace QLQCFTest
     {
         BindingSource foodList = new BindingSource();
         BindingSource categoryList = new BindingSource();
+        BindingSource accountList = new BindingSource();
 
         public fAdmin()
         {
@@ -31,10 +32,13 @@ namespace QLQCFTest
         {
             dtgvCategory.DataSource = categoryList;
             dtgvFood.DataSource = foodList;
+            dtgvAccount.DataSource = accountList;
             LoadListFood();
             LoadListCatagory();
+            LoadListAccount();
             AddFoodBinding();
             AddCategoryBinding();
+            AddAccountBinding();
         }
 
         private void btnShowCategory_Click(object sender, EventArgs e)
@@ -47,6 +51,13 @@ namespace QLQCFTest
             categoryList.DataSource = CategoryDAO.Instance.GetListCategory();
         }
 
+        void AddCategoryBinding()
+        {
+            txbCategoryID.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "ID", true, DataSourceUpdateMode.Never));
+            txbCategoryName.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "Name", true, DataSourceUpdateMode.Never));
+            txbCategoryActive.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "active", true, DataSourceUpdateMode.Never));
+        }
+
         private void btnShowFood_Click(object sender, EventArgs e)
         {
             LoadListFood();
@@ -55,7 +66,6 @@ namespace QLQCFTest
         {
             foodList.DataSource = FoodDAO.Instance.GetListFood();
         }
-
         void AddFoodBinding()
         {
             txbFoodName.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "NameFood", true, DataSourceUpdateMode.Never));
@@ -64,12 +74,23 @@ namespace QLQCFTest
             txbFoodPrice.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Price", true, DataSourceUpdateMode.Never));
         }
 
-        void AddCategoryBinding()
+        private void btnShowAccount_Click(object sender, EventArgs e)
         {
-            txbCategoryID.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "ID", true, DataSourceUpdateMode.Never));
-            txbCategoryName.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "Name", true, DataSourceUpdateMode.Never));
-            txbCategoryActive.DataBindings.Add(new Binding("text", dtgvCategory.DataSource, "active", true, DataSourceUpdateMode.Never));
+            LoadListAccount();
         }
+
+        void LoadListAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+
+        void AddAccountBinding()
+        {
+            txbUserName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbDisplayName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            txbType.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+        }
+
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
@@ -167,5 +188,11 @@ namespace QLQCFTest
                 MessageBox.Show("Xóa danh mục thất bại!");
             }
         }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
