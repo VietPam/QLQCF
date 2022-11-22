@@ -31,22 +31,22 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbRePass = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbNewPass = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbDisplayUserName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -82,8 +82,8 @@
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnExit);
+            this.panel2.Controls.Add(this.btnConfirm);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Controls.Add(this.panel6);
             this.panel2.Controls.Add(this.panel5);
@@ -95,27 +95,29 @@
             this.panel2.Size = new System.Drawing.Size(617, 578);
             this.panel2.TabIndex = 1;
             // 
-            // button2
+            // btnExit
             // 
-            this.button2.Location = new System.Drawing.Point(466, 524);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 30);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnExit.Location = new System.Drawing.Point(466, 524);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(100, 30);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
-            // button1
+            // btnConfirm
             // 
-            this.button1.Location = new System.Drawing.Point(329, 524);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Xác Nhận";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConfirm.Location = new System.Drawing.Point(329, 524);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(100, 30);
+            this.btnConfirm.TabIndex = 7;
+            this.btnConfirm.Text = "Xác Nhận";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.textBox5);
+            this.panel7.Controls.Add(this.txbRePass);
             this.panel7.Controls.Add(this.label6);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 400);
@@ -123,13 +125,13 @@
             this.panel7.Size = new System.Drawing.Size(617, 100);
             this.panel7.TabIndex = 6;
             // 
-            // textBox5
+            // txbRePass
             // 
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.Location = new System.Drawing.Point(58, 55);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(508, 34);
-            this.textBox5.TabIndex = 2;
+            this.txbRePass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbRePass.Location = new System.Drawing.Point(58, 55);
+            this.txbRePass.Name = "txbRePass";
+            this.txbRePass.Size = new System.Drawing.Size(508, 34);
+            this.txbRePass.TabIndex = 2;
             // 
             // label6
             // 
@@ -143,7 +145,7 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.textBox4);
+            this.panel6.Controls.Add(this.txbNewPass);
             this.panel6.Controls.Add(this.label5);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 300);
@@ -151,13 +153,13 @@
             this.panel6.Size = new System.Drawing.Size(617, 100);
             this.panel6.TabIndex = 5;
             // 
-            // textBox4
+            // txbNewPass
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(58, 55);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(508, 34);
-            this.textBox4.TabIndex = 2;
+            this.txbNewPass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbNewPass.Location = new System.Drawing.Point(58, 55);
+            this.txbNewPass.Name = "txbNewPass";
+            this.txbNewPass.Size = new System.Drawing.Size(508, 34);
+            this.txbNewPass.TabIndex = 2;
             // 
             // label5
             // 
@@ -171,7 +173,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.textBox3);
+            this.panel5.Controls.Add(this.txbPassword);
             this.panel5.Controls.Add(this.label4);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 200);
@@ -179,13 +181,13 @@
             this.panel5.Size = new System.Drawing.Size(617, 100);
             this.panel5.TabIndex = 4;
             // 
-            // textBox3
+            // txbPassword
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(58, 55);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(508, 34);
-            this.textBox3.TabIndex = 2;
+            this.txbPassword.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbPassword.Location = new System.Drawing.Point(58, 55);
+            this.txbPassword.Name = "txbPassword";
+            this.txbPassword.Size = new System.Drawing.Size(508, 34);
+            this.txbPassword.TabIndex = 2;
             // 
             // label4
             // 
@@ -199,7 +201,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.textBox2);
+            this.panel4.Controls.Add(this.txbDisplayUserName);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 100);
@@ -207,13 +209,13 @@
             this.panel4.Size = new System.Drawing.Size(617, 100);
             this.panel4.TabIndex = 3;
             // 
-            // textBox2
+            // txbDisplayUserName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(58, 55);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(508, 34);
-            this.textBox2.TabIndex = 2;
+            this.txbDisplayUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbDisplayUserName.Location = new System.Drawing.Point(58, 55);
+            this.txbDisplayUserName.Name = "txbDisplayUserName";
+            this.txbDisplayUserName.Size = new System.Drawing.Size(508, 34);
+            this.txbDisplayUserName.TabIndex = 2;
             // 
             // label3
             // 
@@ -227,7 +229,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txbUserName);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
@@ -235,14 +237,14 @@
             this.panel3.Size = new System.Drawing.Size(617, 100);
             this.panel3.TabIndex = 2;
             // 
-            // textBox1
+            // txbUserName
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(58, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(508, 34);
-            this.textBox1.TabIndex = 2;
+            this.txbUserName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbUserName.Location = new System.Drawing.Point(58, 55);
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.ReadOnly = true;
+            this.txbUserName.Size = new System.Drawing.Size(508, 34);
+            this.txbUserName.TabIndex = 2;
             // 
             // label2
             // 
@@ -286,22 +288,22 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private Button button2;
-        private Button button1;
+        private Button btnExit;
+        private Button btnConfirm;
         private Panel panel7;
-        private TextBox textBox5;
+        private TextBox txbRePass;
         private Label label6;
         private Panel panel6;
-        private TextBox textBox4;
+        private TextBox txbNewPass;
         private Label label5;
         private Panel panel5;
-        private TextBox textBox3;
+        private TextBox txbPassword;
         private Label label4;
         private Panel panel4;
-        private TextBox textBox2;
+        private TextBox txbDisplayUserName;
         private Label label3;
         private Panel panel3;
-        private TextBox textBox1;
+        private TextBox txbUserName;
         private Label label2;
     }
 }

@@ -88,5 +88,11 @@ namespace QLQCF.DAO
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }
+
+        public bool UpdateAccountProfile(string userName, string displayName, string pass, string newpass)
+        {
+            int kq = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword ", new object[] {userName, displayName, pass, newpass });
+            return kq > 0;
+        }
     }
 }

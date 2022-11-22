@@ -172,7 +172,7 @@ namespace QLQCF
 
         private void btnAccount_Click(object sender, EventArgs e)
         {
-            fAccount fAccount = new fAccount();
+            fAccount fAccount = new fAccount(acc);
             fAccount.Show();
         }
     }
