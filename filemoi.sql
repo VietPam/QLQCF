@@ -221,5 +221,23 @@ BEGIN
 END
 Go
 
+--UPDATE ACCOUNT
+CREATE PROC USP_UpdateAccount
+@userName NVARCHAR(100), @displayName NVARCHAR(100), @password NVARCHAR(100), @newPassword NVARCHAR(100)
+AS
+BEGIN
+	DECLARE @isRightPass INT = 0
+	SELECT @isRightPass = COUNT(*) FROM Account WHERE UserName = @userName and PassWord = @password
+	IF (@isRightPass = 1)
+	BEGIN
+		IF (@newPassword = NULL OR @newPassword = '')
+		BEGIN
+			UPDATE Account SET DisplayName = @displayName WHERE UserName = @userName
+		END
+		ELSE
+			UPDATE Account SET DisplayName = @displayName, PassWord = @newPassword WHERE UserName = @userName
+ 	END
+END
+GO
 
 select * from Account
