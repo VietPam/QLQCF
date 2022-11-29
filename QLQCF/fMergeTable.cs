@@ -31,14 +31,17 @@ namespace QLQCF
             cbTableResult.Items.Clear();
             lbNameTable.Text=table.Name;
             List<Table> lTable = TableDAO.Instance.GetListTableUnEmptyandExceptChoose(table);
-            cbTableCanMerge.DataSource=lTable;
-            cbTableCanMerge.DisplayMember = "name";
-            cbTableResult.Items.Clear();
-            cbTableResult.Items.Add(table);
-            Table tablefirstchoose= lTable[0];
-            cbTableResult.Items.Add(tablefirstchoose);
-            cbTableResult.Tag = tablefirstchoose;
-            cbTableResult.DisplayMember = "name";
+
+                cbTableCanMerge.DataSource = lTable;
+                cbTableCanMerge.DisplayMember = "name";
+                cbTableResult.Items.Clear();
+                cbTableResult.Items.Add(table);
+                Table tablefirstchoose = lTable[0];
+                cbTableResult.Items.Add(tablefirstchoose);
+                cbTableResult.Tag = tablefirstchoose;
+                cbTableResult.DisplayMember = "name";
+
+            
         }
 
 
@@ -88,6 +91,7 @@ namespace QLQCF
 
         private void fMergeTable_FormClosed(object sender, FormClosedEventArgs e)
         {
+            
             ftableManager.LoadForm();
         }
     }

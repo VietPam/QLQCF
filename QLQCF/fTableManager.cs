@@ -96,8 +96,15 @@ namespace QLQCF
                     lsvBillTBMNG.Items.Add(listView);
                 }
                 BillDAO.Instance.UpdatePrice(tabel, bill);
-                txtTotalPrice.Text = bill.TotalPrice.ToString();
+                UpdateTotalPricetxt();
             }
+        }
+
+        void UpdateTotalPricetxt()
+        {
+            Table table = lbTableName.Tag as Table;
+            Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
+            txtTotalPrice.Text = bill.TotalPrice.ToString();
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
@@ -145,8 +152,13 @@ namespace QLQCF
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lbTableName.Tag as Table;
-            fCheckOut fcheckout= new fCheckOut(table,this);
-            fcheckout.Show(this);
+            if (BillDAO.Instance.CheckEmpty(table)) { MessageBox.Show("Bàn không có gì để thanh toán!"); }
+            else
+            {
+                
+                fCheckOut fcheckout = new fCheckOut(table, this,acc);
+                fcheckout.Show(this);
+            }
         }
 
         private void btnSwitch_Click(object sender, EventArgs e)
@@ -164,9 +176,18 @@ namespace QLQCF
             }
             else
             {
-                fMergeTable fmergeTable = new fMergeTable(table, this);
-                fmergeTable.Show();
+                List<Table> lTable = TableDAO.Instance.GetListTableUnEmptyandExceptChoose(table);
+                if (lTable.Count > 0)
+                {
+                    fMergeTable fmergeTable = new fMergeTable(table, this);
+                    fmergeTable.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Không đủ 2 bàn để gộp");
+                }
             }
+            
 
         }
 

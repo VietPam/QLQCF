@@ -53,7 +53,7 @@ namespace QLQCF.DAO
 
         public Food GetFoodByBillInfo(BillInfo billInfo)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Food where ID_Food='" + billInfo.IdFood + "' and active =1");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from Food where ID_Food='" + billInfo.IdFood + "'");
             if (data.Rows.Count > 0)
             {
                 return new Food(data.Rows[0]);
@@ -80,7 +80,7 @@ namespace QLQCF.DAO
 
         public bool DeleteFood(int id)
         {
-            string query = string.Format("delete Food where ID_Food = {0}", id);
+            string query = string.Format("update Food set Active=0 where ID_Food='" + id+"'" );
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;
@@ -88,7 +88,7 @@ namespace QLQCF.DAO
 
         public DataTable GetListFood()
         {
-            return DataProvider.Instance.ExecuteQuery("select * from Food");
+            return DataProvider.Instance.ExecuteQuery("select * from Food where Active='1'");
         }
     }
 }

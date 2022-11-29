@@ -20,8 +20,10 @@ namespace QLQCFTest
         int moneyReceive;
         string type;
         fTableManager ftableManager;
-        public fBill(Table tabel,int money,string TypeMoney,fTableManager fTable )
+        Account acc;
+        public fBill(Table tabel,int money,string TypeMoney,fTableManager fTable,Account account )
         {
+            acc=account;
             ftableManager = fTable;
             moneyReceive=money;
             type=TypeMoney;
@@ -36,6 +38,7 @@ namespace QLQCFTest
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
             lbIDBill.Text = bill.Id.ToString();
             lbTableName.Text = table.Name;
+            lbDisplayAccount.Text = acc.DisplayName;
             lbDateIn.Text = bill.DayCheckIn.ToString();
             List<BillInfo> lbillinfo=BillInfoDAO.Instance.GetListBillInfoWithTable(table);
             foreach(BillInfo billinfo in lbillinfo)

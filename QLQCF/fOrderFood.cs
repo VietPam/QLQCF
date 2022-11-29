@@ -49,9 +49,16 @@ namespace QLQCF
         private void cbCategoryFood_SelectedIndexChanged(object sender, EventArgs e)
         {
             
-            int id = cbCategoryFood.SelectedIndex+1;
-            
-            LoadFood(id);
+            int id=CategoryDAO.Instance.GetIdCateWithName(cbCategoryFood.Text);
+            if (id == -1)
+            {
+                int cateid = CategoryDAO.Instance.GetFirstCate().Id;
+                LoadFood(cateid);
+            }
+            else
+            {
+                LoadFood(id);
+            }
         }
 
         private void LoadBillInfo()
@@ -173,7 +180,6 @@ namespace QLQCF
 
         private void fOrderFood_FormClosed(object sender, FormClosedEventArgs e)
         {
-            
             fManager.LoadForm();
 
         }

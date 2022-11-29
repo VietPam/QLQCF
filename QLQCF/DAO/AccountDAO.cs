@@ -27,15 +27,20 @@ namespace QLQCF.DAO
 
         private AccountDAO() { }
 
-        public bool Login(string userName, string passWord)
+       private string hashPass(string password)
         {
-            byte[] temp = ASCIIEncoding.ASCII.GetBytes(passWord);
+            byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);
             string passWordsecurity = "";
-            foreach(byte b in hashData)
+            foreach (byte b in hashData)
             {
                 passWordsecurity += b.ToString();
             }
+            return passWordsecurity;
+        }
+        public bool Login(string userName, string passWord)
+        {
+            string passWordsecurity = hashPass(passWord);
             string query = "USP_Login @username , @password";
             DataTable result = DataProvider.Instance.ExecuteQuery(query, new object[] { userName, passWordsecurity });
             return result.Rows.Count > 0;
@@ -91,7 +96,9 @@ namespace QLQCF.DAO
 
         public bool UpdateAccountProfile(string userName, string displayName, string pass, string newpass)
         {
-            int kq = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword ", new object[] {userName, displayName, pass, newpass });
+            string password = hashPass(pass);
+            string newpassword=hashPass(newpass);
+            int kq = DataProvider.Instance.ExecuteNonQuery("exec USP_UpdateAccount @userName , @displayName , @password , @newPassword ", new object[] {userName, displayName, password, newpassword });
             return kq > 0;
         }
     }
