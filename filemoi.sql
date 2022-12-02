@@ -240,4 +240,13 @@ BEGIN
 END
 GO
 
-select * from Account
+CREATE PROC USP_GetListBillByDate
+@checkIn date,@checkout date
+AS
+BEGIN
+	SELECT /*b.ID_Bill AS [ID Bill],*/ t.NameTable AS [Tên bàn], /*b.ID_User AS [Người thu],*/ DateCheckIn AS [Ngày vào],DateCheckOut AS [Ngày ra], /*discount AS [Giảm giá],*/ b.totalPrice AS [Tổng tiền]
+	FROM dbo.Bill as b, dbo.TableFood as t
+	WHERE DateCheckIn>=@checkIn AND DateCheckOut<=@checkout AND b.status=1 AND t.ID_TableFood=b.ID_TableFood
+END
+Go
+

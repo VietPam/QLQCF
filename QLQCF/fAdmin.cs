@@ -42,6 +42,8 @@ namespace QLQCFTest
             AddFoodBinding();
             AddCategoryBinding();
             AddAccountBinding();
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
+            LoadDateTimePickerBill();
         }
 
         private void btnShowCategory_Click(object sender, EventArgs e)
@@ -264,6 +266,23 @@ namespace QLQCFTest
             {
                 MessageBox.Show("Đặt lại mật khẩu thất bại!");
             }
+        }
+
+        void LoadDateTimePickerBill ()
+        {
+            DateTime date = DateTime.Now;
+            dtpkFromDate.Value = new DateTime(date.Year, date.Month, 1);
+            dtpkToDate.Value = dtpkFromDate.Value.AddMonths(1).AddDays(-1);
+        }
+
+        void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+           dtgvTotalBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+        }
+
+        private void btnTotalBill_Click(object sender, EventArgs e)
+        {
+            LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
     }
 }

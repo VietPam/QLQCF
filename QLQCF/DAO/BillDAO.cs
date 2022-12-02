@@ -131,5 +131,10 @@ namespace QLQCF.DAO
             DataProvider.Instance.ExecuteNonQuery("update Bill set status ='1' ,DateCheckOut=GetDate() where ID_Bill='" + bill.Id + "'");
         }
 
+        public DataTable GetBillListByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return DataProvider.Instance.ExecuteQuery("exec USP_GetListBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+        }
+
     }
 }
