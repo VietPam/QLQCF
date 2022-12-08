@@ -277,7 +277,17 @@ namespace QLQCFTest
 
         void LoadListBillByDate(DateTime checkIn, DateTime checkOut)
         {
-           dtgvTotalBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+            dtgvTotalBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
+
+            int tong = 0;
+            int gia;
+            for (int i = 0; i < dtgvTotalBill.Rows.Count - 1; i++)
+            {
+                gia = (int)(dtgvTotalBill.Rows[i].Cells[3].Value);
+                tong += gia;
+            }
+
+            txbTotalBill.Text = tong.ToString();
         }
 
         private void btnTotalBill_Click(object sender, EventArgs e)
