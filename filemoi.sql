@@ -194,10 +194,10 @@ GO
 
 
 --LoadTableFood
-Create proc USP_LoadTableFood
+create proc USP_LoadTableFood
 as
 begin
-	select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active from TableFood
+	select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active, Type from TableFood
 end
 go
 --Login
@@ -250,3 +250,13 @@ BEGIN
 END
 Go
 
+select * from TableFood
+alter table TableFood add Type INT 
+
+--UPDATE TableFood SET NameTable = 'Bàn 11' where ID_TableFood = 11 
+
+UPDATE TableFood SET Type = 0
+WHERE ID_TableFood  < 12 AND ID_TableFood > 5
+
+select * from Bill
+select * from BillInfo

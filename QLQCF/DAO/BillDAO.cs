@@ -62,6 +62,10 @@ namespace QLQCF.DAO
                 Food food=FoodDAO.Instance.GetFoodByBillInfo(billInfo);
                 totalPrice += (int)FoodDAO.Instance.GetPricewithName(food.Name)*billInfo.Count;
             }
+            if (table.Type == 1)
+            {
+                totalPrice += 5000;
+            }
             DataProvider.Instance.ExecuteNonQuery("update Bill set totalPrice='" + totalPrice + "' where ID_Bill='"+bill.Id+"'");
         }
 

@@ -279,6 +279,7 @@ namespace QLQCFTest
         {
             dtgvTotalBill.DataSource = BillDAO.Instance.GetBillListByDate(checkIn, checkOut);
 
+            #region TinhTongDanhThu
             int tong = 0;
             int gia;
             for (int i = 0; i < dtgvTotalBill.Rows.Count - 1; i++)
@@ -287,7 +288,8 @@ namespace QLQCFTest
                 tong += gia;
             }
 
-            txbTotalBill.Text = tong.ToString();
+            txbTotalBill.Text = tong.ToString(); 
+            #endregion
         }
 
         private void btnTotalBill_Click(object sender, EventArgs e)

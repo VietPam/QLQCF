@@ -55,7 +55,16 @@ namespace QLQCFTest
                 count++;
 
             }
+            AddLabelType();
             AddLabelMoneyBack(bill);
+            if (table.Type == 1)
+            {
+                lbType.Text = "5000";
+            }
+            else if (table.Type == 0)
+            {
+                lbType.Text = "0000";
+            }
             lbMoneyReceive.Text = moneyReceive.ToString();
             lbMoneyType.Text = type.ToString();
             lbTotalPrice.Text = bill.TotalPrice.ToString();
@@ -124,6 +133,18 @@ namespace QLQCFTest
             flpTotal.Controls.Add(label);
             flpTotal.Height = 30 * i;
         }
+
+        private void AddLabelType()
+        {
+            Label label = new Label();
+            label.Text = "5000";
+            label.Height = 30;
+            label.Width = 107;
+            label.TextAlign = ContentAlignment.MiddleCenter;
+            flpTotal.Controls.Add(label);
+            flpTotal.Height = 30;
+        }
+
         private void AddLabelMoneyBack(Bill bill)
         {
             int money = 0;

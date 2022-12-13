@@ -62,7 +62,7 @@ namespace QLQCF.DAO
         public List<Table> LoadTableListExcept(int idTable)
         {
             List<Table> tableList = new List<Table>();
-            DataTable data = DataProvider.Instance.ExecuteQuery("select ID_TableFood as [ID], NameTable as [Tên Bàn], StatusTable as [Trạng Thái], Active from TableFood where ID_TableFood !='"+idTable+ "' and Active='1'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select ID_TableFood as [ID], NameTable as [Tên Bàn], StatusTable as [Trạng Thái], Active, Type from TableFood where ID_TableFood !='"+idTable+ "' and Active='1'");
             foreach (DataRow row in data.Rows)
             {
                 Table tableFood = new Table(row);
@@ -72,7 +72,7 @@ namespace QLQCF.DAO
         }
         public Table GetTableWithName(string nameTable)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active from TableFood where NameTable='" + nameTable + "'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active, Type from TableFood where NameTable='" + nameTable + "'");
             if(data.Rows.Count==0)
             {
                 return null;
