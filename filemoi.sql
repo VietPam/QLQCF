@@ -250,13 +250,15 @@ BEGIN
 END
 Go
 
-select * from TableFood
+--select * from TableFood
+
 alter table TableFood add Type INT 
+go
 
 --UPDATE TableFood SET NameTable = 'Bàn 11' where ID_TableFood = 11 
 
 UPDATE TableFood SET Type = 0
-WHERE ID_TableFood  < 12 AND ID_TableFood > 5
+--WHERE ID_TableFood  < 12 AND ID_TableFood > 5
 
-select * from Bill
-select * from BillInfo
+--select * from Bill
+--select * from BillInfo
