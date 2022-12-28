@@ -102,6 +102,7 @@
             this.panel24 = new System.Windows.Forms.Panel();
             this.txbTotalBill = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnToFile = new System.Windows.Forms.Button();
             this.panel23 = new System.Windows.Forms.Panel();
             this.dtgvTotalBill = new System.Windows.Forms.DataGridView();
             this.panel18 = new System.Windows.Forms.Panel();
@@ -895,11 +896,12 @@
             // 
             this.panel24.Controls.Add(this.txbTotalBill);
             this.panel24.Controls.Add(this.label10);
+            this.panel24.Controls.Add(this.btnToFile);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel24.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panel24.Location = new System.Drawing.Point(3, 565);
+            this.panel24.Location = new System.Drawing.Point(3, 563);
             this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(1168, 54);
+            this.panel24.Size = new System.Drawing.Size(1168, 56);
             this.panel24.TabIndex = 3;
             // 
             // txbTotalBill
@@ -921,6 +923,16 @@
             this.label10.TabIndex = 0;
             this.label10.Text = "Tổng doanh thu:";
             // 
+            // btnToFile
+            // 
+            this.btnToFile.Location = new System.Drawing.Point(5, 12);
+            this.btnToFile.Name = "btnToFile";
+            this.btnToFile.Size = new System.Drawing.Size(120, 35);
+            this.btnToFile.TabIndex = 0;
+            this.btnToFile.Text = "Xuất file";
+            this.btnToFile.UseVisualStyleBackColor = true;
+            this.btnToFile.Click += new System.EventHandler(this.btnToFile_Click);
+            // 
             // panel23
             // 
             this.panel23.Controls.Add(this.dtgvTotalBill);
@@ -934,13 +946,12 @@
             // 
             this.dtgvTotalBill.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvTotalBill.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvTotalBill.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dtgvTotalBill.Location = new System.Drawing.Point(0, 0);
             this.dtgvTotalBill.Name = "dtgvTotalBill";
             this.dtgvTotalBill.RowHeadersWidth = 51;
             this.dtgvTotalBill.RowTemplate.Height = 29;
             this.dtgvTotalBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvTotalBill.Size = new System.Drawing.Size(1168, 533);
+            this.dtgvTotalBill.Size = new System.Drawing.Size(1168, 471);
             this.dtgvTotalBill.TabIndex = 0;
             // 
             // panel18
@@ -1125,5 +1136,6 @@
         private Panel panel26;
         private Panel panel25;
         private Panel panel27;
+        private Button btnToFile;
     }
 }

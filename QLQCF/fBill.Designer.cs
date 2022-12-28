@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fBill));
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbDateOut = new System.Windows.Forms.Label();
             this.lbDateIn = new System.Windows.Forms.Label();
@@ -57,6 +58,8 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
+            this.lbType = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.flpBillInfo = new System.Windows.Forms.FlowLayoutPanel();
@@ -65,12 +68,15 @@
             this.flpAmount = new System.Windows.Forms.FlowLayoutPanel();
             this.flpPrice = new System.Windows.Forms.FlowLayoutPanel();
             this.flpTotal = new System.Windows.Forms.FlowLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.lbType = new System.Windows.Forms.Label();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnPrint = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.flpBillInfo.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -275,10 +281,10 @@
             this.panel4.Controls.Add(this.label20);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(2, 391);
+            this.panel4.Location = new System.Drawing.Point(0, 384);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(560, 356);
+            this.panel4.Size = new System.Drawing.Size(568, 326);
             this.panel4.TabIndex = 10;
             // 
             // lbMoneyType
@@ -320,17 +326,18 @@
             // label19
             // 
             this.label19.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label19.Location = new System.Drawing.Point(144, 314);
+            this.label19.Location = new System.Drawing.Point(140, 286);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(288, 31);
             this.label19.TabIndex = 20;
             this.label19.Text = "Cảm Ơn Và Hẹn Gặp Lại Quý Khách";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // label18
             // 
             this.label18.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(158, 266);
+            this.label18.Location = new System.Drawing.Point(168, 255);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(250, 31);
             this.label18.TabIndex = 19;
@@ -340,7 +347,7 @@
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(176, 236);
+            this.label17.Location = new System.Drawing.Point(186, 225);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(207, 31);
             this.label17.TabIndex = 18;
@@ -351,7 +358,7 @@
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(176, 205);
+            this.label16.Location = new System.Drawing.Point(186, 194);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(207, 31);
             this.label16.TabIndex = 17;
@@ -367,6 +374,24 @@
             this.label15.TabIndex = 16;
             this.label15.Text = "Tiền Trả Lại :";
             // 
+            // lbType
+            // 
+            this.lbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbType.Location = new System.Drawing.Point(320, 14);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(186, 31);
+            this.lbType.TabIndex = 15;
+            this.lbType.Text = "Tiền phòng";
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label20.Location = new System.Drawing.Point(9, 14);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(186, 31);
+            this.label20.TabIndex = 15;
+            this.label20.Text = "Tiền Phòng";
+            // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -381,7 +406,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(9, 58);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 31);
+            this.label6.Size = new System.Drawing.Size(215, 31);
             this.label6.TabIndex = 14;
             this.label6.Text = "Tổng Tiền Thanh Toán :";
             // 
@@ -439,23 +464,39 @@
             this.flpTotal.Size = new System.Drawing.Size(128, 41);
             this.flpTotal.TabIndex = 11;
             // 
-            // label20
+            // printDocument1
             // 
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(9, 14);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(186, 31);
-            this.label20.TabIndex = 15;
-            this.label20.Text = "Tiền Phòng";
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
             // 
-            // lbType
+            // printPreviewDialog1
             // 
-            this.lbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbType.Location = new System.Drawing.Point(320, 14);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(186, 31);
-            this.lbType.TabIndex = 15;
-            this.lbType.Text = "Tiền phòng";
+            this.printPreviewDialog1.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog1.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog1.Document = this.printDocument1;
+            this.printPreviewDialog1.Enabled = true;
+            this.printPreviewDialog1.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog1.Icon")));
+            this.printPreviewDialog1.Name = "printPreviewDialog1";
+            this.printPreviewDialog1.Visible = false;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnPrint);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 717);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(568, 43);
+            this.panel3.TabIndex = 12;
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(453, 11);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(112, 29);
+            this.btnPrint.TabIndex = 0;
+            this.btnPrint.Text = "In Hóa Đơn";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
             // fBill
             // 
@@ -463,17 +504,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(568, 760);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.flpBillInfo);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximizeBox = false;
             this.Name = "fBill";
-            this.Text = "fBill";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Hóa Đơn";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.flpBillInfo.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -519,5 +564,9 @@
         private Label lbMoneyType;
         private Label lbType;
         private Label label20;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private PrintPreviewDialog printPreviewDialog1;
+        private Panel panel3;
+        private Button btnPrint;
     }
 }

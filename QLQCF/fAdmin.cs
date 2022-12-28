@@ -9,6 +9,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Office.Interop.Excel;
+using app = Microsoft.Office.Interop.Excel.Application;
+using System.Windows.Markup;
 
 namespace QLQCFTest
 {
@@ -296,5 +299,114 @@ namespace QLQCFTest
         {
             LoadListBillByDate(dtpkFromDate.Value, dtpkToDate.Value);
         }
+
+        #region xuatFileExcel
+        public void ExportFile(DataGridView data, string sheetName, string title)
+        {
+            //Tạo các đối tượng Excel
+
+            Microsoft.Office.Interop.Excel.Application oExcel = new Microsoft.Office.Interop.Excel.Application();
+
+            Microsoft.Office.Interop.Excel.Workbooks oBooks;
+
+            Microsoft.Office.Interop.Excel.Sheets oSheets;
+
+            Microsoft.Office.Interop.Excel.Workbook oBook;
+
+            Microsoft.Office.Interop.Excel.Worksheet oSheet;
+
+            //Tạo mới một Excel WorkBook 
+
+            oExcel.Visible = true;
+
+            oExcel.DisplayAlerts = false;
+
+            oExcel.Application.SheetsInNewWorkbook = 1;
+
+            oBooks = oExcel.Workbooks;
+
+            oBook = (Microsoft.Office.Interop.Excel.Workbook)(oExcel.Workbooks.Add(Type.Missing));
+
+            oSheets = oBook.Worksheets;
+
+            oSheet = (Microsoft.Office.Interop.Excel.Worksheet)oSheets.get_Item(1);
+
+            oSheet.Name = sheetName;
+
+            // Tạo phần Tiêu đề
+            Microsoft.Office.Interop.Excel.Range head = oSheet.get_Range("A1", "D1");
+
+            head.MergeCells = true;
+
+            head.Value2 = title;
+
+            head.Font.Bold = true;
+
+            head.Font.Name = "Times New Roman";
+
+            head.Font.Size = "20";
+
+            head.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo tiêu đề cột 
+
+            Microsoft.Office.Interop.Excel.Range cl1 = oSheet.get_Range("A3", "A3");
+
+            cl1.Value2 = "Tên bàn";
+
+            cl1.ColumnWidth = 12;
+
+            Microsoft.Office.Interop.Excel.Range cl2 = oSheet.get_Range("B3", "B3");
+
+            cl2.Value2 = "Ngày vào";
+
+            cl2.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl3 = oSheet.get_Range("C3", "C3");
+
+            cl3.Value2 = "Ngày ra";
+            cl3.ColumnWidth = 25.0;
+
+            Microsoft.Office.Interop.Excel.Range cl4 = oSheet.get_Range("D3", "D3");
+
+            cl4.Value2 = "Tổng tiền";
+
+            cl4.ColumnWidth = 10.5;
+
+            Microsoft.Office.Interop.Excel.Range rowHead = oSheet.get_Range("A3", "D3");
+
+            rowHead.Font.Bold = true;
+
+            // Kẻ viền
+            rowHead.Borders.LineStyle = Microsoft.Office.Interop.Excel.Constants.xlSolid;
+
+            // Thiết lập màu nền
+            rowHead.Interior.ColorIndex = 6;
+
+            rowHead.HorizontalAlignment = Microsoft.Office.Interop.Excel.XlHAlign.xlHAlignCenter;
+
+            // Tạo bảng
+            for (int i = 1; i < data.Columns.Count + 1; i++)
+            {
+                oExcel.Cells[3, i] = data.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < data.Rows.Count; i++)
+            {
+                for (int j = 0; j < data.Columns.Count; j++)
+                {
+                    if (data.Rows[i].Cells[j].Value != null)
+                    {
+                        oExcel.Cells[i + 5, j + 1] = data.Rows[i].Cells[j].Value.ToString();
+                    }
+                }
+            }
+
+        }
+
+        private void btnToFile_Click(object sender, EventArgs e)
+        {
+            ExportFile(dtgvTotalBill, "DoanhSoBanRa", "QuanCaffe");
+        } 
+        #endregion
     }
 }
