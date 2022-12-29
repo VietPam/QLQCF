@@ -36,10 +36,12 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnLogin = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lbNameShop = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -51,7 +53,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lbNameShop);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
@@ -129,15 +131,15 @@
             this.panel2.Size = new System.Drawing.Size(263, 1);
             this.panel2.TabIndex = 1;
             // 
-            // label3
+            // lbNameShop
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(62, 31);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(191, 36);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Coffee Shop";
+            this.lbNameShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbNameShop.Location = new System.Drawing.Point(3, 31);
+            this.lbNameShop.Name = "lbNameShop";
+            this.lbNameShop.Size = new System.Drawing.Size(362, 36);
+            this.lbNameShop.TabIndex = 0;
+            this.lbNameShop.Text = "Coffee Shop";
+            this.lbNameShop.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -159,18 +161,31 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Mật khẩu";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::QLQCFTest.Properties.Resources.TableManage_LogoShop;
+            this.pictureBox1.Location = new System.Drawing.Point(40, 134);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(248, 169);
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // fLogin
             // 
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(700, 476);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Name = "fLogin";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.fLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -183,10 +198,11 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbNameShop;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txbPassWord;
         private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.Panel panel3;
+        private PictureBox pictureBox1;
     }
 }

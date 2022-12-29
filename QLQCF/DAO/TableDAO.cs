@@ -18,8 +18,8 @@ namespace QLQCF.DAO
             get { if (instance == null) instance = new TableDAO(); return TableDAO.instance; }
             set => instance = value;
         }
-        public static int TableWidth = 155;
-        public static int TableHeight = 155;
+        public static int TableWidth = 150;
+        public static int TableHeight = 150;
         private TableDAO() { }
 
         public List<Table> LoadTableList()
@@ -100,5 +100,15 @@ namespace QLQCF.DAO
             return tablesresult;
             
         }
+
+        public bool ChangeTableProperty(int type,string Name,int ID)
+        {
+            
+            
+                return DataProvider.Instance.ExecuteNonQuery("update TableFood set Type=" + type + ", NameTable=' " + Name + "' where ID_TableFood=" + ID) > 0;
+            
+        }
+
+        
     }
 }

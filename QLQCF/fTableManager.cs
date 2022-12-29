@@ -1,12 +1,15 @@
 ﻿using QLQCF.DAO;
 using QLQCF.DTO;
 using QLQCFTest;
+using QLQCFTest.DAO;
+using QLQCFTest.DTO;
 using QLQCFTest.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,11 +26,14 @@ namespace QLQCF
         public fTableManager(Account account)
         {
             this.acc = account;
+
             InitializeComponent();
             LoadForm();
             LoadAccount();
+
             ChangeAccount(acc.Type);
         }
+
 
         void ChangeAccount(int type)
         {
@@ -44,42 +50,99 @@ namespace QLQCF
         }
         public void LoadForm()
         {
-            lsvBillTBMNG.Controls.Clear();
-            flpTable.Controls.Clear();
+            Shop shop = ShopDAO.Instance.GetShop();
+            lbShopName.Text = shop.NameShop;
+            lbEncouragement.Text = shop.Encouragement;
             TableDAO.Instance.CheckListTableStatus();
+            LoadTable();
+
+        }
+
+        public void LoadTable()
+        {
+            Shop shop = ShopDAO.Instance.GetShop();
+            flpAll.Controls.Clear();
+            flpEmpty.Controls.Clear();
+            flpUnEmpty.Controls.Clear();
             List<Table> tablelist = TableDAO.Instance.LoadTableList();
             foreach (Table tabel in tablelist)
             {
                 Button btn = new Button();
+
                 if (BillDAO.Instance.CheckEmpty(tabel))
+                {   
+                    LoadEmptyTable(tabel);
+                }
+                else
+                {    
+                    LoadUnEmptyTable(tabel);
+                }
+                if (tabel.Type==0)
                 {
-                    btn.BackColor = Color.White;
+                    btn.BackColor = Color.White;              
                 }
                 else
                 {
-                    
                     btn.BackColor = Color.YellowGreen;
+ 
                 }
                 btn.Text = tabel.Name + "\n" + tabel.Status;
                 btn.Width = TableDAO.TableWidth;
                 btn.Height = TableDAO.TableHeight;
-                flpTable.Controls.Add(btn);
                 btn.Tag = tabel;
-                
-                btn.Click += btn_CLick;     
+                flpAll.Controls.Add(btn);
+                btn.Click += btn_CLick;
             }
-           
-            
         }
 
+        void LoadEmptyTable(Table tabel)
+        {
+
+            Button btn = new Button();
+            if (tabel.Type == 0)
+            {
+                btn.BackColor = Color.White;
+            }
+            else
+            {
+                btn.BackColor = Color.YellowGreen;
+
+            }
+            btn.Text = tabel.Name + "\n" + tabel.Status;
+            btn.Width = TableDAO.TableWidth;
+            btn.Height = TableDAO.TableHeight;
+            btn.Tag = tabel;
+            flpEmpty.Controls.Add(btn);
+            btn.Click += btn_CLick;
+        }
+        void LoadUnEmptyTable(Table tabel)
+        {
+
+
+            Button btn = new Button();
+            if (tabel.Type == 0)
+            {
+                btn.BackColor = Color.White;
+            }
+            else
+            {
+                btn.BackColor = Color.YellowGreen;
+
+            }
+            btn.Text = tabel.Name + "\n" + tabel.Status;
+            btn.Width = TableDAO.TableWidth;
+            btn.Height = TableDAO.TableHeight;
+            btn.Tag = tabel;
+            flpUnEmpty.Controls.Add(btn);
+            btn.Click += btn_CLick;
+        }
         private void btn_CLick(object sender, EventArgs e)
         {
             txtTotalPrice.Text = "0";
             Table tabel = (sender as Button).Tag as Table;
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(tabel);
             lbTableName.Text = tabel.Name;
-            lbTableName.Font = new Font("Times", 16f);
-            lbTableName.TextAlign = ContentAlignment.MiddleCenter;
+
             lbTableName.Tag = tabel;
             Button bt = sender as Button;
             lsvBillTBMNG.Items.Clear();
@@ -108,31 +171,9 @@ namespace QLQCF
         }
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            fAdmin fadmin = new fAdmin();
+            fAdmin fadmin = new fAdmin(this);
             fadmin.Show();
             fadmin.acc = acc;
-        }
-
-        private void fTableManager_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnOrder_Click(object sender, EventArgs e)
@@ -152,18 +193,21 @@ namespace QLQCF
         private void btnCheckOut_Click(object sender, EventArgs e)
         {
             Table table = lbTableName.Tag as Table;
-            if (BillDAO.Instance.CheckEmpty(table)) { MessageBox.Show("Bàn không có gì để thanh toán!"); }
-            else
+            if (table != null)
             {
-                
-                fCheckOut fcheckout = new fCheckOut(table, this,acc);
-                fcheckout.Show(this);
+                if (BillDAO.Instance.CheckEmpty(table)) { MessageBox.Show("Bàn không có gì để thanh toán!"); }
+                else
+                {
+
+                    fCheckOut fcheckout = new fCheckOut(table, this, acc);
+                    fcheckout.ShowDialog(this);
+                }
             }
         }
 
         private void btnSwitch_Click(object sender, EventArgs e)
         {
-            fSwitchTable fSwitchTabel=new fSwitchTable(lbTableName.Tag as Table,this);
+            fSwitchTable fSwitchTabel = new fSwitchTable(lbTableName.Tag as Table, this);
             fSwitchTabel.Show();
         }
 
@@ -187,7 +231,7 @@ namespace QLQCF
                     MessageBox.Show("Không đủ 2 bàn để gộp");
                 }
             }
-            
+
 
         }
 
@@ -195,6 +239,39 @@ namespace QLQCF
         {
             fAccount fAccount = new fAccount(acc);
             fAccount.Show();
+        }
+
+        private void btnSetting_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int x = lbEncouragement.Location.X;
+            x--;
+            int y = lbEncouragement.Location.Y;
+            lbEncouragement.Location = new Point(x, y);
+            if (x <= 0 - lbEncouragement.Size.Width)
+            {
+                x = panel2.Width;
+                lbEncouragement.Location = new Point(x, y);
+            }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            DialogResult ask;
+            ask = MessageBox.Show("Bạn Có Muốn Thoát?", "Thông Báo Thoát!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if(ask==DialogResult.Yes ) 
+            { 
+                this.Close();
+            }
         }
     }
 }

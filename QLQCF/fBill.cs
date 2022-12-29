@@ -1,6 +1,8 @@
 ﻿using QLQCF;
 using QLQCF.DAO;
 using QLQCF.DTO;
+using QLQCFTest.DAO;
+using QLQCFTest.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +23,10 @@ namespace QLQCFTest
         string type;
         fTableManager ftableManager;
         Account acc;
-        public fBill(Table tabel,int money,string TypeMoney,fTableManager fTable,Account account )
+        int surCharge;
+        public fBill(Table tabel,int money,string TypeMoney,fTableManager fTable,Account account,int surcharge )
         {
+            surCharge= surcharge;
             acc=account;
             ftableManager = fTable;
             moneyReceive=money;
@@ -35,6 +39,7 @@ namespace QLQCFTest
         private void LoadBill()
         {
             int count = 1;
+            Shop shop = ShopDAO.Instance.GetShop();
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
             lbIDBill.Text = bill.Id.ToString();
             lbTableName.Text = table.Name;
@@ -47,30 +52,61 @@ namespace QLQCFTest
                 AddLabelName(count, billinfo);
                 AddLabelAmount(count,billinfo);
                 AddLabelPrice(count,billinfo);
-                AddLabelTotal(count, billinfo);
-                
+                AddLabelTotal(count, billinfo);      
                 this.Height += 30;
                 panel4.Location = new Point(panel4.Location.X, panel4.Location.Y+30);
+                flpAdd.Location = new Point(flpAdd.Location.X, flpAdd.Location.Y + 30);
+                panel3.Location = new Point(panel3.Location.X, panel3.Location.Y + 30);
                 flpBillInfo.Height += 30;
                 count++;
-
+                FoodDAO.Instance.IncreaseFoodTotalCount(billinfo);
             }
             AddLabelType();
             AddLabelMoneyBack(bill);
             if (table.Type == 1)
             {
-                lbType.Text = "5000";
+                lbType.Text = "5k";
             }
             else if (table.Type == 0)
             {
-                lbType.Text = "0000";
+                lbType.Visible = false;
+                label20.Visible = false;
+                label17.Visible = false;
             }
-            lbMoneyReceive.Text = moneyReceive.ToString();
+            if(surCharge==0) { 
+            }         
+            else
+            {
+                
+                Label lb1=new Label();
+                lb1 = lbType;
+                lb1.Text = "Phụ Thu Qua Đêm";
+                Label lb2=new Label(); lb2 = label17;
+                lb2.Text=((shop.SurCharge*surCharge)/1000).ToString()+"k";
+                lb1.Visible=true;
+                lb2.Visible=true;
+                flpAdd.Height += lb1.Height;
+                this.Height += lb1.Height;
+                panel4.Location=new Point(panel4.Location.X,panel4.Location.Y+lb1.Height);
+                panel3.Location= new Point(panel3.Location.X, panel3.Location.Y + lb1.Height);
+            }
+            lbMoneyReceive.Text = ((float)moneyReceive/1000).ToString()+"k";
             lbMoneyType.Text = type.ToString();
-            lbTotalPrice.Text = bill.TotalPrice.ToString();
+            lbTotalPrice.Text = ((float)bill.TotalPrice / 1000).ToString() + "k";
+            
             BillDAO.Instance.UpdateBillChecked(bill);
-            lbDateOut.Text = DateTime.Now.ToString();
+            
             ftableManager.LoadForm();
+            
+            if (shop != null)
+            {
+                lbShopName.Text = shop.NameShop;
+                lbSlogan.Text = shop.Slogan;
+                lbWifi.Text = "Wifi:"+shop.Wifi;
+                lbWifiPassWord.Text = "Password:"+shop.PassWifi;
+                lbAddress.Text = "Địa Chỉ:"+shop.ShopAddress;
+                lbPhoneNumber.Text = "SĐT:"+shop.PhoneNumber;
+            }
         }
         private void label8_Click(object sender, EventArgs e)
         {
@@ -168,16 +204,11 @@ namespace QLQCFTest
             {
                 money = (moneyReceive * 177);
             }
-            lbMoneyBack.Text = (money-bill.TotalPrice).ToString();
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-            Graphics g = this.CreateGraphics();
-            bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
-            Graphics mg = Graphics.FromImage(bmp);
-            mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            printPreviewDialog1.ShowDialog();
+            double rate=DiscountDAO.Instance.GetDiscount(money);
+            if (rate != -1) { lbCode.Text = DiscountDAO.Instance.CreateCode(rate); }
+                
+            
+            lbMoneyBack.Text = ((float)(money-bill.TotalPrice)/1000).ToString() + "k";
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -186,7 +217,6 @@ namespace QLQCFTest
         }
 
         Bitmap bmp;
-
         private void btnPrint_Click(object sender, EventArgs e)
         {
             Graphics g = this.CreateGraphics();
@@ -194,7 +224,8 @@ namespace QLQCFTest
             Graphics mg = Graphics.FromImage(bmp);
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
             printPreviewDialog1.ShowDialog();
-
         }
+
+       
     }
 }

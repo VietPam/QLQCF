@@ -23,7 +23,8 @@ namespace QLQCF.DAO
 
         private DataProvider() { }
 
-        private string connectionSTR = @"Data Source=.\sqlexpress;Initial Catalog=QuanLyQuanCafeGKMoi;Integrated Security=True";
+        private string connectionSTR = @"Data Source=DESKTOP-T8LIS12\MSSQLSERVER01;Initial Catalog=QuanLyQuanCafeGKMoi;Integrated Security=True";
+
 
         public DataTable ExecuteQuery(string query, object[] parameter = null) //trả về bảng dữ liệu
         {

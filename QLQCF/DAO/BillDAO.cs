@@ -69,7 +69,10 @@ namespace QLQCF.DAO
             DataProvider.Instance.ExecuteNonQuery("update Bill set totalPrice='" + totalPrice + "' where ID_Bill='"+bill.Id+"'");
         }
 
-
+        public void UpdatePriceAfterDiscount(Bill bill,int money)
+        {
+            DataProvider.Instance.ExecuteQuery("update Bill set totalPrice= "+money+" where ID_Bill="+bill.Id);    
+        }
 
         public void SwitchTableBill(int idTable1, int idTable2)
         {

@@ -14,9 +14,11 @@ namespace QLQCF.DAO
     {
         private static FoodDAO instance;
 
-        public static FoodDAO Instance {
+        public static FoodDAO Instance
+        {
             get { if (instance == null) instance = new FoodDAO(); return FoodDAO.instance; }
-            set => instance = value; }
+            set => instance = value;
+        }
         private FoodDAO() { }
         public List<Food> GetListFoodByCateID(int id)
         {
@@ -29,14 +31,14 @@ namespace QLQCF.DAO
             }
             return listFood;
         }
-        public int GetFoodIdwithName(string name)
+        public Food GetFoodwithName(string name)
         {
             DataTable data = DataProvider.Instance.ExecuteQuery("select * from Food where NameFood=N'" + name + "'");
-            if(data.Rows.Count > 0)
+            if (data.Rows.Count > 0)
             {
-                return new Food(data.Rows[0]).Id;
+                return new Food(data.Rows[0]);
             }
-            return -1;
+            return null;
         }
 
         public float GetPricewithName(string name)
@@ -60,6 +62,38 @@ namespace QLQCF.DAO
             }
             return null;
         }
+        public List<Food> FindListFood(string name)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Food where NameFood like '%" + name + "%'");
+            List<Food> foods = new List<Food> { };
+            foreach (DataRow row in data.Rows)
+            {
+                Food food = new Food(row);
+                foods.Add(food);
+            }
+            if (foods.Count > 0)
+            {
+                return foods;
+            }
+            return null;
+        }
+        public void IncreaseFoodTotalCount(BillInfo billInfo)
+        {
+            DataProvider.Instance.ExecuteNonQuery("update Food set TotalCount = TotalCount + " + billInfo.Count + " where ID_Food= '" + billInfo.IdFood + "'");
+        }
+
+        public List<Food> GetListFoodHot()
+        {
+            List<Food> foods = new List<Food>();
+            DataTable dataTable = DataProvider.Instance.ExecuteQuery("select * from Food Order By TotalCount desc");
+            foreach (DataRow row in dataTable.Rows)
+            {
+                foods.Add(new Food(row));
+            }
+            if (foods.Count == 0) { return null; }
+
+            return foods;
+        }
 
         //cua Dong
         public bool InsertFood(string name, int categoryid, float price)
@@ -80,7 +114,7 @@ namespace QLQCF.DAO
 
         public bool DeleteFood(int id)
         {
-            string query = string.Format("update Food set Active=0 where ID_Food='" + id+"'" );
+            string query = string.Format("update Food set Active=0 where ID_Food='" + id + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
 
             return result > 0;

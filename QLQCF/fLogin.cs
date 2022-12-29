@@ -1,5 +1,7 @@
 ﻿using QLQCF.DAO;
 using QLQCF.DTO;
+using QLQCFTest.DAO;
+using QLQCFTest.DTO;
 
 namespace QLQCF
 {
@@ -53,6 +55,12 @@ namespace QLQCF
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void fLogin_Load(object sender, EventArgs e)
+        {
+            Shop shop = ShopDAO.Instance.GetShop();
+            lbNameShop.Text = shop.NameShop;
         }
     }
 }

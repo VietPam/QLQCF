@@ -12,9 +12,14 @@ namespace QLQCF.DAO
     {
         private static CategoryDAO instance;
 
-        public static CategoryDAO Instance {
-            get { if (instance == null) instance = new CategoryDAO();return CategoryDAO.instance;
-            } set => instance = value; }
+        public static CategoryDAO Instance
+        {
+            get
+            {
+                if (instance == null) instance = new CategoryDAO(); return CategoryDAO.instance;
+            }
+            set => instance = value;
+        }
         private CategoryDAO() { }
         public List<Category> GetListCategory()
         {
@@ -29,7 +34,7 @@ namespace QLQCF.DAO
         }
         public int GetIdCateWithName(string name)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("select * from FoodCategory where name=N'"+name+"' and Active='1'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from FoodCategory where name=N'" + name + "' and Active='1'");
             if (data.Rows.Count > 0)
             {
                 return new Category(data.Rows[0]).Id;
@@ -43,7 +48,17 @@ namespace QLQCF.DAO
             DataTable dta = DataProvider.Instance.ExecuteQuery("select * from FoodCategory where ID_FoodCategory='" + (int)data.Rows[0][0] + "' ");
             return new Category(dta.Rows[0]);
         }
-        
+
+        public Category GetCateWithFood(Food food)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("select * from FoodCategory where ID_FoodCategory='" + food.IdCate + "' and Active='1'");
+            if (data.Rows.Count > 0)
+            {
+                return new Category(data.Rows[0]);
+            }
+            return null;
+        }
+
         //cua Dong
         public bool InsertCategory(string name)
         {
@@ -63,8 +78,8 @@ namespace QLQCF.DAO
 
         public bool DeleteCategory(int id)
         {
-            
-            string query = string.Format("update FoodCategory set Active=0 where ID_FoodCategory='"+id+"'");
+
+            string query = string.Format("update FoodCategory set Active=0 where ID_FoodCategory='" + id + "'");
             int result = DataProvider.Instance.ExecuteNonQuery(query);
             return result > 0;
         }

@@ -2,16 +2,15 @@
 go
 USE QuanLyQuanCafeGKMoi
 go
-
+--tao bang
 CREATE TABLE TableFood
 (
 	ID_TableFood INT IDENTITY PRIMARY KEY,
-	NameTable NVARCHAR(100) NOT NULL DEFAULT N'Bàn chưa có tên',
+	NameTable NVARCHAR(100) DEFAULT N'Bàn chưa có tên',
 	StatusTable NVARCHAR(100) NOT NULL DEFAULT N'Trống',	-- Trống hoặc có người
-	Active int default 1
+	Active int default 1,
+	Type int default 0 -- 0:thuong 1: vip
 )
-go
-
 
 CREATE TABLE Account
 (
@@ -22,7 +21,6 @@ CREATE TABLE Account
 	Active int default 1,
 	Picture image,
 )
-go
 
 CREATE TABLE FoodCategory
 (
@@ -30,7 +28,6 @@ CREATE TABLE FoodCategory
 	name NVARCHAR(100) NOT NULL DEFAULT N'Chưa đặt tên',
 	Active int default 1
 )
-go
 
 CREATE TABLE Food
 (
@@ -39,16 +36,15 @@ CREATE TABLE Food
 	ID_FoodCategory INT NOT NULL,
 	Price FLOAT NOT NULL DEFAULT 0,
 	Active int default 1,
-
+	TotalCount int default 0,
 	
 	FOREIGN KEY (ID_FoodCategory) REFERENCES FoodCategory(ID_FoodCategory)
 )
-go
 
 CREATE TABLE Bill
 (
 	ID_Bill INT IDENTITY PRIMARY KEY,
-	DateCheckIn DATE NOT NULL DEFAULT GETDATE(),
+	DateCheckIn DATETime NOT NULL DEFAULT GETDATE(),
 	DateCheckOut DATE,
 	ID_TableFood INT NOT NULL, 
 	status INT NOT NULL DEFAULT 0, -- 1: đã thanh toán && 0: chưa thanh toán && -1:bill bị huỷ do huỷ món hoặc gộp bàn
@@ -58,7 +54,7 @@ CREATE TABLE Bill
 	
 	FOREIGN KEY (ID_TableFood) REFERENCES TableFood(ID_TableFood)
 )
-go
+
 CREATE TABLE BillInfo
 (
 	ID_BillInfo int IDENTITY PRIMARY KEY,
@@ -69,31 +65,69 @@ CREATE TABLE BillInfo
 	FOREIGN KEY (ID_Bill) REFERENCES Bill(ID_Bill),
 	FOREIGN KEY (ID_Food) REFERENCES dbo.Food(ID_Food)
 )
+
+Create Table Shop
+(
+NameShop NVARCHAR(100) NOT NULL DEFAULT N'CoffeShop',
+Wifi NVARCHAR(100) NOT NULL DEFAULT N'Chưa có',
+PassWifi NVARCHAR(100) NOT NULL DEFAULT N'Chưa có',
+NumberTable int NOT NULL DEFAULT 0,
+Slogan Nvarchar(100) not null default N'Vui Lòng Khách Đến Vừa Lòng Khách Đi!',
+Encouragement Nvarchar(100) not null default N'Hãy Hết Mình Về Công Việc',
+ShopAddress Nvarchar(100) default N'Chưa Có',
+PhoneNumber Varchar(10) not null default '0000000000',
+GoodByeSentence Nvarchar(100) default N'Xin Chào Và Hẹn Gặp Lại',
+TimeStart int default 0,
+TimeEnd int default 0,
+SurCharge int default 0
+)
+Create Table Discount
+(
+Rate float primary key,
+Money int default -1 -- !=-1 => co giam giam ,= -1 => khong giam gia
+)
+
+Create Table DiscountCode
+(
+Code nvarchar(10) primary key,
+Rate float,
+DayTake Smalldatetime,
+foreign key (Rate) references Discount(Rate),
+Number int default 1
+)
 go
 
+--insert
+insert into Discount(Rate) values(0)
+insert into Discount(Rate) values(0.05)
+insert into Discount(Rate) values(0.1)
+insert into Discount(Rate) values(0.15)
+insert into Discount(Rate) values(0.2)
+insert into Discount(Rate) values(0.25)
+insert into Discount(Rate) values(0.3)
+insert into Discount(Rate) values(0.35)
+insert into Discount(Rate) values(0.4)
+insert into Discount(Rate) values(0.45)
+insert into Discount(Rate) values(0.5)
+insert into Shop(NameShop) values('CoffeShop')
 
 
---//CSDL Form đăng nhập
-		
 insert into Account(UserName,DisplayName,Password,Type,Active)
 values ('admin',N'Quản lý','1962026656160185351301320480154111117132155',0,1)
-go
+
+
+
 insert into Account(UserName,DisplayName,Password,Type,Active)
 values ('tuan',N'Quản lý','1962026656160185351301320480154111117132155',0,1)
-go
+
 insert into Account(UserName,DisplayName,Password,Type,Active)
 values ('viet',N'Quản lý','1962026656160185351301320480154111117132155',0,1)
-go
+
 insert into Account(UserName,DisplayName,Password,Type,Active)
 values ('dong',N'Quản lý','1962026656160185351301320480154111117132155',0,1)
-go
+
 insert into Account(UserName,DisplayName,Password,Type,Active)
 values ('tri',N'Quản lý','1962026656160185351301320480154111117132155',0,1)
-go
-
-
-
-
 
 --INSERT FOODCATE
 INSERT INTO FoodCategory (name ) VALUES (N'Cafe')
@@ -104,7 +138,7 @@ INSERT INTO FoodCategory (name ) VALUES (N'Ðá xay')
 INSERT INTO FoodCategory (name ) VALUES (N'Nước ngọt')
 INSERT INTO FoodCategory (name ) VALUES (N'Mì cay')
 INSERT INTO FoodCategory (name ) VALUES (N'Ăn vặt')
-
+INSERT INTO FoodCategory (name ) VALUES (N'Phụ Thu')
 ---- INSERT FOOD
 INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Cafe đá',1, 18000)
 INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Cafe nóng',1, 18000)
@@ -150,6 +184,8 @@ INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Bò cá viên chi�
 INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Bánh tráng trộn',8, 20000)
 INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Bánh bao chiên',8, 10000)
 INSERT INTO Food (NameFood, ID_FoodCategory, Price) VALUES (N'Bánh sầu riêng',8, 15000)
+
+
 go
 
 
@@ -173,8 +209,7 @@ BEGIN
 			0
 			)
 END
-GO	
-
+go
 
 CREATE PROC USP_InsertBillInfo
 @idBill INT, @idFood INT, @count INT
@@ -190,16 +225,16 @@ BEGIN
 			@count
 			)
 END
-GO
-
+go
 
 --LoadTableFood
-create proc USP_LoadTableFood
+Create proc USP_LoadTableFood
 as
 begin
-	select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active, Type from TableFood
+	select ID_TableFood as [ID], NameTable as [Tên Bàn] ,StatusTable as [Trạng Thái],Active,Type from TableFood where Active=1
 end
 go
+
 --Login
 CREATE PROC USP_Login
 @username varchar(100),@password varchar(100)
@@ -207,19 +242,19 @@ AS
 BEGIN
 	SELECT *FROM Account WHERE UserName = @username AND Password = @password AND Active = 1
 END
-GO
-
-
-
+go
 -- INSERT BAN AN
-DECLARE @i INT = 1
-
-WHILE @i <= 10
+Create proc USP_InsertTable
+@sl int
+as
+DECLARE @i INT = 1,@id_table int
+select @id_table=max(ID_TableFood)+1 from TableFood
+WHILE @i <= @sl
 BEGIN
-	INSERT DBO.TableFood(NameTable) VALUES ('Bàn ' + CAST(@i AS nvarchar(100)))
+	INSERT DBO.TableFood(NameTable) values ('Bàn ' + CAST(@id_table AS nvarchar(100)))
 	SET @i = @i + 1
 END
-Go
+go
 
 --UPDATE ACCOUNT
 CREATE PROC USP_UpdateAccount
@@ -238,7 +273,15 @@ BEGIN
 			UPDATE Account SET DisplayName = @displayName, PassWord = @newPassword WHERE UserName = @userName
  	END
 END
-GO
+go
+--cai dat shop
+CREATE PROC USP_InsertShop
+@nameShop nvarchar(100), @wifi nvarchar(100), @passwifi nvarchar(100),@numberTable int,@slogan nvarchar(100),@encouragement nvarchar(100),@shopAddress nvarchar(100),@phoneNumber nvarchar(100),@goodByeSentence nvarchar(100),@timestart int,@timeend int,@sucharge int
+AS
+BEGIN
+	Update dbo.Shop set NameShop=@nameShop,Wifi=@wifi,PassWifi=@passwifi,NumberTable=@numberTable,Slogan=@slogan,Encouragement=@encouragement,ShopAddress=@shopAddress,PhoneNumber=@phoneNumber,GoodByeSentence=@goodByeSentence,TimeStart=@timestart,TimeEnd=@timeend,SurCharge=@sucharge
+END
+go
 
 CREATE PROC USP_GetListBillByDate
 @checkIn date,@checkout date
@@ -248,17 +291,58 @@ BEGIN
 	FROM dbo.Bill as b, dbo.TableFood as t
 	WHERE DateCheckIn>=@checkIn AND DateCheckOut<=@checkout AND b.status=1 AND t.ID_TableFood=b.ID_TableFood
 END
-Go
-
---select * from TableFood
-
-alter table TableFood add Type INT 
+go
+--doi ten ban
+create Trigger Ins_TableName
+on TableFood
+for insert
+as
+begin
+Declare @id int
+select @id=ID_TableFood from inserted 
+if(@id is not null)
+begin
+	update TableFood set NameTable='Bàn ' + CAST(@id AS nvarchar(100)) where ID_TableFood=@id
+	end
+end
+go
+--tao code ngau nhien
+create proc USP_InsertCode
+@code varchar(10),@rate float
+as
+begin
+	Insert into DiscountCode(Code,Rate,DayTake) values(@code,@rate,GETDATE())
+end 
+go
+--lay ti le giam gia
+create proc USP_GetRate
+@code varchar(10)
+as
+begin
+select Discount.Rate,Discount.Money from Discount,DiscountCode where Code=@code
+and Discount.Rate=DiscountCode.Rate
+end
 go
 
---UPDATE TableFood SET NameTable = 'Bàn 11' where ID_TableFood = 11 
+--tao code co so luong
+create proc USP_InsertCode2
+@code nvarchar(10),@rate float,@number int
+as
+begin
+	Insert into DiscountCode(Code,Rate,DayTake,Number) values(@code,@rate,GETDATE(),@number)
+end 
+go
 
-UPDATE TableFood SET Type = 0
---WHERE ID_TableFood  < 12 AND ID_TableFood > 5
+create proc USP_UpdateCode
+@code nvarchar(10),@rate float,@number int
+as
+begin
+	update DiscountCode set Rate=@rate,Number=@number where Code=@code
+end 
+go
 
---select * from Bill
---select * from BillInfo
+select * from DiscountCode
+drop proc USP_UpdateCode
+drop proc USP_InsertCode2
+exec USP_InsertCode2 
+@code='21345',@rate='0.15',@number=16
