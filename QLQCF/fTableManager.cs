@@ -273,5 +273,11 @@ namespace QLQCF
                 this.Close();
             }
         }
+
+        private void btnNotification_Click(object sender, EventArgs e)
+        {
+            fNotification fNotification = new fNotification();
+            fNotification.ShowDialog();
+        }
     }
 }

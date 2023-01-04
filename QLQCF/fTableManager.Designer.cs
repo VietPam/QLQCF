@@ -31,9 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.ptbAvatarUser = new System.Windows.Forms.PictureBox();
             this.btnAccount = new System.Windows.Forms.Button();
-            this.btnExit = new System.Windows.Forms.Button();
+            this.btnNotification = new System.Windows.Forms.Button();
             this.lbDisplayUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
@@ -87,16 +88,29 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.ptbAvatarUser);
             this.panel1.Controls.Add(this.btnAccount);
             this.panel1.Controls.Add(this.btnAdmin);
-            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.lbDisplayUser);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 745);
             this.panel1.TabIndex = 3;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Red;
+            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnExit.Location = new System.Drawing.Point(-1, 597);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(200, 140);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "Thoát";
+            this.btnExit.UseVisualStyleBackColor = false;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // ptbAvatarUser
             // 
@@ -118,17 +132,17 @@
             this.btnAccount.UseVisualStyleBackColor = true;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
-            // btnExit
+            // btnNotification
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Red;
-            this.btnExit.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExit.Location = new System.Drawing.Point(0, 466);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(200, 150);
-            this.btnExit.TabIndex = 9;
-            this.btnExit.Text = "Thoát";
-            this.btnExit.UseVisualStyleBackColor = false;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            this.btnNotification.BackColor = System.Drawing.Color.White;
+            this.btnNotification.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNotification.Location = new System.Drawing.Point(0, 461);
+            this.btnNotification.Name = "btnNotification";
+            this.btnNotification.Size = new System.Drawing.Size(200, 140);
+            this.btnNotification.TabIndex = 9;
+            this.btnNotification.Text = "Thông báo ";
+            this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnNotification.Click += new System.EventHandler(this.btnNotification_Click);
             // 
             // lbDisplayUser
             // 
@@ -443,7 +457,7 @@
         private Panel panel1;
         private Label label1;
         private Label lbDisplayUser;
-        private Button btnExit;
+        private Button btnNotification;
         private Button btnAccount;
         private FlowLayoutPanel flpTable;
         private Panel panel2;
@@ -471,5 +485,6 @@
         private FlowLayoutPanel flpUnEmpty;
         private TabPage tabPage3;
         private FlowLayoutPanel flpEmpty;
+        private Button btnExit;
     }
 }

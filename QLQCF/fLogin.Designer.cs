@@ -164,9 +164,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QLQCFTest.Properties.Resources.TableManage_LogoShop;
-            this.pictureBox1.Location = new System.Drawing.Point(40, 134);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(248, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(314, 452);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
