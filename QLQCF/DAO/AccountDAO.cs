@@ -27,7 +27,7 @@ namespace QLQCF.DAO
 
         private AccountDAO() { }
 
-       private string hashPass(string password)
+        private string hashPass(string password)
         {
             byte[] temp = ASCIIEncoding.ASCII.GetBytes(password);
             byte[] hashData = new MD5CryptoServiceProvider().ComputeHash(temp);

@@ -75,18 +75,19 @@
             // 
             // btnAdmin
             // 
+            this.btnAdmin.BackColor = System.Drawing.Color.White;
             this.btnAdmin.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdmin.Location = new System.Drawing.Point(-1, 171);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(200, 150);
             this.btnAdmin.TabIndex = 2;
             this.btnAdmin.Text = "Admin";
-            this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.UseVisualStyleBackColor = false;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.ptbAvatarUser);
@@ -114,7 +115,6 @@
             // 
             // ptbAvatarUser
             // 
-            this.ptbAvatarUser.Image = global::QLQCFTest.Properties.Resources.nullAvatarUser;
             this.ptbAvatarUser.Location = new System.Drawing.Point(49, 85);
             this.ptbAvatarUser.Name = "ptbAvatarUser";
             this.ptbAvatarUser.Size = new System.Drawing.Size(100, 86);
@@ -123,13 +123,14 @@
             // 
             // btnAccount
             // 
+            this.btnAccount.BackColor = System.Drawing.Color.White;
             this.btnAccount.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAccount.Location = new System.Drawing.Point(0, 319);
             this.btnAccount.Name = "btnAccount";
             this.btnAccount.Size = new System.Drawing.Size(200, 150);
             this.btnAccount.TabIndex = 8;
             this.btnAccount.Text = "Tài Khoản";
-            this.btnAccount.UseVisualStyleBackColor = true;
+            this.btnAccount.UseVisualStyleBackColor = false;
             this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
             // 
             // btnNotification
@@ -201,7 +202,7 @@
             this.flpAll.AutoScroll = true;
             this.flpAll.Location = new System.Drawing.Point(6, 6);
             this.flpAll.Name = "flpAll";
-            this.flpAll.Size = new System.Drawing.Size(648, 533);
+            this.flpAll.Size = new System.Drawing.Size(648, 536);
             this.flpAll.TabIndex = 0;
             // 
             // tabPage2
@@ -296,7 +297,7 @@
             this.TotalPrice.Controls.Add(this.lsvBillTBMNG);
             this.TotalPrice.Location = new System.Drawing.Point(894, 173);
             this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(474, 576);
+            this.TotalPrice.Size = new System.Drawing.Size(474, 543);
             this.TotalPrice.TabIndex = 7;
             // 
             // btnCheckOut
@@ -343,7 +344,6 @@
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnOrder.Image = global::QLQCFTest.Properties.Resources.Order_ImgCaPheTrung;
             this.btnOrder.Location = new System.Drawing.Point(72, 86);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(90, 55);
@@ -422,20 +422,23 @@
             // 
             // fTableManager
             // 
+            this.AcceptButton = this.btnOrder;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(1370, 742);
             this.Controls.Add(this.TotalPrice);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTableManager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTableManager_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ptbAvatarUser)).EndInit();

@@ -74,8 +74,8 @@ namespace QLQCFTest
                         
                         }
                         fBill fbill = new fBill(table, Convert.ToInt32(txbMoney.Text), type, ftableManager,acc,Convert.ToInt32(textBox1.Text));
-                        fbill.Show();
-                        this.Hide();
+                        fbill.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
@@ -130,45 +130,24 @@ namespace QLQCFTest
 
         private void fCheckOut_Load(object sender, EventArgs e)
         {
+            Surcharge sur = SurchargeDAO.Instance.GetSurcharge();
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
+            Shop shop = ShopDAO.Instance.GetShop();
             lbMoney.Text = bill.TotalPrice.ToString();
             txbCode.Tag = null;
-
-            DateTime dt = DateTime.Now;
-            
-            int time = dt.Hour * 60 + dt.Minute;
-            Shop shop = ShopDAO.Instance.GetShop();
-            bool flag = false;
-            if(shop.TimeEnd>=shop.TimeStart) 
-            {
-                if(time>=shop.TimeStart && time<=shop.TimeEnd)
-                {
-                    flag = true;
-                }
-            }
-            else
-            {
-                if(time>=shop.TimeStart || time<=shop.TimeEnd)
-                {
-                    flag = true;
-                }
-            }
+            bool flag = CheckSurcharge(sur);
             if(flag==true)
             {
-                label3.Text = "Số Lượng Phụ Thu";
-                label3.AutoSize = false;
-                label3.Font = new Font("Times", 16f);   
-                label3.Height = 29;
-                label3.Width = 180;
-                label3.TextAlign = ContentAlignment.MiddleCenter;
-                
+                panel3.Visible = true;
                 panel2.Visible = false;
                 panel1.Visible = false;
-                this.Size = new Size(449, 300);
+                this.Size = new Size(panel3.Width, panel3.Height+30);
+                this.AcceptButton = btnNumSurcharge;
             }
             else
             {
                 panel3.Visible= false;
+                
             }
         }
 
@@ -180,6 +159,53 @@ namespace QLQCFTest
             this.Size = new Size(449, 484);
             Shop shop=ShopDAO.Instance.GetShop();
             lbMoney.Text=(Convert.ToInt32(lbMoney.Text)+Convert.ToInt32(shop.SurCharge)* Convert.ToInt32(textBox1.Text)).ToString();
+            this.AcceptButton = btnCheckOut;
+        }
+
+        private bool CheckSurcharge(Surcharge sur)
+        {
+            DateTime dt = DateTime.Now;
+            int time = dt.Hour * 60 + dt.Minute;
+            if (sur.Hour == 1)
+            {
+                if (sur.HourEnd >= sur.HourStart)
+                {
+                    if (time >= sur.HourStart && time <= sur.HourEnd)
+                    {
+                        return true;
+                    }
+                }
+                else
+                {
+                    if (time >= sur.HourStart || time <= sur.HourEnd)
+                    {
+                        return true;
+                    }
+                }
+            }
+            if (sur.Day == 1)
+                if (dt <= sur.DayEnd && dt >= sur.DayStart)
+                    return true;
+            if (sur.DayofWeek == 1)
+            {
+                DayOfWeek[] dayOfWeeks = new DayOfWeek[] { DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday, DayOfWeek.Friday, DayOfWeek.Saturday, DayOfWeek.Sunday };
+                int flag = -1;
+                for (int i = 0; i < 7; i++)
+                {
+                    if (dt.DayOfWeek == dayOfWeeks[i])
+                    {
+                        flag = i;
+                        break;
+                    }
+                }
+                if (flag != -1)
+                {
+                    if (sur.DateOfWeek[flag] == '1')
+                        return true;
+                }
+            }
+            return false;
+            
         }
     }
 }

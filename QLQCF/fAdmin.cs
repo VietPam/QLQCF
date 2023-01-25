@@ -46,6 +46,7 @@ namespace QLQCFTest
             dtgvFood.DataSource = foodList;
             dtgvAccount.DataSource = accountList;
             dtgvCode.DataSource = codeList;
+
             LoadListFood();
             LoadListCatagory();
             LoadListAccount();
@@ -58,8 +59,9 @@ namespace QLQCFTest
             LoadDateTimePickerBill();
             LoadShopSetting();
             LoadTable();
+            LoadSurcharge();
         }
-        
+
         private void btnShowCategory_Click(object sender, EventArgs e)
         {
             LoadListCatagory();
@@ -292,7 +294,7 @@ namespace QLQCFTest
             }
         }
 
-        void LoadDateTimePickerBill ()
+        void LoadDateTimePickerBill()
         {
             DateTime date = DateTime.Now;
             dtpkFromDate.Value = new DateTime(date.Year, date.Month, 1);
@@ -312,7 +314,7 @@ namespace QLQCFTest
                 tong += gia;
             }
 
-            txbTotalBill.Text = tong.ToString(); 
+            txbTotalBill.Text = tong.ToString();
             #endregion
         }
 
@@ -324,9 +326,9 @@ namespace QLQCFTest
         public void LoadTable()
         {
             flpTable.Controls.Clear();
-            
+
             List<Table> tablelist = TableDAO.Instance.LoadTableList();
-            
+
             foreach (Table tabel in tablelist)
             {
 
@@ -345,7 +347,7 @@ namespace QLQCFTest
 
         void btn_CLick(object sender, EventArgs e)
         {
-            
+
             Table tabel = (sender as System.Windows.Forms.Button).Tag as Table;
             lbTable.Tag = tabel;
             txbTableName.Text = tabel.Name;
@@ -373,7 +375,7 @@ namespace QLQCFTest
             txbAddress.Text = shop.ShopAddress;
             txbPhoneNumber.Text = shop.PhoneNumber;
             txbSurcharge.Text = shop.SurCharge.ToString();
-            LoadPhuThu();
+            txbVipCost.Text=shop.VipCost.ToString();
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
@@ -389,10 +391,9 @@ namespace QLQCFTest
                 }
                 else
                 {
-                    int timeStart = ChangTimeToMin(Convert.ToInt32(cbbTimeStartH.Text), Convert.ToInt32(cbbTimeStartM.Text));
-                    int timeEnd = ChangTimeToMin(Convert.ToInt32(cbbTimeEndH.Text), Convert.ToInt32(cbbTimeEndM.Text));
-                    bool flag = ShopDAO.Instance.SetShopProperties(txbShopName.Text, txbWifi.Text, txbWifiPassword.Text, Convert.ToInt32(txbTableNumber.Text), txbSlogan.Text, txbEncouragement.Text, txbAddress.Text, txbPhoneNumber.Text, txbByeText.Text,timeStart,timeEnd,Convert.ToInt32(txbSurcharge.Text));
-                    if(cbDiscount.Text=="0%")
+                    
+                    bool flag = ShopDAO.Instance.SetShopProperties(txbShopName.Text, txbWifi.Text, txbWifiPassword.Text, Convert.ToInt32(txbTableNumber.Text), txbSlogan.Text, txbEncouragement.Text, txbAddress.Text, txbPhoneNumber.Text, txbByeText.Text,  Convert.ToInt32(txbSurcharge.Text),Convert.ToInt32(txbVipCost.Text));
+                    if (cbDiscount.Text == "0%")
                     {
                         cbDiscount.Tag = "0";
                     }
@@ -412,7 +413,7 @@ namespace QLQCFTest
             }
 
         }
-        public void button2_Click(object sender, EventArgs e)
+        public void btnRestore_Click(object sender, EventArgs e)
         {
             LoadShopSetting();
         }
@@ -425,10 +426,10 @@ namespace QLQCFTest
 
         private void btnReset_Click(object sender, EventArgs e)
         {
-            if(lbTable.Tag==null)
+            if (lbTable.Tag == null)
             {
 
-            }   
+            }
             else
             {
 
@@ -445,46 +446,46 @@ namespace QLQCFTest
                 }
             }
             Shop shop = ShopDAO.Instance.GetShop();
-            
+
         }
 
         private void buttDone_Click(object sender, EventArgs e)
         {
-            
+
             if (lbTable.Tag == null)
             {
             }
             else
             {
-                
+
                 bool flag;
                 if (rdNormal.Checked == true)
                 {
-                    flag=TableDAO.Instance.ChangeTableProperty(0, txbTableName.Text,(lbTable.Tag as Table).Id);
+                    flag = TableDAO.Instance.ChangeTableProperty(0, txbTableName.Text, (lbTable.Tag as Table).Id);
                 }
                 else
                 {
                     flag = TableDAO.Instance.ChangeTableProperty(1, txbTableName.Text, (lbTable.Tag as Table).Id);
                 }
-                
+
                 if (flag == false)
                     MessageBox.Show("Cập Nhật Không Thành Công!");
                 else
                     MessageBox.Show("Cập Nhật Thành Công!");
 
-                
+
             }
             LoadTable();
 
         }
 
-        private void txbNumTable_KeyPress(object sender, KeyPressEventArgs e)
+        private void txbNumOnly_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
 
-        private void comboBox1_KeyPress(object sender, KeyPressEventArgs e)
+        private void txbCanNotChange_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = true;
         }
@@ -492,9 +493,10 @@ namespace QLQCFTest
         private void cbDiscount_SelectedIndexChanged(object sender, EventArgs e)
         {
             string flag = "0";
-            switch(cbDiscount.Text)
+            switch (cbDiscount.Text)
             {
-                case ("0%"): flag = "0"; 
+                case ("0%"):
+                    flag = "0";
                     break;
                 case ("5%"):
                     flag = "0.05";
@@ -528,7 +530,7 @@ namespace QLQCFTest
                     break;
             }
             cbDiscount.Tag = flag;
-            txbMoneyDiscount.Text= DiscountDAO.Instance.LoadRateMoney(flag).ToString();
+            txbMoneyDiscount.Text = DiscountDAO.Instance.LoadRateMoney(flag).ToString();
         }
 
         private void tabPage2_Click(object sender, EventArgs e)
@@ -536,32 +538,18 @@ namespace QLQCFTest
 
         }
 
-        void LoadPhuThu()
-        {
-            cbbTimeEndM.Items.Clear();
-            cbbTimeStartM.Items.Clear();
-            Shop shop = ShopDAO.Instance.GetShop();
-            cbbTimeStartH.Text=((int)(shop.TimeStart/60)).ToString();
-            cbbTimeStartM.Text = ((int)(shop.TimeStart % 60)).ToString();
-            cbbTimeEndH.Text = ((int)(shop.TimeEnd / 60)).ToString();
-            cbbTimeEndM.Text = ((int)(shop.TimeEnd % 60)).ToString();
-            for(int i=0;i<60; i++)
-            {
-                cbbTimeStartM.Items.Add(i.ToString());
-                cbbTimeEndM.Items.Add(i.ToString());
-            }
-        }
+        
 
-        int ChangTimeToMin(int h,int m)
+        int ChangTimeToMin(int h, int m)
         {
             return h * 60 + m;
         }
 
         private void btnAddCode_Click(object sender, EventArgs e)
         {
-            string Rate=GetRate();
-          
-            if(DiscountCodeDAO.Instance.AddCode(txbDCode.Text,Rate,Convert.ToInt32(txbNumberCode.Text)))
+            string Rate = GetRate();
+
+            if (DiscountCodeDAO.Instance.AddCode(txbDCode.Text, Rate, Convert.ToInt32(txbNumberCode.Text)))
             {
                 MessageBox.Show("Thêm Code Thành Công");
                 LoadListCode();
@@ -569,7 +557,7 @@ namespace QLQCFTest
             else
             {
                 MessageBox.Show("Thêm Code Thất Bại");
-            }    
+            }
         }
 
         private void btnDeleteCode_Click(object sender, EventArgs e)
@@ -607,7 +595,7 @@ namespace QLQCFTest
             switch (cbbDRate.Text)
             {
                 case ("0"):
-                    return "0";                  
+                    return "0";
                 case ("0,05"):
                     return "0.05";
                 case ("0,1"):
@@ -745,6 +733,224 @@ namespace QLQCFTest
         {
             ExportFile(dtgvTotalBill, "DoanhSoBanRa", "QuanCaffe");
         }
+
         #endregion
+
+
+
+        private void txbHour_KeyUp(object sender, KeyPressEventArgs e)
+        {
+            System.Windows.Forms.TextBox txb = sender as System.Windows.Forms.TextBox;
+            if (!Char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            { e.Handled = true; }
+            else { 
+                string flag = txb.Text;
+                if (!Char.IsControl(e.KeyChar))
+                {
+                    flag = "";
+                    flag = txb.Text + e.KeyChar;
+                }
+                if (flag.Length > 2 || Convert.ToInt32(flag) > 23)
+                {
+                    
+                        e.Handled= true;
+                }
+            }
+        }
+
+        private void txbMinutes_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            System.Windows.Forms.TextBox txb = sender as System.Windows.Forms.TextBox;
+            if (!Char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            { e.Handled = true; }
+            else
+            {
+                string flag = txb.Text;
+                if (!Char.IsControl(e.KeyChar))
+                {
+                    flag = "";
+                    flag = txb.Text + e.KeyChar;
+                }
+                if (flag.Length > 2 || Convert.ToInt32(flag) > 60)
+                {
+
+                    e.Handled = true;
+                }
+            }
+        }
+        private void LoadSurcharge()
+        {
+            Surcharge sur = SurchargeDAO.Instance.GetSurcharge();
+            if( sur != null) {
+                CheckSurcharge( sur );
+                LoadHour(sur);
+                LoadDay(sur);
+                LoadDayofWeek(sur);
+            }
+        }
+
+        private void CheckSurcharge(Surcharge sur)
+        {
+            if (sur.Hour == 1)
+                cbHour.Checked = true;
+            else
+                cbHour.Checked = false;
+        
+            if (sur.Day == 1)
+                cbDay.Checked = true;
+            else
+                cbDay.Checked = false;
+
+            if(sur.DayofWeek==1)
+                cbDayofWeek.Checked = true;
+            else
+                cbDayofWeek.Checked = false;
+         }
+
+        private void btnChooseSurCharge_Click(object sender, EventArgs e)
+        {
+            string flag = "";
+            if (cbHour.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbDay.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbDayofWeek.Checked)
+                flag += "1";
+            else
+                flag += "0";
+
+            bool flag2 = SurchargeDAO.Instance.ChangeChoose(flag);
+            if (flag2)
+                MessageBox.Show("Cập Nhật Loại Phụ Thu Thành Công");
+            else
+                MessageBox.Show("Cập Nhật Loại Phụ Thu Không Thành Công");
+        }
+
+        private void LoadHour(Surcharge sur)
+        {
+            txbHour1.Text = ((int)(sur.HourStart / 60)).ToString();
+            txbMin1.Text = ((int)(sur.HourStart % 60)).ToString();
+            txbHour2.Text = ((int)(sur.HourEnd / 60)).ToString();
+            txbMin2.Text = ((int)(sur.HourEnd % 60)).ToString();
+        }
+
+        private void btnHour_Click(object sender, EventArgs e)
+        {
+            int timeStart = ChangTimeToMin(Convert.ToInt32(txbHour1.Text), Convert.ToInt32(txbMin1.Text));
+            int timeEnd = ChangTimeToMin(Convert.ToInt32(txbHour2.Text), Convert.ToInt32(txbMin2.Text));
+            bool flag=SurchargeDAO.Instance.ChangeHour(timeStart, timeEnd);
+            if(flag)
+                MessageBox.Show("Cập Nhật Giờ Phụ Thu Thành Công");
+            else
+                MessageBox.Show("Cập Nhật Giờ Phụ Thu Không Thành Công");
+        }
+
+        private void LoadDay(Surcharge sur)
+        {
+            dtpFrom.Value = sur.DayStart;
+            dtpTo.Value = sur.DayEnd;
+        }
+
+        private void btnDay_Click(object sender, EventArgs e)
+        {
+            if (dtpFrom.Value > dtpTo.Value)
+            {
+                MessageBox.Show("Ngày bắt đầu không thể lớn hơn hoặc bằng ngày kết thúc");
+
+            }
+            else
+            {
+                bool flag = SurchargeDAO.Instance.ChangeDay(dtpFrom.Value, dtpTo.Value);
+
+                if (flag)
+                    MessageBox.Show("Cập Nhật Ngày Phụ Thu Thành Công");
+                else
+                    MessageBox.Show("Cập Nhật Ngày Phụ Thu Không Thành Công");
+            }
+        }
+
+        private void LoadDayofWeek(Surcharge sur)
+        {
+            if (Convert.ToInt32(sur.DateOfWeek[0].ToString()) == 1)
+                cbMonday.Checked = true;
+            else
+                cbMonday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[1].ToString()) == 1)
+                cbTuesday.Checked = true;
+            else
+                cbTuesday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[2].ToString()) == 1)
+                cbWednesday.Checked = true;
+            else
+                cbWednesday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[3].ToString()) == 1)
+                cbThursday.Checked = true;
+            else
+                cbThursday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[4].ToString()) == 1)
+                cbFriday.Checked = true;
+            else
+                cbFriday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[5].ToString()) == 1)
+                cbSaturday.Checked = true;
+            else
+                cbSaturday.Checked = false;
+
+            if (Convert.ToInt32(sur.DateOfWeek[6].ToString()) == 1)
+                cbSunday.Checked = true;
+            else
+                cbSunday.Checked = false;
+        }
+
+        private void btnDayofWeek_Click(object sender, EventArgs e)
+        {
+            string flag = "";
+            if (cbMonday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbTuesday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbWednesday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbThursday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbFriday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbSaturday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+            if (cbSunday.Checked)
+                flag += "1";
+            else
+                flag += "0";
+
+            bool flag2 = SurchargeDAO.Instance.ChangeDateofWeek(flag);
+            if (flag2)
+                MessageBox.Show("Cập Nhật Thứ Phụ Thu Thành Công");
+            else
+                MessageBox.Show("Cập Nhật Thứ Phụ Thu Không Thành Công");
+        }
+
+        
     }
+       
 }

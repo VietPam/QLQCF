@@ -1,4 +1,6 @@
 ﻿using QLQCF.DTO;
+using QLQCFTest.DAO;
+using QLQCFTest.DTO;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -55,6 +57,7 @@ namespace QLQCF.DAO
         }
         public void UpdatePrice(Table table,Bill bill)
         {
+            Shop shop = ShopDAO.Instance.GetShop();
             int totalPrice = 0;
             List<BillInfo> lbillInfo =BillInfoDAO.Instance.GetListBillInfoWithTable(table);
             foreach (BillInfo billInfo in lbillInfo)
@@ -64,7 +67,7 @@ namespace QLQCF.DAO
             }
             if (table.Type == 1)
             {
-                totalPrice += 5000;
+                totalPrice += shop.VipCost;
             }
             DataProvider.Instance.ExecuteNonQuery("update Bill set totalPrice='" + totalPrice + "' where ID_Bill='"+bill.Id+"'");
         }

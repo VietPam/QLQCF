@@ -10,6 +10,7 @@ using System.Data;
 using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Intrinsics.X86;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -65,12 +66,12 @@ namespace QLQCFTest
             AddLabelMoneyBack(bill);
             if (table.Type == 1)
             {
-                lbType.Text = "5k";
+                lbType.Text = (shop.VipCost / 1000).ToString() + "k";
             }
-            else if (table.Type == 0)
+            else
             {
                 lbType.Visible = false;
-                label20.Visible = false;
+                lbVND.Visible = false;
                 label17.Visible = false;
             }
             if(surCharge==0) { 
@@ -79,12 +80,20 @@ namespace QLQCFTest
             {
                 
                 Label lb1=new Label();
-                lb1 = lbType;
-                lb1.Text = "Phụ Thu Qua Đêm";
-                Label lb2=new Label(); lb2 = label17;
+                lb1.Size =new Size(label17.Width,label17.Height);
+                lb1.TextAlign = label17.TextAlign;
+                lb1.Text = "Phụ Thu";
+                Label lb2=new Label();
+                lb2.Size =new Size(lbType.Width,lbType.Height);
                 lb2.Text=((shop.SurCharge*surCharge)/1000).ToString()+"k";
-                lb1.Visible=true;
-                lb2.Visible=true;
+                lb2.TextAlign = lbType.TextAlign;
+                Label lb3=new Label();
+                lb3.Size = lbVND.Size;
+                lb3.Text = "VND";
+                lb3.Font = new Font(lb3.Font,FontStyle.Bold);
+                flpAdd.Controls.Add(lb1);
+                flpAdd.Controls.Add(lb2);
+                flpAdd.Controls.Add(lb3);
                 flpAdd.Height += lb1.Height;
                 this.Height += lb1.Height;
                 panel4.Location=new Point(panel4.Location.X,panel4.Location.Y+lb1.Height);
@@ -108,10 +117,7 @@ namespace QLQCFTest
                 lbPhoneNumber.Text = "SĐT:"+shop.PhoneNumber;
             }
         }
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void label17_Click(object sender, EventArgs e)
         {

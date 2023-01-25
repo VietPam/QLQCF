@@ -2,6 +2,8 @@
 go
 USE QuanLyQuanCafeGKMoi
 go
+set dateformat dmy
+go
 --tao bang
 CREATE TABLE TableFood
 (
@@ -97,7 +99,22 @@ Number int default 1
 )
 go
 
+Create Table SurCharge
+(
+iHour int default 0, --thuoc tinh =0 -> không cài đặt =1 -> cài đặt
+iDay int default 0, 
+iDayofWeek int default 0,
+HourStart int default 0,
+HourEnd int default 0,
+DayStart datetime default 1/1/1900,
+DayEnd datetime default 1/1/1900,
+DateofWeek varchar(7) default '0000000'
+)
+
+
 --insert
+insert into SurCharge(iHour) values(0)
+
 insert into Discount(Rate) values(0)
 insert into Discount(Rate) values(0.05)
 insert into Discount(Rate) values(0.1)
@@ -341,8 +358,10 @@ begin
 end 
 go
 
-select * from DiscountCode
-drop proc USP_UpdateCode
-drop proc USP_InsertCode2
-exec USP_InsertCode2 
-@code='21345',@rate='0.15',@number=16
+create proc USP_ChangeDay
+@datestart datetime,@dateend datetime
+as begin
+	update SurCharge set DayStart=@datestart, DayEnd=@dateend
+end
+go
+

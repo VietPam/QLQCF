@@ -83,7 +83,7 @@ namespace QLQCF
                 }
                 else
                 {
-                    btn.BackColor = Color.YellowGreen;
+                    btn.BackColor = Color.Yellow;
  
                 }
                 btn.Text = tabel.Name + "\n" + tabel.Status;
@@ -105,7 +105,7 @@ namespace QLQCF
             }
             else
             {
-                btn.BackColor = Color.YellowGreen;
+                btn.BackColor = Color.Yellow;
 
             }
             btn.Text = tabel.Name + "\n" + tabel.Status;
@@ -126,7 +126,7 @@ namespace QLQCF
             }
             else
             {
-                btn.BackColor = Color.YellowGreen;
+                btn.BackColor = Color.Yellow;
 
             }
             btn.Text = tabel.Name + "\n" + tabel.Status;
@@ -266,18 +266,28 @@ namespace QLQCF
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            DialogResult ask;
-            ask = MessageBox.Show("Bạn Có Muốn Thoát?", "Thông Báo Thoát!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-            if(ask==DialogResult.Yes ) 
-            { 
-                this.Close();
-            }
+            this.Close();
+            
         }
 
         private void btnNotification_Click(object sender, EventArgs e)
         {
             fNotification fNotification = new fNotification();
             fNotification.ShowDialog();
+        }
+
+        private void fTableManager_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult ask;
+            ask = MessageBox.Show("Bạn Có Muốn Thoát?", "Thông Báo Thoát!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (ask == DialogResult.Yes)
+            {
+                
+            }
+            else
+            {
+                e.Cancel = true;
+            }
         }
     }
 }

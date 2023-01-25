@@ -40,7 +40,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnNumSurcharge = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
@@ -177,15 +177,15 @@
             this.textBox1.Text = "0";
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMoney_KeyPress);
             // 
-            // button1
+            // btnNumSurcharge
             // 
-            this.button1.Location = new System.Drawing.Point(167, 76);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Xong";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnNumSurcharge.Location = new System.Drawing.Point(167, 76);
+            this.btnNumSurcharge.Name = "btnNumSurcharge";
+            this.btnNumSurcharge.Size = new System.Drawing.Size(75, 29);
+            this.btnNumSurcharge.TabIndex = 11;
+            this.btnNumSurcharge.Text = "Xong";
+            this.btnNumSurcharge.UseVisualStyleBackColor = true;
+            this.btnNumSurcharge.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -200,15 +200,16 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.button1);
+            this.panel3.Controls.Add(this.btnNumSurcharge);
             this.panel3.Controls.Add(this.textBox1);
-            this.panel3.Location = new System.Drawing.Point(3, 92);
+            this.panel3.Location = new System.Drawing.Point(-1, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 108);
+            this.panel3.Size = new System.Drawing.Size(429, 146);
             this.panel3.TabIndex = 9;
             // 
             // fCheckOut
             // 
+            this.AcceptButton = this.btnCheckOut;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 445);
@@ -242,7 +243,7 @@
         private Panel panel1;
         private Label label3;
         private TextBox textBox1;
-        private Button button1;
+        private Button btnNumSurcharge;
         private Panel panel2;
         private Panel panel3;
     }

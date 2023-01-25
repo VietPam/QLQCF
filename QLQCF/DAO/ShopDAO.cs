@@ -33,9 +33,9 @@ namespace QLQCFTest.DAO
             return null;
         }
 
-        public bool SetShopProperties(string nameShop, string wifi, string passwifi, int numberTable, string slogan, string encouragement, string shopAddress, string phoneNumber, string goodByeSentence,int timeStart,int timeEnd,int sucharge)
+        public bool SetShopProperties(string nameShop, string wifi, string passwifi, int numberTable, string slogan, string encouragement, string shopAddress, string phoneNumber, string goodByeSentence, int surcharge,int vipCost)
         {
-            int data = DataProvider.Instance.ExecuteNonQuery("USP_InsertShop @nameShop , @wifi , @passwifi , @numberTable , @slogan , @encouragement , @shopAddress , @phoneNumber , @goodByeSentence , @timestart , @timeend , @surcharge", new object[] { nameShop, wifi, passwifi, numberTable, slogan, encouragement, shopAddress, phoneNumber, goodByeSentence, timeStart, timeEnd, sucharge });
+            int data = DataProvider.Instance.ExecuteNonQuery("USP_InsertShop @nameShop , @wifi , @passwifi , @numberTable , @slogan , @encouragement , @shopAddress , @phoneNumber , @goodByeSentence , @surcharge , @vipcost", new object[] { nameShop, wifi, passwifi, numberTable, slogan, encouragement, shopAddress, phoneNumber, goodByeSentence,surcharge,vipCost});
 
             ChangeTableNumber(numberTable);
             return true;

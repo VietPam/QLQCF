@@ -98,8 +98,70 @@
             this.btnEditAccount = new System.Windows.Forms.Button();
             this.btnDeleteAccount = new System.Windows.Forms.Button();
             this.btnAddAccount = new System.Windows.Forms.Button();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tpTable = new System.Windows.Forms.TabPage();
+            this.btnRestoreTable = new System.Windows.Forms.Button();
+            this.btnDoneTable = new System.Windows.Forms.Button();
+            this.txbTableName = new System.Windows.Forms.TextBox();
+            this.rdVip = new System.Windows.Forms.RadioButton();
+            this.rdNormal = new System.Windows.Forms.RadioButton();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.lbTable = new System.Windows.Forms.Label();
+            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
+            this.tpDiscountCode = new System.Windows.Forms.TabPage();
+            this.dtgvCode = new System.Windows.Forms.DataGridView();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.txbNumberCode = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.cbbDRate = new System.Windows.Forms.ComboBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.txbDCode = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.panel35 = new System.Windows.Forms.Panel();
+            this.btnShowCode = new System.Windows.Forms.Button();
+            this.btnEditCode = new System.Windows.Forms.Button();
+            this.btnDeleteCode = new System.Windows.Forms.Button();
+            this.btnAddCode = new System.Windows.Forms.Button();
+            this.tpSurcharge = new System.Windows.Forms.TabPage();
+            this.panel37 = new System.Windows.Forms.Panel();
+            this.btnDayofWeek = new System.Windows.Forms.Button();
+            this.cbSaturday = new System.Windows.Forms.CheckBox();
+            this.cbSunday = new System.Windows.Forms.CheckBox();
+            this.cbFriday = new System.Windows.Forms.CheckBox();
+            this.cbThursday = new System.Windows.Forms.CheckBox();
+            this.cbWednesday = new System.Windows.Forms.CheckBox();
+            this.cbTuesday = new System.Windows.Forms.CheckBox();
+            this.cbMonday = new System.Windows.Forms.CheckBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.panel36 = new System.Windows.Forms.Panel();
+            this.btnDay = new System.Windows.Forms.Button();
+            this.dtpTo = new System.Windows.Forms.DateTimePicker();
+            this.label41 = new System.Windows.Forms.Label();
+            this.dtpFrom = new System.Windows.Forms.DateTimePicker();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.panel34 = new System.Windows.Forms.Panel();
+            this.txbMin2 = new System.Windows.Forms.TextBox();
+            this.txbHour2 = new System.Windows.Forms.TextBox();
+            this.txbMin1 = new System.Windows.Forms.TextBox();
+            this.txbHour1 = new System.Windows.Forms.TextBox();
+            this.btnHour = new System.Windows.Forms.Button();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.btnChooseSurCharge = new System.Windows.Forms.Button();
+            this.cbDayofWeek = new System.Windows.Forms.CheckBox();
+            this.cbDay = new System.Windows.Forms.CheckBox();
+            this.cbHour = new System.Windows.Forms.CheckBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.tpRevenue = new System.Windows.Forms.TabPage();
             this.panel24 = new System.Windows.Forms.Panel();
+            this.btnToFile = new System.Windows.Forms.Button();
             this.txbTotalBill = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -108,20 +170,16 @@
             this.dtpkToDate = new System.Windows.Forms.DateTimePicker();
             this.dtpkFromDate = new System.Windows.Forms.DateTimePicker();
             this.btnTotalBill = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txbSurcharge = new System.Windows.Forms.TextBox();
-            this.label31 = new System.Windows.Forms.Label();
+            this.tpSetting = new System.Windows.Forms.TabPage();
             this.label30 = new System.Windows.Forms.Label();
-            this.cbbTimeEndH = new System.Windows.Forms.ComboBox();
-            this.cbbTimeEndM = new System.Windows.Forms.ComboBox();
-            this.cbbTimeStartM = new System.Windows.Forms.ComboBox();
-            this.cbbTimeStartH = new System.Windows.Forms.ComboBox();
+            this.txbVipCost = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.txbSurcharge = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.txbMoneyDiscount = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.btnDone = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRestore = new System.Windows.Forms.Button();
             this.txbTableNumber = new System.Windows.Forms.TextBox();
             this.txbByeText = new System.Windows.Forms.TextBox();
             this.txbPhoneNumber = new System.Windows.Forms.TextBox();
@@ -142,35 +200,6 @@
             this.label24 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
             this.cbDiscount = new System.Windows.Forms.ComboBox();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btnReset = new System.Windows.Forms.Button();
-            this.btnDoneTable = new System.Windows.Forms.Button();
-            this.txbTableName = new System.Windows.Forms.TextBox();
-            this.rdVip = new System.Windows.Forms.RadioButton();
-            this.rdNormal = new System.Windows.Forms.RadioButton();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.lbTable = new System.Windows.Forms.Label();
-            this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.dtgvCode = new System.Windows.Forms.DataGridView();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.panel32 = new System.Windows.Forms.Panel();
-            this.txbNumberCode = new System.Windows.Forms.TextBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.cbbDRate = new System.Windows.Forms.ComboBox();
-            this.label33 = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.txbDCode = new System.Windows.Forms.TextBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.panel35 = new System.Windows.Forms.Panel();
-            this.btnShowCode = new System.Windows.Forms.Button();
-            this.btnEditCode = new System.Windows.Forms.Button();
-            this.btnDeleteCode = new System.Windows.Forms.Button();
-            this.btnAddCode = new System.Windows.Forms.Button();
-            this.btnToFile = new System.Windows.Forms.Button();
             this.tcAdmin.SuspendLayout();
             this.tpCategory.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -202,14 +231,8 @@
             this.panel21.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel16.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel23.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTotalBill)).BeginInit();
-            this.panel18.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tpTable.SuspendLayout();
+            this.tpDiscountCode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCode)).BeginInit();
             this.panel28.SuspendLayout();
             this.panel29.SuspendLayout();
@@ -217,6 +240,17 @@
             this.panel31.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel35.SuspendLayout();
+            this.tpSurcharge.SuspendLayout();
+            this.panel37.SuspendLayout();
+            this.panel36.SuspendLayout();
+            this.panel34.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.tpRevenue.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTotalBill)).BeginInit();
+            this.panel18.SuspendLayout();
+            this.tpSetting.SuspendLayout();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -224,10 +258,11 @@
             this.tcAdmin.Controls.Add(this.tpCategory);
             this.tcAdmin.Controls.Add(this.tpFood);
             this.tcAdmin.Controls.Add(this.tpAccount);
-            this.tcAdmin.Controls.Add(this.tabPage1);
-            this.tcAdmin.Controls.Add(this.tabPage2);
-            this.tcAdmin.Controls.Add(this.tabPage3);
-            this.tcAdmin.Controls.Add(this.tabPage4);
+            this.tcAdmin.Controls.Add(this.tpTable);
+            this.tcAdmin.Controls.Add(this.tpDiscountCode);
+            this.tcAdmin.Controls.Add(this.tpSurcharge);
+            this.tcAdmin.Controls.Add(this.tpRevenue);
+            this.tcAdmin.Controls.Add(this.tpSetting);
             this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tcAdmin.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tcAdmin.Location = new System.Drawing.Point(0, 0);
@@ -909,19 +944,652 @@
             this.btnAddAccount.UseVisualStyleBackColor = true;
             this.btnAddAccount.Click += new System.EventHandler(this.btnAddAccount_Click);
             // 
-            // tabPage1
+            // tpTable
             // 
-            this.tabPage1.Controls.Add(this.panel24);
-            this.tabPage1.Controls.Add(this.panel23);
-            this.tabPage1.Controls.Add(this.panel18);
-            this.tabPage1.Location = new System.Drawing.Point(4, 23);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPage1.Size = new System.Drawing.Size(1026, 464);
-            this.tabPage1.TabIndex = 3;
-            this.tabPage1.Text = "Doanh Thu";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tpTable.Controls.Add(this.btnRestoreTable);
+            this.tpTable.Controls.Add(this.btnDoneTable);
+            this.tpTable.Controls.Add(this.txbTableName);
+            this.tpTable.Controls.Add(this.rdVip);
+            this.tpTable.Controls.Add(this.rdNormal);
+            this.tpTable.Controls.Add(this.label29);
+            this.tpTable.Controls.Add(this.label28);
+            this.tpTable.Controls.Add(this.lbTable);
+            this.tpTable.Controls.Add(this.flpTable);
+            this.tpTable.Location = new System.Drawing.Point(4, 23);
+            this.tpTable.Name = "tpTable";
+            this.tpTable.Size = new System.Drawing.Size(1026, 464);
+            this.tpTable.TabIndex = 5;
+            this.tpTable.Text = "Bàn";
+            this.tpTable.UseVisualStyleBackColor = true;
+            // 
+            // btnRestoreTable
+            // 
+            this.btnRestoreTable.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRestoreTable.Location = new System.Drawing.Point(881, 337);
+            this.btnRestoreTable.Name = "btnRestoreTable";
+            this.btnRestoreTable.Size = new System.Drawing.Size(119, 44);
+            this.btnRestoreTable.TabIndex = 53;
+            this.btnRestoreTable.Text = "Khôi Phục";
+            this.btnRestoreTable.UseVisualStyleBackColor = true;
+            this.btnRestoreTable.Click += new System.EventHandler(this.btnReset_Click);
+            // 
+            // btnDoneTable
+            // 
+            this.btnDoneTable.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnDoneTable.Location = new System.Drawing.Point(685, 337);
+            this.btnDoneTable.Name = "btnDoneTable";
+            this.btnDoneTable.Size = new System.Drawing.Size(119, 44);
+            this.btnDoneTable.TabIndex = 52;
+            this.btnDoneTable.Text = "Xong";
+            this.btnDoneTable.UseVisualStyleBackColor = true;
+            this.btnDoneTable.Click += new System.EventHandler(this.buttDone_Click);
+            // 
+            // txbTableName
+            // 
+            this.txbTableName.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbTableName.Location = new System.Drawing.Point(838, 140);
+            this.txbTableName.Name = "txbTableName";
+            this.txbTableName.Size = new System.Drawing.Size(180, 32);
+            this.txbTableName.TabIndex = 51;
+            // 
+            // rdVip
+            // 
+            this.rdVip.AutoSize = true;
+            this.rdVip.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdVip.Location = new System.Drawing.Point(903, 259);
+            this.rdVip.Name = "rdVip";
+            this.rdVip.Size = new System.Drawing.Size(58, 27);
+            this.rdVip.TabIndex = 50;
+            this.rdVip.TabStop = true;
+            this.rdVip.Text = "Vip";
+            this.rdVip.UseVisualStyleBackColor = true;
+            // 
+            // rdNormal
+            // 
+            this.rdNormal.AutoSize = true;
+            this.rdNormal.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rdNormal.Location = new System.Drawing.Point(712, 259);
+            this.rdNormal.Name = "rdNormal";
+            this.rdNormal.Size = new System.Drawing.Size(92, 27);
+            this.rdNormal.TabIndex = 49;
+            this.rdNormal.TabStop = true;
+            this.rdNormal.Text = "Thường";
+            this.rdNormal.UseVisualStyleBackColor = true;
+            // 
+            // label29
+            // 
+            this.label29.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label29.Location = new System.Drawing.Point(657, 199);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(366, 34);
+            this.label29.TabIndex = 48;
+            this.label29.Text = "Loại";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label28.Location = new System.Drawing.Point(657, 137);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(147, 34);
+            this.label28.TabIndex = 47;
+            this.label28.Text = "Tên Bàn";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbTable
+            // 
+            this.lbTable.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.lbTable.Location = new System.Drawing.Point(657, 3);
+            this.lbTable.Name = "lbTable";
+            this.lbTable.Size = new System.Drawing.Size(366, 92);
+            this.lbTable.TabIndex = 46;
+            this.lbTable.Text = "Tên Bàn";
+            this.lbTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // flpTable
+            // 
+            this.flpTable.AutoScroll = true;
+            this.flpTable.Location = new System.Drawing.Point(3, 3);
+            this.flpTable.Name = "flpTable";
+            this.flpTable.Size = new System.Drawing.Size(648, 458);
+            this.flpTable.TabIndex = 45;
+            // 
+            // tpDiscountCode
+            // 
+            this.tpDiscountCode.Controls.Add(this.dtgvCode);
+            this.tpDiscountCode.Controls.Add(this.panel28);
+            this.tpDiscountCode.Location = new System.Drawing.Point(4, 23);
+            this.tpDiscountCode.Name = "tpDiscountCode";
+            this.tpDiscountCode.Size = new System.Drawing.Size(1026, 464);
+            this.tpDiscountCode.TabIndex = 6;
+            this.tpDiscountCode.Text = "Code";
+            this.tpDiscountCode.UseVisualStyleBackColor = true;
+            // 
+            // dtgvCode
+            // 
+            this.dtgvCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dtgvCode.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCode.Location = new System.Drawing.Point(3, 1);
+            this.dtgvCode.Name = "dtgvCode";
+            this.dtgvCode.RowHeadersWidth = 51;
+            this.dtgvCode.RowTemplate.Height = 24;
+            this.dtgvCode.Size = new System.Drawing.Size(569, 460);
+            this.dtgvCode.TabIndex = 6;
+            // 
+            // panel28
+            // 
+            this.panel28.Controls.Add(this.panel29);
+            this.panel28.Controls.Add(this.panel35);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel28.Location = new System.Drawing.Point(578, 0);
+            this.panel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(448, 464);
+            this.panel28.TabIndex = 5;
+            // 
+            // panel29
+            // 
+            this.panel29.Controls.Add(this.panel32);
+            this.panel29.Controls.Add(this.panel31);
+            this.panel29.Controls.Add(this.panel30);
+            this.panel29.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.panel29.Location = new System.Drawing.Point(36, 13);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(376, 318);
+            this.panel29.TabIndex = 3;
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.txbNumberCode);
+            this.panel32.Controls.Add(this.label34);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel32.Location = new System.Drawing.Point(0, 80);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(376, 40);
+            this.panel32.TabIndex = 7;
+            // 
+            // txbNumberCode
+            // 
+            this.txbNumberCode.Location = new System.Drawing.Point(146, 8);
+            this.txbNumberCode.Name = "txbNumberCode";
+            this.txbNumberCode.Size = new System.Drawing.Size(190, 24);
+            this.txbNumberCode.TabIndex = 1;
+            this.txbNumberCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(16, 10);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(119, 17);
+            this.label34.TabIndex = 0;
+            this.label34.Text = "Số Lần Sử Dụng";
+            // 
+            // panel31
+            // 
+            this.panel31.Controls.Add(this.cbbDRate);
+            this.panel31.Controls.Add(this.label33);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel31.Location = new System.Drawing.Point(0, 40);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(376, 40);
+            this.panel31.TabIndex = 6;
+            // 
+            // cbbDRate
+            // 
+            this.cbbDRate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbbDRate.FormattingEnabled = true;
+            this.cbbDRate.Items.AddRange(new object[] {
+            "0",
+            "0,05",
+            "0,1",
+            "0,15",
+            "0,2",
+            "0,25",
+            "0,3",
+            "0,35",
+            "0,4",
+            "0,45",
+            "0,5"});
+            this.cbbDRate.Location = new System.Drawing.Point(146, 9);
+            this.cbbDRate.Name = "cbbDRate";
+            this.cbbDRate.Size = new System.Drawing.Size(190, 25);
+            this.cbbDRate.TabIndex = 2;
+            this.cbbDRate.Text = "0%";
+            this.cbbDRate.SelectedIndexChanged += new System.EventHandler(this.cbbDRate_SelectedIndexChanged_1);
+            this.cbbDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCanNotChange_KeyPress);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(16, 10);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(75, 17);
+            this.label33.TabIndex = 0;
+            this.label33.Text = "Mức Giảm";
+            // 
+            // panel30
+            // 
+            this.panel30.Controls.Add(this.txbDCode);
+            this.panel30.Controls.Add(this.label32);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel30.Location = new System.Drawing.Point(0, 0);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(376, 40);
+            this.panel30.TabIndex = 5;
+            // 
+            // txbDCode
+            // 
+            this.txbDCode.Location = new System.Drawing.Point(146, 8);
+            this.txbDCode.Name = "txbDCode";
+            this.txbDCode.Size = new System.Drawing.Size(190, 24);
+            this.txbDCode.TabIndex = 1;
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(16, 10);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(68, 17);
+            this.label32.TabIndex = 0;
+            this.label32.Text = "Mã Code";
+            // 
+            // panel35
+            // 
+            this.panel35.Controls.Add(this.btnShowCode);
+            this.panel35.Controls.Add(this.btnEditCode);
+            this.panel35.Controls.Add(this.btnDeleteCode);
+            this.panel35.Controls.Add(this.btnAddCode);
+            this.panel35.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.panel35.Location = new System.Drawing.Point(36, 372);
+            this.panel35.Name = "panel35";
+            this.panel35.Size = new System.Drawing.Size(376, 59);
+            this.panel35.TabIndex = 1;
+            // 
+            // btnShowCode
+            // 
+            this.btnShowCode.Location = new System.Drawing.Point(297, 0);
+            this.btnShowCode.Name = "btnShowCode";
+            this.btnShowCode.Size = new System.Drawing.Size(79, 56);
+            this.btnShowCode.TabIndex = 1;
+            this.btnShowCode.Text = "Xem";
+            this.btnShowCode.UseVisualStyleBackColor = true;
+            this.btnShowCode.Click += new System.EventHandler(this.btnShowCode_Click);
+            // 
+            // btnEditCode
+            // 
+            this.btnEditCode.Location = new System.Drawing.Point(202, 1);
+            this.btnEditCode.Name = "btnEditCode";
+            this.btnEditCode.Size = new System.Drawing.Size(79, 56);
+            this.btnEditCode.TabIndex = 0;
+            this.btnEditCode.Text = "Sửa";
+            this.btnEditCode.UseVisualStyleBackColor = true;
+            this.btnEditCode.Click += new System.EventHandler(this.btnEditCode_Click);
+            // 
+            // btnDeleteCode
+            // 
+            this.btnDeleteCode.Location = new System.Drawing.Point(103, 0);
+            this.btnDeleteCode.Name = "btnDeleteCode";
+            this.btnDeleteCode.Size = new System.Drawing.Size(79, 56);
+            this.btnDeleteCode.TabIndex = 0;
+            this.btnDeleteCode.Text = "Xóa ";
+            this.btnDeleteCode.UseVisualStyleBackColor = true;
+            this.btnDeleteCode.Click += new System.EventHandler(this.btnDeleteCode_Click);
+            // 
+            // btnAddCode
+            // 
+            this.btnAddCode.Location = new System.Drawing.Point(3, 1);
+            this.btnAddCode.Name = "btnAddCode";
+            this.btnAddCode.Size = new System.Drawing.Size(79, 56);
+            this.btnAddCode.TabIndex = 0;
+            this.btnAddCode.Text = "Thêm";
+            this.btnAddCode.UseVisualStyleBackColor = true;
+            this.btnAddCode.Click += new System.EventHandler(this.btnAddCode_Click);
+            // 
+            // tpSurcharge
+            // 
+            this.tpSurcharge.Controls.Add(this.panel37);
+            this.tpSurcharge.Controls.Add(this.panel36);
+            this.tpSurcharge.Controls.Add(this.panel34);
+            this.tpSurcharge.Controls.Add(this.panel33);
+            this.tpSurcharge.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tpSurcharge.Location = new System.Drawing.Point(4, 23);
+            this.tpSurcharge.Name = "tpSurcharge";
+            this.tpSurcharge.Size = new System.Drawing.Size(1026, 464);
+            this.tpSurcharge.TabIndex = 7;
+            this.tpSurcharge.Text = "Phụ Thu";
+            this.tpSurcharge.UseVisualStyleBackColor = true;
+            // 
+            // panel37
+            // 
+            this.panel37.Controls.Add(this.btnDayofWeek);
+            this.panel37.Controls.Add(this.cbSaturday);
+            this.panel37.Controls.Add(this.cbSunday);
+            this.panel37.Controls.Add(this.cbFriday);
+            this.panel37.Controls.Add(this.cbThursday);
+            this.panel37.Controls.Add(this.cbWednesday);
+            this.panel37.Controls.Add(this.cbTuesday);
+            this.panel37.Controls.Add(this.cbMonday);
+            this.panel37.Controls.Add(this.label42);
+            this.panel37.Location = new System.Drawing.Point(7, 315);
+            this.panel37.Name = "panel37";
+            this.panel37.Size = new System.Drawing.Size(1019, 141);
+            this.panel37.TabIndex = 2;
+            // 
+            // btnDayofWeek
+            // 
+            this.btnDayofWeek.Location = new System.Drawing.Point(841, 58);
+            this.btnDayofWeek.Name = "btnDayofWeek";
+            this.btnDayofWeek.Size = new System.Drawing.Size(152, 35);
+            this.btnDayofWeek.TabIndex = 11;
+            this.btnDayofWeek.Text = "Thiết Lập";
+            this.btnDayofWeek.UseVisualStyleBackColor = true;
+            this.btnDayofWeek.Click += new System.EventHandler(this.btnDayofWeek_Click);
+            // 
+            // cbSaturday
+            // 
+            this.cbSaturday.AutoSize = true;
+            this.cbSaturday.Location = new System.Drawing.Point(545, 63);
+            this.cbSaturday.Name = "cbSaturday";
+            this.cbSaturday.Size = new System.Drawing.Size(78, 27);
+            this.cbSaturday.TabIndex = 10;
+            this.cbSaturday.Text = "Thứ 7";
+            this.cbSaturday.UseVisualStyleBackColor = true;
+            // 
+            // cbSunday
+            // 
+            this.cbSunday.AutoSize = true;
+            this.cbSunday.Location = new System.Drawing.Point(663, 63);
+            this.cbSunday.Name = "cbSunday";
+            this.cbSunday.Size = new System.Drawing.Size(109, 27);
+            this.cbSunday.TabIndex = 10;
+            this.cbSunday.Text = "Chủ Nhật";
+            this.cbSunday.UseVisualStyleBackColor = true;
+            // 
+            // cbFriday
+            // 
+            this.cbFriday.AutoSize = true;
+            this.cbFriday.Location = new System.Drawing.Point(438, 63);
+            this.cbFriday.Name = "cbFriday";
+            this.cbFriday.Size = new System.Drawing.Size(78, 27);
+            this.cbFriday.TabIndex = 9;
+            this.cbFriday.Text = "Thứ 6";
+            this.cbFriday.UseVisualStyleBackColor = true;
+            // 
+            // cbThursday
+            // 
+            this.cbThursday.AutoSize = true;
+            this.cbThursday.Location = new System.Drawing.Point(336, 63);
+            this.cbThursday.Name = "cbThursday";
+            this.cbThursday.Size = new System.Drawing.Size(78, 27);
+            this.cbThursday.TabIndex = 8;
+            this.cbThursday.Text = "Thứ 5";
+            this.cbThursday.UseVisualStyleBackColor = true;
+            // 
+            // cbWednesday
+            // 
+            this.cbWednesday.AutoSize = true;
+            this.cbWednesday.Location = new System.Drawing.Point(226, 63);
+            this.cbWednesday.Name = "cbWednesday";
+            this.cbWednesday.Size = new System.Drawing.Size(78, 27);
+            this.cbWednesday.TabIndex = 7;
+            this.cbWednesday.Text = "Thứ 4";
+            this.cbWednesday.UseVisualStyleBackColor = true;
+            // 
+            // cbTuesday
+            // 
+            this.cbTuesday.AutoSize = true;
+            this.cbTuesday.Location = new System.Drawing.Point(114, 63);
+            this.cbTuesday.Name = "cbTuesday";
+            this.cbTuesday.Size = new System.Drawing.Size(78, 27);
+            this.cbTuesday.TabIndex = 6;
+            this.cbTuesday.Text = "Thứ 3";
+            this.cbTuesday.UseVisualStyleBackColor = true;
+            // 
+            // cbMonday
+            // 
+            this.cbMonday.AutoSize = true;
+            this.cbMonday.Location = new System.Drawing.Point(13, 63);
+            this.cbMonday.Name = "cbMonday";
+            this.cbMonday.Size = new System.Drawing.Size(78, 27);
+            this.cbMonday.TabIndex = 5;
+            this.cbMonday.Text = "Thứ 2";
+            this.cbMonday.UseVisualStyleBackColor = true;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(442, 13);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(43, 23);
+            this.label42.TabIndex = 3;
+            this.label42.Text = "Thứ";
+            // 
+            // panel36
+            // 
+            this.panel36.Controls.Add(this.btnDay);
+            this.panel36.Controls.Add(this.dtpTo);
+            this.panel36.Controls.Add(this.label41);
+            this.panel36.Controls.Add(this.dtpFrom);
+            this.panel36.Controls.Add(this.label40);
+            this.panel36.Controls.Add(this.label39);
+            this.panel36.Location = new System.Drawing.Point(3, 182);
+            this.panel36.Name = "panel36";
+            this.panel36.Size = new System.Drawing.Size(1019, 127);
+            this.panel36.TabIndex = 1;
+            // 
+            // btnDay
+            // 
+            this.btnDay.Location = new System.Drawing.Point(844, 64);
+            this.btnDay.Name = "btnDay";
+            this.btnDay.Size = new System.Drawing.Size(152, 35);
+            this.btnDay.TabIndex = 7;
+            this.btnDay.Text = "Thiết Lập";
+            this.btnDay.UseVisualStyleBackColor = true;
+            this.btnDay.Click += new System.EventHandler(this.btnDay_Click);
+            // 
+            // dtpTo
+            // 
+            this.dtpTo.Location = new System.Drawing.Point(520, 63);
+            this.dtpTo.Name = "dtpTo";
+            this.dtpTo.Size = new System.Drawing.Size(266, 32);
+            this.dtpTo.TabIndex = 6;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(443, 70);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(44, 23);
+            this.label41.TabIndex = 5;
+            this.label41.Text = "Đến";
+            // 
+            // dtpFrom
+            // 
+            this.dtpFrom.Location = new System.Drawing.Point(139, 63);
+            this.dtpFrom.Name = "dtpFrom";
+            this.dtpFrom.Size = new System.Drawing.Size(266, 32);
+            this.dtpFrom.TabIndex = 4;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(51, 70);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(33, 23);
+            this.label40.TabIndex = 3;
+            this.label40.Text = "Từ";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(445, 10);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(53, 23);
+            this.label39.TabIndex = 2;
+            this.label39.Text = "Ngày";
+            // 
+            // panel34
+            // 
+            this.panel34.Controls.Add(this.txbMin2);
+            this.panel34.Controls.Add(this.txbHour2);
+            this.panel34.Controls.Add(this.txbMin1);
+            this.panel34.Controls.Add(this.txbHour1);
+            this.panel34.Controls.Add(this.btnHour);
+            this.panel34.Controls.Add(this.label38);
+            this.panel34.Controls.Add(this.label37);
+            this.panel34.Controls.Add(this.label36);
+            this.panel34.Location = new System.Drawing.Point(4, 91);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(1019, 85);
+            this.panel34.TabIndex = 1;
+            // 
+            // txbMin2
+            // 
+            this.txbMin2.Location = new System.Drawing.Point(649, 37);
+            this.txbMin2.Name = "txbMin2";
+            this.txbMin2.Size = new System.Drawing.Size(54, 32);
+            this.txbMin2.TabIndex = 10;
+            this.txbMin2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMinutes_KeyPress);
+            // 
+            // txbHour2
+            // 
+            this.txbHour2.Location = new System.Drawing.Point(572, 37);
+            this.txbHour2.Name = "txbHour2";
+            this.txbHour2.Size = new System.Drawing.Size(54, 32);
+            this.txbHour2.TabIndex = 9;
+            this.txbHour2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbHour_KeyUp);
+            // 
+            // txbMin1
+            // 
+            this.txbMin1.Location = new System.Drawing.Point(253, 37);
+            this.txbMin1.Name = "txbMin1";
+            this.txbMin1.Size = new System.Drawing.Size(54, 32);
+            this.txbMin1.TabIndex = 8;
+            this.txbMin1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMinutes_KeyPress);
+            // 
+            // txbHour1
+            // 
+            this.txbHour1.Location = new System.Drawing.Point(171, 37);
+            this.txbHour1.Name = "txbHour1";
+            this.txbHour1.Size = new System.Drawing.Size(54, 32);
+            this.txbHour1.TabIndex = 7;
+            this.txbHour1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbHour_KeyUp);
+            // 
+            // btnHour
+            // 
+            this.btnHour.Location = new System.Drawing.Point(844, 34);
+            this.btnHour.Name = "btnHour";
+            this.btnHour.Size = new System.Drawing.Size(152, 35);
+            this.btnHour.TabIndex = 6;
+            this.btnHour.Text = "Thiết Lập";
+            this.btnHour.UseVisualStyleBackColor = true;
+            this.btnHour.Click += new System.EventHandler(this.btnHour_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(443, 40);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(44, 23);
+            this.label38.TabIndex = 4;
+            this.label38.Text = "Đến";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(51, 40);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(33, 23);
+            this.label37.TabIndex = 2;
+            this.label37.Text = "Từ";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(445, 9);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(42, 23);
+            this.label36.TabIndex = 1;
+            this.label36.Text = "Giờ";
+            // 
+            // panel33
+            // 
+            this.panel33.Controls.Add(this.btnChooseSurCharge);
+            this.panel33.Controls.Add(this.cbDayofWeek);
+            this.panel33.Controls.Add(this.cbDay);
+            this.panel33.Controls.Add(this.cbHour);
+            this.panel33.Controls.Add(this.label35);
+            this.panel33.Location = new System.Drawing.Point(4, 3);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(1019, 82);
+            this.panel33.TabIndex = 0;
+            // 
+            // btnChooseSurCharge
+            // 
+            this.btnChooseSurCharge.Location = new System.Drawing.Point(844, 24);
+            this.btnChooseSurCharge.Name = "btnChooseSurCharge";
+            this.btnChooseSurCharge.Size = new System.Drawing.Size(152, 35);
+            this.btnChooseSurCharge.TabIndex = 4;
+            this.btnChooseSurCharge.Text = "Thiết Lập";
+            this.btnChooseSurCharge.UseVisualStyleBackColor = true;
+            this.btnChooseSurCharge.Click += new System.EventHandler(this.btnChooseSurCharge_Click);
+            // 
+            // cbDayofWeek
+            // 
+            this.cbDayofWeek.AutoSize = true;
+            this.cbDayofWeek.Location = new System.Drawing.Point(582, 29);
+            this.cbDayofWeek.Name = "cbDayofWeek";
+            this.cbDayofWeek.Size = new System.Drawing.Size(67, 27);
+            this.cbDayofWeek.TabIndex = 3;
+            this.cbDayofWeek.Text = "Thứ ";
+            this.cbDayofWeek.UseVisualStyleBackColor = true;
+            // 
+            // cbDay
+            // 
+            this.cbDay.AutoSize = true;
+            this.cbDay.Location = new System.Drawing.Point(397, 29);
+            this.cbDay.Name = "cbDay";
+            this.cbDay.Size = new System.Drawing.Size(72, 27);
+            this.cbDay.TabIndex = 2;
+            this.cbDay.Text = "Ngày";
+            this.cbDay.UseVisualStyleBackColor = true;
+            // 
+            // cbHour
+            // 
+            this.cbHour.AutoSize = true;
+            this.cbHour.Location = new System.Drawing.Point(218, 29);
+            this.cbHour.Name = "cbHour";
+            this.cbHour.Size = new System.Drawing.Size(61, 27);
+            this.cbHour.TabIndex = 1;
+            this.cbHour.Text = "Giờ";
+            this.cbHour.UseVisualStyleBackColor = true;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(16, 30);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(128, 23);
+            this.label35.TabIndex = 0;
+            this.label35.Text = "Phụ Thu Theo";
+            // 
+            // tpRevenue
+            // 
+            this.tpRevenue.Controls.Add(this.panel24);
+            this.tpRevenue.Controls.Add(this.panel23);
+            this.tpRevenue.Controls.Add(this.panel18);
+            this.tpRevenue.Location = new System.Drawing.Point(4, 23);
+            this.tpRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpRevenue.Name = "tpRevenue";
+            this.tpRevenue.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tpRevenue.Size = new System.Drawing.Size(1026, 464);
+            this.tpRevenue.TabIndex = 3;
+            this.tpRevenue.Text = "Doanh Thu";
+            this.tpRevenue.UseVisualStyleBackColor = true;
             // 
             // panel24
             // 
@@ -935,6 +1603,16 @@
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(1020, 40);
             this.panel24.TabIndex = 3;
+            // 
+            // btnToFile
+            // 
+            this.btnToFile.Location = new System.Drawing.Point(0, 8);
+            this.btnToFile.Name = "btnToFile";
+            this.btnToFile.Size = new System.Drawing.Size(75, 23);
+            this.btnToFile.TabIndex = 2;
+            this.btnToFile.Text = "Xuất File";
+            this.btnToFile.UseVisualStyleBackColor = true;
+            this.btnToFile.Click += new System.EventHandler(this.btnToFile_Click);
             // 
             // txbTotalBill
             // 
@@ -1020,203 +1698,80 @@
             this.btnTotalBill.UseVisualStyleBackColor = true;
             this.btnTotalBill.Click += new System.EventHandler(this.btnTotalBill_Click);
             // 
-            // tabPage2
+            // tpSetting
             // 
-            this.tabPage2.Controls.Add(this.txbSurcharge);
-            this.tabPage2.Controls.Add(this.label31);
-            this.tabPage2.Controls.Add(this.label30);
-            this.tabPage2.Controls.Add(this.cbbTimeEndH);
-            this.tabPage2.Controls.Add(this.cbbTimeEndM);
-            this.tabPage2.Controls.Add(this.cbbTimeStartM);
-            this.tabPage2.Controls.Add(this.cbbTimeStartH);
-            this.tabPage2.Controls.Add(this.label27);
-            this.tabPage2.Controls.Add(this.label15);
-            this.tabPage2.Controls.Add(this.txbMoneyDiscount);
-            this.tabPage2.Controls.Add(this.label26);
-            this.tabPage2.Controls.Add(this.btnDone);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Controls.Add(this.txbTableNumber);
-            this.tabPage2.Controls.Add(this.txbByeText);
-            this.tabPage2.Controls.Add(this.txbPhoneNumber);
-            this.tabPage2.Controls.Add(this.txbSlogan);
-            this.tabPage2.Controls.Add(this.txbEncouragement);
-            this.tabPage2.Controls.Add(this.txbAddress);
-            this.tabPage2.Controls.Add(this.txbWifiPassword);
-            this.tabPage2.Controls.Add(this.txbWifi);
-            this.tabPage2.Controls.Add(this.txbShopName);
-            this.tabPage2.Controls.Add(this.label16);
-            this.tabPage2.Controls.Add(this.label17);
-            this.tabPage2.Controls.Add(this.label18);
-            this.tabPage2.Controls.Add(this.label19);
-            this.tabPage2.Controls.Add(this.label20);
-            this.tabPage2.Controls.Add(this.label21);
-            this.tabPage2.Controls.Add(this.label22);
-            this.tabPage2.Controls.Add(this.label23);
-            this.tabPage2.Controls.Add(this.label24);
-            this.tabPage2.Controls.Add(this.label25);
-            this.tabPage2.Controls.Add(this.cbDiscount);
-            this.tabPage2.Location = new System.Drawing.Point(4, 23);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(1026, 464);
-            this.tabPage2.TabIndex = 4;
-            this.tabPage2.Text = "Quán";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // txbSurcharge
-            // 
-            this.txbSurcharge.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbSurcharge.Location = new System.Drawing.Point(842, 107);
-            this.txbSurcharge.Name = "txbSurcharge";
-            this.txbSurcharge.Size = new System.Drawing.Size(163, 26);
-            this.txbSurcharge.TabIndex = 56;
-            this.txbSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumTable_KeyPress);
-            // 
-            // label31
-            // 
-            this.label31.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label31.Location = new System.Drawing.Point(717, 109);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(119, 25);
-            this.label31.TabIndex = 55;
-            this.label31.Text = "Tiền Phụ Thu";
+            this.tpSetting.Controls.Add(this.label30);
+            this.tpSetting.Controls.Add(this.txbVipCost);
+            this.tpSetting.Controls.Add(this.label27);
+            this.tpSetting.Controls.Add(this.txbSurcharge);
+            this.tpSetting.Controls.Add(this.label15);
+            this.tpSetting.Controls.Add(this.txbMoneyDiscount);
+            this.tpSetting.Controls.Add(this.label26);
+            this.tpSetting.Controls.Add(this.btnDone);
+            this.tpSetting.Controls.Add(this.btnRestore);
+            this.tpSetting.Controls.Add(this.txbTableNumber);
+            this.tpSetting.Controls.Add(this.txbByeText);
+            this.tpSetting.Controls.Add(this.txbPhoneNumber);
+            this.tpSetting.Controls.Add(this.txbSlogan);
+            this.tpSetting.Controls.Add(this.txbEncouragement);
+            this.tpSetting.Controls.Add(this.txbAddress);
+            this.tpSetting.Controls.Add(this.txbWifiPassword);
+            this.tpSetting.Controls.Add(this.txbWifi);
+            this.tpSetting.Controls.Add(this.txbShopName);
+            this.tpSetting.Controls.Add(this.label16);
+            this.tpSetting.Controls.Add(this.label17);
+            this.tpSetting.Controls.Add(this.label18);
+            this.tpSetting.Controls.Add(this.label19);
+            this.tpSetting.Controls.Add(this.label20);
+            this.tpSetting.Controls.Add(this.label21);
+            this.tpSetting.Controls.Add(this.label22);
+            this.tpSetting.Controls.Add(this.label23);
+            this.tpSetting.Controls.Add(this.label24);
+            this.tpSetting.Controls.Add(this.label25);
+            this.tpSetting.Controls.Add(this.cbDiscount);
+            this.tpSetting.Location = new System.Drawing.Point(4, 23);
+            this.tpSetting.Name = "tpSetting";
+            this.tpSetting.Size = new System.Drawing.Size(1026, 464);
+            this.tpSetting.TabIndex = 4;
+            this.tpSetting.Text = "Quán";
+            this.tpSetting.UseVisualStyleBackColor = true;
+            this.tpSetting.Click += new System.EventHandler(this.tabPage2_Click);
             // 
             // label30
             // 
             this.label30.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label30.Location = new System.Drawing.Point(461, 108);
+            this.label30.Location = new System.Drawing.Point(554, 116);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(53, 25);
-            this.label30.TabIndex = 54;
-            this.label30.Text = "-->";
-            this.label30.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label30.Size = new System.Drawing.Size(150, 25);
+            this.label30.TabIndex = 59;
+            this.label30.Text = "Tiền Phòng Vip:";
             // 
-            // cbbTimeEndH
+            // txbVipCost
             // 
-            this.cbbTimeEndH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbbTimeEndH.FormattingEnabled = true;
-            this.cbbTimeEndH.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24"});
-            this.cbbTimeEndH.Location = new System.Drawing.Point(529, 104);
-            this.cbbTimeEndH.Name = "cbbTimeEndH";
-            this.cbbTimeEndH.Size = new System.Drawing.Size(79, 31);
-            this.cbbTimeEndH.TabIndex = 53;
-            this.cbbTimeEndH.Text = "0";
-            this.cbbTimeEndH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // cbbTimeEndM
-            // 
-            this.cbbTimeEndM.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbbTimeEndM.FormattingEnabled = true;
-            this.cbbTimeEndM.Items.AddRange(new object[] {
-            "0%",
-            "5%",
-            "10%",
-            "15%",
-            "20%",
-            "25%",
-            "30%",
-            "35%",
-            "40%",
-            "50%"});
-            this.cbbTimeEndM.Location = new System.Drawing.Point(620, 105);
-            this.cbbTimeEndM.Name = "cbbTimeEndM";
-            this.cbbTimeEndM.Size = new System.Drawing.Size(79, 31);
-            this.cbbTimeEndM.TabIndex = 52;
-            this.cbbTimeEndM.Text = "0%";
-            this.cbbTimeEndM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // cbbTimeStartM
-            // 
-            this.cbbTimeStartM.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbbTimeStartM.FormattingEnabled = true;
-            this.cbbTimeStartM.Items.AddRange(new object[] {
-            "0%",
-            "5%",
-            "10%",
-            "15%",
-            "20%",
-            "25%",
-            "30%",
-            "35%",
-            "40%",
-            "50%"});
-            this.cbbTimeStartM.Location = new System.Drawing.Point(371, 102);
-            this.cbbTimeStartM.Name = "cbbTimeStartM";
-            this.cbbTimeStartM.Size = new System.Drawing.Size(79, 31);
-            this.cbbTimeStartM.TabIndex = 50;
-            this.cbbTimeStartM.Text = "0%";
-            this.cbbTimeStartM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // cbbTimeStartH
-            // 
-            this.cbbTimeStartH.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbbTimeStartH.FormattingEnabled = true;
-            this.cbbTimeStartH.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24"});
-            this.cbbTimeStartH.Location = new System.Drawing.Point(278, 102);
-            this.cbbTimeStartH.Name = "cbbTimeStartH";
-            this.cbbTimeStartH.Size = new System.Drawing.Size(79, 31);
-            this.cbbTimeStartH.TabIndex = 49;
-            this.cbbTimeStartH.Text = "0";
-            this.cbbTimeStartH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
+            this.txbVipCost.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbVipCost.Location = new System.Drawing.Point(737, 114);
+            this.txbVipCost.Name = "txbVipCost";
+            this.txbVipCost.Size = new System.Drawing.Size(224, 26);
+            this.txbVipCost.TabIndex = 58;
+            this.txbVipCost.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
             // 
             // label27
             // 
             this.label27.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label27.Location = new System.Drawing.Point(28, 107);
+            this.label27.Location = new System.Drawing.Point(76, 116);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(244, 25);
-            this.label27.TabIndex = 48;
-            this.label27.Text = "Thời Gian Phụ Thu Qua Đêm";
+            this.label27.Size = new System.Drawing.Size(150, 25);
+            this.label27.TabIndex = 57;
+            this.label27.Text = "Tiền Phụ Thu";
+            // 
+            // txbSurcharge
+            // 
+            this.txbSurcharge.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbSurcharge.Location = new System.Drawing.Point(232, 114);
+            this.txbSurcharge.Name = "txbSurcharge";
+            this.txbSurcharge.Size = new System.Drawing.Size(224, 26);
+            this.txbSurcharge.TabIndex = 56;
+            this.txbSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
             // 
             // label15
             // 
@@ -1234,7 +1789,7 @@
             this.txbMoneyDiscount.Name = "txbMoneyDiscount";
             this.txbMoneyDiscount.Size = new System.Drawing.Size(224, 26);
             this.txbMoneyDiscount.TabIndex = 46;
-            this.txbMoneyDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumTable_KeyPress);
+            this.txbMoneyDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
             // 
             // label26
             // 
@@ -1252,20 +1807,20 @@
             this.btnDone.Name = "btnDone";
             this.btnDone.Size = new System.Drawing.Size(143, 36);
             this.btnDone.TabIndex = 44;
-            this.btnDone.Text = "Xong";
+            this.btnDone.Text = "Thiết Lập";
             this.btnDone.UseVisualStyleBackColor = true;
             this.btnDone.Click += new System.EventHandler(this.buttonDone_Click);
             // 
-            // button2
+            // btnRestore
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(554, 420);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(145, 36);
-            this.button2.TabIndex = 43;
-            this.button2.Text = "Khôi Phục";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnRestore.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnRestore.Location = new System.Drawing.Point(554, 420);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(145, 36);
+            this.btnRestore.TabIndex = 43;
+            this.btnRestore.Text = "Khôi Phục";
+            this.btnRestore.UseVisualStyleBackColor = true;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
             // 
             // txbTableNumber
             // 
@@ -1274,7 +1829,7 @@
             this.txbTableNumber.Name = "txbTableNumber";
             this.txbTableNumber.Size = new System.Drawing.Size(224, 26);
             this.txbTableNumber.TabIndex = 42;
-            this.txbTableNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumTable_KeyPress);
+            this.txbTableNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
             // 
             // txbByeText
             // 
@@ -1291,6 +1846,7 @@
             this.txbPhoneNumber.Name = "txbPhoneNumber";
             this.txbPhoneNumber.Size = new System.Drawing.Size(224, 26);
             this.txbPhoneNumber.TabIndex = 40;
+            this.txbPhoneNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumOnly_KeyPress);
             // 
             // txbSlogan
             // 
@@ -1453,322 +2009,7 @@
             this.cbDiscount.TabIndex = 1;
             this.cbDiscount.Text = "0%";
             this.cbDiscount.SelectedIndexChanged += new System.EventHandler(this.cbDiscount_SelectedIndexChanged);
-            this.cbDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.btnReset);
-            this.tabPage3.Controls.Add(this.btnDoneTable);
-            this.tabPage3.Controls.Add(this.txbTableName);
-            this.tabPage3.Controls.Add(this.rdVip);
-            this.tabPage3.Controls.Add(this.rdNormal);
-            this.tabPage3.Controls.Add(this.label29);
-            this.tabPage3.Controls.Add(this.label28);
-            this.tabPage3.Controls.Add(this.lbTable);
-            this.tabPage3.Controls.Add(this.flpTable);
-            this.tabPage3.Location = new System.Drawing.Point(4, 23);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1026, 464);
-            this.tabPage3.TabIndex = 5;
-            this.tabPage3.Text = "Bàn";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btnReset
-            // 
-            this.btnReset.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReset.Location = new System.Drawing.Point(881, 337);
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(119, 44);
-            this.btnReset.TabIndex = 53;
-            this.btnReset.Text = "Khôi Phục";
-            this.btnReset.UseVisualStyleBackColor = true;
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // btnDoneTable
-            // 
-            this.btnDoneTable.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDoneTable.Location = new System.Drawing.Point(685, 337);
-            this.btnDoneTable.Name = "btnDoneTable";
-            this.btnDoneTable.Size = new System.Drawing.Size(119, 44);
-            this.btnDoneTable.TabIndex = 52;
-            this.btnDoneTable.Text = "Xong";
-            this.btnDoneTable.UseVisualStyleBackColor = true;
-            this.btnDoneTable.Click += new System.EventHandler(this.buttDone_Click);
-            // 
-            // txbTableName
-            // 
-            this.txbTableName.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbTableName.Location = new System.Drawing.Point(838, 140);
-            this.txbTableName.Name = "txbTableName";
-            this.txbTableName.Size = new System.Drawing.Size(180, 32);
-            this.txbTableName.TabIndex = 51;
-            // 
-            // rdVip
-            // 
-            this.rdVip.AutoSize = true;
-            this.rdVip.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdVip.Location = new System.Drawing.Point(903, 259);
-            this.rdVip.Name = "rdVip";
-            this.rdVip.Size = new System.Drawing.Size(58, 27);
-            this.rdVip.TabIndex = 50;
-            this.rdVip.TabStop = true;
-            this.rdVip.Text = "Vip";
-            this.rdVip.UseVisualStyleBackColor = true;
-            // 
-            // rdNormal
-            // 
-            this.rdNormal.AutoSize = true;
-            this.rdNormal.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rdNormal.Location = new System.Drawing.Point(712, 259);
-            this.rdNormal.Name = "rdNormal";
-            this.rdNormal.Size = new System.Drawing.Size(92, 27);
-            this.rdNormal.TabIndex = 49;
-            this.rdNormal.TabStop = true;
-            this.rdNormal.Text = "Thường";
-            this.rdNormal.UseVisualStyleBackColor = true;
-            // 
-            // label29
-            // 
-            this.label29.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label29.Location = new System.Drawing.Point(657, 199);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(366, 34);
-            this.label29.TabIndex = 48;
-            this.label29.Text = "Loại";
-            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label28
-            // 
-            this.label28.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(657, 137);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(147, 34);
-            this.label28.TabIndex = 47;
-            this.label28.Text = "Tên Bàn";
-            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbTable
-            // 
-            this.lbTable.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.lbTable.Location = new System.Drawing.Point(657, 3);
-            this.lbTable.Name = "lbTable";
-            this.lbTable.Size = new System.Drawing.Size(366, 92);
-            this.lbTable.TabIndex = 46;
-            this.lbTable.Text = "Tên Bàn";
-            this.lbTable.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // flpTable
-            // 
-            this.flpTable.AutoScroll = true;
-            this.flpTable.Location = new System.Drawing.Point(3, 3);
-            this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(648, 458);
-            this.flpTable.TabIndex = 45;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dtgvCode);
-            this.tabPage4.Controls.Add(this.panel28);
-            this.tabPage4.Location = new System.Drawing.Point(4, 23);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1026, 464);
-            this.tabPage4.TabIndex = 6;
-            this.tabPage4.Text = "Code";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // dtgvCode
-            // 
-            this.dtgvCode.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dtgvCode.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtgvCode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvCode.Location = new System.Drawing.Point(3, 1);
-            this.dtgvCode.Name = "dtgvCode";
-            this.dtgvCode.RowHeadersWidth = 51;
-            this.dtgvCode.RowTemplate.Height = 24;
-            this.dtgvCode.Size = new System.Drawing.Size(569, 460);
-            this.dtgvCode.TabIndex = 6;
-            // 
-            // panel28
-            // 
-            this.panel28.Controls.Add(this.panel29);
-            this.panel28.Controls.Add(this.panel35);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel28.Location = new System.Drawing.Point(578, 0);
-            this.panel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(448, 464);
-            this.panel28.TabIndex = 5;
-            // 
-            // panel29
-            // 
-            this.panel29.Controls.Add(this.panel32);
-            this.panel29.Controls.Add(this.panel31);
-            this.panel29.Controls.Add(this.panel30);
-            this.panel29.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panel29.Location = new System.Drawing.Point(36, 13);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(376, 318);
-            this.panel29.TabIndex = 3;
-            // 
-            // panel32
-            // 
-            this.panel32.Controls.Add(this.txbNumberCode);
-            this.panel32.Controls.Add(this.label34);
-            this.panel32.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel32.Location = new System.Drawing.Point(0, 80);
-            this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(376, 40);
-            this.panel32.TabIndex = 7;
-            // 
-            // txbNumberCode
-            // 
-            this.txbNumberCode.Location = new System.Drawing.Point(146, 8);
-            this.txbNumberCode.Name = "txbNumberCode";
-            this.txbNumberCode.Size = new System.Drawing.Size(190, 24);
-            this.txbNumberCode.TabIndex = 1;
-            this.txbNumberCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbNumTable_KeyPress);
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(16, 10);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(119, 17);
-            this.label34.TabIndex = 0;
-            this.label34.Text = "Số Lần Sử Dụng";
-            // 
-            // panel31
-            // 
-            this.panel31.Controls.Add(this.cbbDRate);
-            this.panel31.Controls.Add(this.label33);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel31.Location = new System.Drawing.Point(0, 40);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(376, 40);
-            this.panel31.TabIndex = 6;
-            // 
-            // cbbDRate
-            // 
-            this.cbbDRate.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbbDRate.FormattingEnabled = true;
-            this.cbbDRate.Items.AddRange(new object[] {
-            "0",
-            "0,05",
-            "0,1",
-            "0,15",
-            "0,2",
-            "0,25",
-            "0,3",
-            "0,35",
-            "0,4",
-            "0,45",
-            "0,5"});
-            this.cbbDRate.Location = new System.Drawing.Point(146, 9);
-            this.cbbDRate.Name = "cbbDRate";
-            this.cbbDRate.Size = new System.Drawing.Size(190, 25);
-            this.cbbDRate.TabIndex = 2;
-            this.cbbDRate.Text = "0%";
-            this.cbbDRate.SelectedIndexChanged += new System.EventHandler(this.cbbDRate_SelectedIndexChanged_1);
-            this.cbbDRate.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.comboBox1_KeyPress);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(16, 10);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(75, 17);
-            this.label33.TabIndex = 0;
-            this.label33.Text = "Mức Giảm";
-            // 
-            // panel30
-            // 
-            this.panel30.Controls.Add(this.txbDCode);
-            this.panel30.Controls.Add(this.label32);
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel30.Location = new System.Drawing.Point(0, 0);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(376, 40);
-            this.panel30.TabIndex = 5;
-            // 
-            // txbDCode
-            // 
-            this.txbDCode.Location = new System.Drawing.Point(146, 8);
-            this.txbDCode.Name = "txbDCode";
-            this.txbDCode.Size = new System.Drawing.Size(190, 24);
-            this.txbDCode.TabIndex = 1;
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(16, 10);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(68, 17);
-            this.label32.TabIndex = 0;
-            this.label32.Text = "Mã Code";
-            // 
-            // panel35
-            // 
-            this.panel35.Controls.Add(this.btnShowCode);
-            this.panel35.Controls.Add(this.btnEditCode);
-            this.panel35.Controls.Add(this.btnDeleteCode);
-            this.panel35.Controls.Add(this.btnAddCode);
-            this.panel35.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panel35.Location = new System.Drawing.Point(36, 372);
-            this.panel35.Name = "panel35";
-            this.panel35.Size = new System.Drawing.Size(376, 59);
-            this.panel35.TabIndex = 1;
-            // 
-            // btnShowCode
-            // 
-            this.btnShowCode.Location = new System.Drawing.Point(297, 0);
-            this.btnShowCode.Name = "btnShowCode";
-            this.btnShowCode.Size = new System.Drawing.Size(79, 56);
-            this.btnShowCode.TabIndex = 1;
-            this.btnShowCode.Text = "Xem";
-            this.btnShowCode.UseVisualStyleBackColor = true;
-            this.btnShowCode.Click += new System.EventHandler(this.btnShowCode_Click);
-            // 
-            // btnEditCode
-            // 
-            this.btnEditCode.Location = new System.Drawing.Point(202, 1);
-            this.btnEditCode.Name = "btnEditCode";
-            this.btnEditCode.Size = new System.Drawing.Size(79, 56);
-            this.btnEditCode.TabIndex = 0;
-            this.btnEditCode.Text = "Sửa";
-            this.btnEditCode.UseVisualStyleBackColor = true;
-            this.btnEditCode.Click += new System.EventHandler(this.btnEditCode_Click);
-            // 
-            // btnDeleteCode
-            // 
-            this.btnDeleteCode.Location = new System.Drawing.Point(103, 0);
-            this.btnDeleteCode.Name = "btnDeleteCode";
-            this.btnDeleteCode.Size = new System.Drawing.Size(79, 56);
-            this.btnDeleteCode.TabIndex = 0;
-            this.btnDeleteCode.Text = "Xóa ";
-            this.btnDeleteCode.UseVisualStyleBackColor = true;
-            this.btnDeleteCode.Click += new System.EventHandler(this.btnDeleteCode_Click);
-            // 
-            // btnAddCode
-            // 
-            this.btnAddCode.Location = new System.Drawing.Point(3, 1);
-            this.btnAddCode.Name = "btnAddCode";
-            this.btnAddCode.Size = new System.Drawing.Size(79, 56);
-            this.btnAddCode.TabIndex = 0;
-            this.btnAddCode.Text = "Thêm";
-            this.btnAddCode.UseVisualStyleBackColor = true;
-            this.btnAddCode.Click += new System.EventHandler(this.btnAddCode_Click);
-            // 
-            // btnToFile
-            // 
-            this.btnToFile.Location = new System.Drawing.Point(0, 8);
-            this.btnToFile.Name = "btnToFile";
-            this.btnToFile.Size = new System.Drawing.Size(75, 23);
-            this.btnToFile.TabIndex = 2;
-            this.btnToFile.Text = "Xuất File";
-            this.btnToFile.UseVisualStyleBackColor = true;
-            this.btnToFile.Click += new System.EventHandler(this.btnToFile_Click);
+            this.cbDiscount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCanNotChange_KeyPress);
             // 
             // fAdmin
             // 
@@ -1824,17 +2065,9 @@
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel16.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            this.panel24.PerformLayout();
-            this.panel23.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvTotalBill)).EndInit();
-            this.panel18.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
+            this.tpTable.ResumeLayout(false);
+            this.tpTable.PerformLayout();
+            this.tpDiscountCode.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCode)).EndInit();
             this.panel28.ResumeLayout(false);
             this.panel29.ResumeLayout(false);
@@ -1845,6 +2078,23 @@
             this.panel30.ResumeLayout(false);
             this.panel30.PerformLayout();
             this.panel35.ResumeLayout(false);
+            this.tpSurcharge.ResumeLayout(false);
+            this.panel37.ResumeLayout(false);
+            this.panel37.PerformLayout();
+            this.panel36.ResumeLayout(false);
+            this.panel36.PerformLayout();
+            this.panel34.ResumeLayout(false);
+            this.panel34.PerformLayout();
+            this.panel33.ResumeLayout(false);
+            this.panel33.PerformLayout();
+            this.tpRevenue.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel24.PerformLayout();
+            this.panel23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTotalBill)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.tpSetting.ResumeLayout(false);
+            this.tpSetting.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1918,7 +2168,7 @@
         private Button btnAddAccount;
         private TextBox txbType;
         private Button btnResetPassWord;
-        private TabPage tabPage1;
+        private TabPage tpRevenue;
         private Panel panel23;
         private DataGridView dtgvTotalBill;
         private Panel panel18;
@@ -1931,13 +2181,13 @@
         private Panel panel26;
         private Panel panel25;
         private Panel panel27;
-        private TabPage tabPage2;
+        private TabPage tpSetting;
         private ComboBox cbDiscount;
         private Label label15;
         private TextBox txbMoneyDiscount;
         private Label label26;
         private Button btnDone;
-        private Button button2;
+        private Button btnRestore;
         private TextBox txbTableNumber;
         private TextBox txbByeText;
         private TextBox txbPhoneNumber;
@@ -1957,7 +2207,7 @@
         private Label label23;
         private Label label24;
         private Label label25;
-        private TabPage tabPage3;
+        private TabPage tpTable;
         private FlowLayoutPanel flpTable;
         private Label lbTable;
         private TextBox txbTableName;
@@ -1965,17 +2215,10 @@
         private RadioButton rdNormal;
         private Label label29;
         private Label label28;
-        private Button btnReset;
+        private Button btnRestoreTable;
         private Button btnDoneTable;
-        private Label label30;
-        private ComboBox cbbTimeEndH;
-        private ComboBox cbbTimeEndM;
-        private ComboBox cbbTimeStartM;
-        private ComboBox cbbTimeStartH;
-        private Label label27;
         private TextBox txbSurcharge;
-        private Label label31;
-        private TabPage tabPage4;
+        private TabPage tpDiscountCode;
         private DataGridView dtgvCode;
         private Panel panel28;
         private Panel panel29;
@@ -1994,5 +2237,41 @@
         private Button btnAddCode;
         private Button btnShowCode;
         private Button btnToFile;
+        private TabPage tpSurcharge;
+        private Panel panel37;
+        private CheckBox cbSaturday;
+        private CheckBox cbSunday;
+        private CheckBox cbFriday;
+        private CheckBox cbThursday;
+        private CheckBox cbWednesday;
+        private CheckBox cbTuesday;
+        private CheckBox cbMonday;
+        private Label label42;
+        private Panel panel36;
+        private Button btnDay;
+        private DateTimePicker dtpTo;
+        private Label label41;
+        private DateTimePicker dtpFrom;
+        private Label label40;
+        private Label label39;
+        private Panel panel34;
+        private Button btnHour;
+        private Label label38;
+        private Label label37;
+        private Label label36;
+        private Panel panel33;
+        private Button btnChooseSurCharge;
+        private CheckBox cbDayofWeek;
+        private CheckBox cbDay;
+        private CheckBox cbHour;
+        private Label label35;
+        private Button btnDayofWeek;
+        private TextBox txbMin2;
+        private TextBox txbHour2;
+        private TextBox txbMin1;
+        private TextBox txbHour1;
+        private Label label30;
+        private TextBox txbVipCost;
+        private Label label27;
     }
 }

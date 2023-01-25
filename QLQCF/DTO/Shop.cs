@@ -36,9 +36,8 @@ namespace QLQCFTest.DTO
             this.ShopAddress = (string)row["ShopAddress"];
             this.PhoneNumber = (string)row["PhoneNumber"];
             this.GoodByeSentence = (string)row["GoodByeSentence"];
-            this.TimeStart = (int)row["TimeStart"];
-            this.TimeEnd = (int)row["TimeEnd"];
             this.SurCharge = (int)row["SurCharge"];
+            this.vipCost = (int)row["VipCost"];
         }
 
         public string NameShop { get => nameShop; set => nameShop = value; }
@@ -49,10 +48,9 @@ namespace QLQCFTest.DTO
         public string Encouragement { get => encouragement; set => encouragement = value; }
         public string ShopAddress { get => shopAddress; set => shopAddress = value; }
         public string PhoneNumber { get => phoneNumber; set => phoneNumber = value; }
-        public string GoodByeSentence { get => goodByeSentence; set => goodByeSentence = value; }
-        public int TimeStart { get => timeStart; set => timeStart = value; }
-        public int TimeEnd { get => timeEnd; set => timeEnd = value; }
+        public string GoodByeSentence { get => goodByeSentence; set => goodByeSentence = value; }      
         public int SurCharge { get => surCharge; set => surCharge = value; }
+        public int VipCost { get => vipCost; set => vipCost = value; }
 
         private string nameShop;
         private string wifi;
@@ -63,8 +61,7 @@ namespace QLQCFTest.DTO
         private string shopAddress;
         private string phoneNumber;
         private string goodByeSentence;
-        private int timeStart;
-        private int timeEnd;
+        private int vipCost;
         private int surCharge;
     }
 }

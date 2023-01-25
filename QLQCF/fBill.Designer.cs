@@ -70,9 +70,9 @@
             this.flpPrice = new System.Windows.Forms.FlowLayoutPanel();
             this.flpTotal = new System.Windows.Forms.FlowLayoutPanel();
             this.flpAdd = new System.Windows.Forms.FlowLayoutPanel();
-            this.lbType = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
+            this.lbType = new System.Windows.Forms.Label();
+            this.lbVND = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
@@ -479,41 +479,44 @@
             // 
             // flpAdd
             // 
-            this.flpAdd.Controls.Add(this.lbType);
             this.flpAdd.Controls.Add(this.label17);
-            this.flpAdd.Controls.Add(this.label20);
+            this.flpAdd.Controls.Add(this.lbType);
+            this.flpAdd.Controls.Add(this.lbVND);
+            this.flpAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.flpAdd.Location = new System.Drawing.Point(6, 374);
             this.flpAdd.Name = "flpAdd";
             this.flpAdd.Size = new System.Drawing.Size(487, 25);
             this.flpAdd.TabIndex = 30;
             // 
-            // lbType
-            // 
-            this.lbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbType.Location = new System.Drawing.Point(3, 0);
-            this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(166, 23);
-            this.lbType.TabIndex = 31;
-            this.lbType.Text = "Phụ Thu Máy Lạnh";
-            // 
             // label17
             // 
             this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(175, 0);
+            this.label17.Location = new System.Drawing.Point(3, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(240, 21);
+            this.label17.Size = new System.Drawing.Size(240, 30);
             this.label17.TabIndex = 30;
             this.label17.Text = "Tiền phòng";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label20
+            // lbType
             // 
-            this.label20.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(421, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(56, 23);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "VND";
+            this.lbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbType.Location = new System.Drawing.Point(249, 0);
+            this.lbType.Name = "lbType";
+            this.lbType.Size = new System.Drawing.Size(161, 30);
+            this.lbType.TabIndex = 31;
+            this.lbType.Text = "Phụ Thu Máy Lạnh";
+            this.lbType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbVND
+            // 
+            this.lbVND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbVND.Location = new System.Drawing.Point(416, 0);
+            this.lbVND.Name = "lbVND";
+            this.lbVND.Size = new System.Drawing.Size(56, 30);
+            this.lbVND.TabIndex = 32;
+            this.lbVND.Text = "VND";
+            this.lbVND.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPrint
             // 
@@ -617,7 +620,7 @@
         private FlowLayoutPanel flpAdd;
         private Label lbType;
         private Label label17;
-        private Label label20;
+        private Label lbVND;
         private Button btnPrint;
         private Panel panel3;
         private System.Drawing.Printing.PrintDocument printDocument1;
