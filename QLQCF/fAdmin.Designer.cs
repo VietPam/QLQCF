@@ -264,7 +264,7 @@
             this.tcAdmin.Controls.Add(this.tpRevenue);
             this.tcAdmin.Controls.Add(this.tpSetting);
             this.tcAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tcAdmin.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tcAdmin.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tcAdmin.Location = new System.Drawing.Point(0, 0);
             this.tcAdmin.Name = "tcAdmin";
             this.tcAdmin.SelectedIndex = 0;
@@ -275,10 +275,10 @@
             // 
             this.tpCategory.Controls.Add(this.panel2);
             this.tpCategory.Controls.Add(this.panel26);
-            this.tpCategory.Location = new System.Drawing.Point(4, 23);
+            this.tpCategory.Location = new System.Drawing.Point(4, 26);
             this.tpCategory.Name = "tpCategory";
             this.tpCategory.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCategory.Size = new System.Drawing.Size(1026, 464);
+            this.tpCategory.Size = new System.Drawing.Size(1026, 461);
             this.tpCategory.TabIndex = 0;
             this.tpCategory.Text = "Danh Mục";
             this.tpCategory.UseVisualStyleBackColor = true;
@@ -311,7 +311,7 @@
             this.panel26.Location = new System.Drawing.Point(575, 3);
             this.panel26.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(448, 458);
+            this.panel26.Size = new System.Drawing.Size(448, 455);
             this.panel26.TabIndex = 3;
             // 
             // panel3
@@ -489,10 +489,10 @@
             // 
             this.tpFood.Controls.Add(this.panel9);
             this.tpFood.Controls.Add(this.panel25);
-            this.tpFood.Location = new System.Drawing.Point(4, 23);
+            this.tpFood.Location = new System.Drawing.Point(4, 26);
             this.tpFood.Name = "tpFood";
             this.tpFood.Padding = new System.Windows.Forms.Padding(3);
-            this.tpFood.Size = new System.Drawing.Size(1026, 464);
+            this.tpFood.Size = new System.Drawing.Size(1026, 461);
             this.tpFood.TabIndex = 1;
             this.tpFood.Text = "Thức Ăn";
             this.tpFood.UseVisualStyleBackColor = true;
@@ -525,7 +525,7 @@
             this.panel25.Location = new System.Drawing.Point(575, 3);
             this.panel25.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(448, 458);
+            this.panel25.Size = new System.Drawing.Size(448, 455);
             this.panel25.TabIndex = 4;
             // 
             // panel10
@@ -729,11 +729,11 @@
             // 
             this.tpAccount.Controls.Add(this.dtgvAccount);
             this.tpAccount.Controls.Add(this.panel27);
-            this.tpAccount.Location = new System.Drawing.Point(4, 23);
+            this.tpAccount.Location = new System.Drawing.Point(4, 26);
             this.tpAccount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpAccount.Name = "tpAccount";
             this.tpAccount.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpAccount.Size = new System.Drawing.Size(1026, 464);
+            this.tpAccount.Size = new System.Drawing.Size(1026, 461);
             this.tpAccount.TabIndex = 2;
             this.tpAccount.Text = "Tài Khoản";
             this.tpAccount.UseVisualStyleBackColor = true;
@@ -748,7 +748,7 @@
             this.dtgvAccount.Name = "dtgvAccount";
             this.dtgvAccount.RowHeadersWidth = 51;
             this.dtgvAccount.RowTemplate.Height = 24;
-            this.dtgvAccount.Size = new System.Drawing.Size(569, 460);
+            this.dtgvAccount.Size = new System.Drawing.Size(569, 457);
             this.dtgvAccount.TabIndex = 1;
             // 
             // panel27
@@ -759,7 +759,7 @@
             this.panel27.Location = new System.Drawing.Point(575, 2);
             this.panel27.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(448, 460);
+            this.panel27.Size = new System.Drawing.Size(448, 457);
             this.panel27.TabIndex = 4;
             // 
             // panel17
@@ -955,9 +955,9 @@
             this.tpTable.Controls.Add(this.label28);
             this.tpTable.Controls.Add(this.lbTable);
             this.tpTable.Controls.Add(this.flpTable);
-            this.tpTable.Location = new System.Drawing.Point(4, 23);
+            this.tpTable.Location = new System.Drawing.Point(4, 26);
             this.tpTable.Name = "tpTable";
-            this.tpTable.Size = new System.Drawing.Size(1026, 464);
+            this.tpTable.Size = new System.Drawing.Size(1026, 461);
             this.tpTable.TabIndex = 5;
             this.tpTable.Text = "Bàn";
             this.tpTable.UseVisualStyleBackColor = true;
@@ -1059,9 +1059,9 @@
             // 
             this.tpDiscountCode.Controls.Add(this.dtgvCode);
             this.tpDiscountCode.Controls.Add(this.panel28);
-            this.tpDiscountCode.Location = new System.Drawing.Point(4, 23);
+            this.tpDiscountCode.Location = new System.Drawing.Point(4, 26);
             this.tpDiscountCode.Name = "tpDiscountCode";
-            this.tpDiscountCode.Size = new System.Drawing.Size(1026, 464);
+            this.tpDiscountCode.Size = new System.Drawing.Size(1026, 461);
             this.tpDiscountCode.TabIndex = 6;
             this.tpDiscountCode.Text = "Code";
             this.tpDiscountCode.UseVisualStyleBackColor = true;
@@ -1087,7 +1087,7 @@
             this.panel28.Location = new System.Drawing.Point(578, 0);
             this.panel28.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(448, 464);
+            this.panel28.Size = new System.Drawing.Size(448, 461);
             this.panel28.TabIndex = 5;
             // 
             // panel29
@@ -1256,9 +1256,9 @@
             this.tpSurcharge.Controls.Add(this.panel34);
             this.tpSurcharge.Controls.Add(this.panel33);
             this.tpSurcharge.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tpSurcharge.Location = new System.Drawing.Point(4, 23);
+            this.tpSurcharge.Location = new System.Drawing.Point(4, 26);
             this.tpSurcharge.Name = "tpSurcharge";
-            this.tpSurcharge.Size = new System.Drawing.Size(1026, 464);
+            this.tpSurcharge.Size = new System.Drawing.Size(1026, 461);
             this.tpSurcharge.TabIndex = 7;
             this.tpSurcharge.Text = "Phụ Thu";
             this.tpSurcharge.UseVisualStyleBackColor = true;
@@ -1582,11 +1582,11 @@
             this.tpRevenue.Controls.Add(this.panel24);
             this.tpRevenue.Controls.Add(this.panel23);
             this.tpRevenue.Controls.Add(this.panel18);
-            this.tpRevenue.Location = new System.Drawing.Point(4, 23);
+            this.tpRevenue.Location = new System.Drawing.Point(4, 26);
             this.tpRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpRevenue.Name = "tpRevenue";
             this.tpRevenue.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpRevenue.Size = new System.Drawing.Size(1026, 464);
+            this.tpRevenue.Size = new System.Drawing.Size(1026, 461);
             this.tpRevenue.TabIndex = 3;
             this.tpRevenue.Text = "Doanh Thu";
             this.tpRevenue.UseVisualStyleBackColor = true;
@@ -1598,7 +1598,7 @@
             this.panel24.Controls.Add(this.label10);
             this.panel24.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel24.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.panel24.Location = new System.Drawing.Point(3, 422);
+            this.panel24.Location = new System.Drawing.Point(3, 419);
             this.panel24.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel24.Name = "panel24";
             this.panel24.Size = new System.Drawing.Size(1020, 40);
@@ -1641,7 +1641,7 @@
             this.panel23.Location = new System.Drawing.Point(3, 64);
             this.panel23.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(1020, 398);
+            this.panel23.Size = new System.Drawing.Size(1020, 395);
             this.panel23.TabIndex = 2;
             // 
             // dtgvTotalBill
@@ -1655,7 +1655,7 @@
             this.dtgvTotalBill.RowHeadersWidth = 51;
             this.dtgvTotalBill.RowTemplate.Height = 29;
             this.dtgvTotalBill.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvTotalBill.Size = new System.Drawing.Size(1020, 398);
+            this.dtgvTotalBill.Size = new System.Drawing.Size(1020, 395);
             this.dtgvTotalBill.TabIndex = 0;
             // 
             // panel18
@@ -1729,9 +1729,9 @@
             this.tpSetting.Controls.Add(this.label24);
             this.tpSetting.Controls.Add(this.label25);
             this.tpSetting.Controls.Add(this.cbDiscount);
-            this.tpSetting.Location = new System.Drawing.Point(4, 23);
+            this.tpSetting.Location = new System.Drawing.Point(4, 26);
             this.tpSetting.Name = "tpSetting";
-            this.tpSetting.Size = new System.Drawing.Size(1026, 464);
+            this.tpSetting.Size = new System.Drawing.Size(1026, 461);
             this.tpSetting.TabIndex = 4;
             this.tpSetting.Text = "Quán";
             this.tpSetting.UseVisualStyleBackColor = true;
@@ -2015,6 +2015,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.ClientSize = new System.Drawing.Size(1034, 491);
             this.Controls.Add(this.tcAdmin);
             this.Name = "fAdmin";

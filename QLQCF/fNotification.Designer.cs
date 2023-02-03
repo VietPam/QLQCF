@@ -272,7 +272,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fNotification";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Notification";
+            this.Text = "Thông Báo";
             this.Load += new System.EventHandler(this.fNotification_Load);
             this.tabControl1.ResumeLayout(false);
             this.flpPlaying.ResumeLayout(false);

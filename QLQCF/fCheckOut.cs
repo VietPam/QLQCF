@@ -73,7 +73,7 @@ namespace QLQCFTest
                            DiscountCodeDAO.Instance.UpdateCode((txbCode.Tag).ToString());
                         
                         }
-                        fBill fbill = new fBill(table, Convert.ToInt32(txbMoney.Text), type, ftableManager,acc,Convert.ToInt32(textBox1.Text));
+                        fBill fbill = new fBill(table, Convert.ToInt32(txbMoney.Text), type, ftableManager,acc,Convert.ToInt32(txbNumSurcharge.Text));
                         fbill.ShowDialog();
                         this.Close();
                     }
@@ -123,7 +123,7 @@ namespace QLQCFTest
             {
                 lbMoney.Text = (money - money * rate).ToString();              
                 Shop shop = ShopDAO.Instance.GetShop();
-                lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(textBox1.Text)).ToString();
+                lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
                 txbCode.Tag =txbCode.Text;
             }
         }
@@ -151,15 +151,20 @@ namespace QLQCFTest
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnNumSurcharge_Click(object sender, EventArgs e)
         {
-            panel3.Visible = false; 
-            panel2.Visible = true;
-            panel1.Visible = true;
-            this.Size = new Size(449, 484);
-            Shop shop=ShopDAO.Instance.GetShop();
-            lbMoney.Text=(Convert.ToInt32(lbMoney.Text)+Convert.ToInt32(shop.SurCharge)* Convert.ToInt32(textBox1.Text)).ToString();
-            this.AcceptButton = btnCheckOut;
+            int num = -1;
+            int.TryParse(txbNumSurcharge.Text, out num);
+            if (num >= 0)
+            {
+                panel3.Visible = false;
+                panel2.Visible = true;
+                panel1.Visible = true;
+                this.Size = new Size(449, 484);
+                Shop shop = ShopDAO.Instance.GetShop();
+                lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
+                this.AcceptButton = btnCheckOut;
+            }
         }
 
         private bool CheckSurcharge(Surcharge sur)
@@ -199,10 +204,7 @@ namespace QLQCFTest
                     }
                 }
                 if (flag != -1)
-                {
-                    if (sur.DateOfWeek[flag] == '1')
-                        return true;
-                }
+                    return true;
             }
             return false;
             

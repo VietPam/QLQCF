@@ -34,7 +34,6 @@
             this.lbTableName = new System.Windows.Forms.Label();
             this.lbAddress = new System.Windows.Forms.Label();
             this.lbDisplayAccount = new System.Windows.Forms.Label();
-            this.lbPhoneNumber = new System.Windows.Forms.Label();
             this.lbIDBill = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -42,6 +41,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.lbShopName = new System.Windows.Forms.Label();
+            this.lbPhoneNumber = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -91,7 +91,6 @@
             this.panel1.Controls.Add(this.lbTableName);
             this.panel1.Controls.Add(this.lbAddress);
             this.panel1.Controls.Add(this.lbDisplayAccount);
-            this.panel1.Controls.Add(this.lbPhoneNumber);
             this.panel1.Controls.Add(this.lbIDBill);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label10);
@@ -107,7 +106,7 @@
             // lbDateIn
             // 
             this.lbDateIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDateIn.Location = new System.Drawing.Point(172, 237);
+            this.lbDateIn.Location = new System.Drawing.Point(251, 237);
             this.lbDateIn.Name = "lbDateIn";
             this.lbDateIn.Size = new System.Drawing.Size(194, 23);
             this.lbDateIn.TabIndex = 17;
@@ -116,7 +115,7 @@
             // lbTableName
             // 
             this.lbTableName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTableName.Location = new System.Drawing.Point(172, 205);
+            this.lbTableName.Location = new System.Drawing.Point(251, 205);
             this.lbTableName.Name = "lbTableName";
             this.lbTableName.Size = new System.Drawing.Size(100, 23);
             this.lbTableName.TabIndex = 16;
@@ -125,7 +124,7 @@
             // lbAddress
             // 
             this.lbAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbAddress.Location = new System.Drawing.Point(4, 117);
+            this.lbAddress.Location = new System.Drawing.Point(1, 113);
             this.lbAddress.Name = "lbAddress";
             this.lbAddress.Size = new System.Drawing.Size(486, 23);
             this.lbAddress.TabIndex = 26;
@@ -141,16 +140,6 @@
             this.lbDisplayAccount.TabIndex = 15;
             this.lbDisplayAccount.Text = "Tên Người Thanh Toán";
             // 
-            // lbPhoneNumber
-            // 
-            this.lbPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPhoneNumber.Location = new System.Drawing.Point(5, 90);
-            this.lbPhoneNumber.Name = "lbPhoneNumber";
-            this.lbPhoneNumber.Size = new System.Drawing.Size(486, 23);
-            this.lbPhoneNumber.TabIndex = 25;
-            this.lbPhoneNumber.Text = "Số Điện Thoại";
-            this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lbIDBill
             // 
             this.lbIDBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -163,7 +152,7 @@
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(21, 237);
+            this.label9.Location = new System.Drawing.Point(13, 237);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(98, 23);
             this.label9.TabIndex = 12;
@@ -181,7 +170,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(21, 205);
+            this.label11.Location = new System.Drawing.Point(13, 205);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(98, 23);
             this.label11.TabIndex = 10;
@@ -216,6 +205,16 @@
             this.lbShopName.Text = "Coffe Shop";
             this.lbShopName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lbPhoneNumber
+            // 
+            this.lbPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbPhoneNumber.Location = new System.Drawing.Point(3, 231);
+            this.lbPhoneNumber.Name = "lbPhoneNumber";
+            this.lbPhoneNumber.Size = new System.Drawing.Size(486, 23);
+            this.lbPhoneNumber.TabIndex = 25;
+            this.lbPhoneNumber.Text = "Mọi Góp Ý Xin Vui Lòng Liên Hệ";
+            this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.label5);
@@ -230,7 +229,7 @@
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(393, 9);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 23);
@@ -239,7 +238,7 @@
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(293, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 23);
@@ -248,7 +247,7 @@
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(189, 9);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(98, 23);
@@ -257,7 +256,7 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.Location = new System.Drawing.Point(85, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(98, 23);
@@ -266,7 +265,7 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(98, 23);
@@ -279,6 +278,7 @@
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.lbCode);
             this.panel4.Controls.Add(this.lbMoneyType);
+            this.panel4.Controls.Add(this.lbPhoneNumber);
             this.panel4.Controls.Add(this.lbMoneyBack);
             this.panel4.Controls.Add(this.lbMoneyReceive);
             this.panel4.Controls.Add(this.lbTotalPrice);
@@ -291,7 +291,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(4, 400);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(492, 256);
+            this.panel4.Size = new System.Drawing.Size(492, 275);
             this.panel4.TabIndex = 10;
             // 
             // label16
@@ -315,7 +315,7 @@
             // lbCode
             // 
             this.lbCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCode.Location = new System.Drawing.Point(0, 227);
+            this.lbCode.Location = new System.Drawing.Point(0, 252);
             this.lbCode.Name = "lbCode";
             this.lbCode.Size = new System.Drawing.Size(491, 23);
             this.lbCode.TabIndex = 19;
@@ -364,7 +364,7 @@
             // lbByeText
             // 
             this.lbByeText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbByeText.Location = new System.Drawing.Point(3, 196);
+            this.lbByeText.Location = new System.Drawing.Point(4, 208);
             this.lbByeText.Name = "lbByeText";
             this.lbByeText.Size = new System.Drawing.Size(484, 23);
             this.lbByeText.TabIndex = 20;
@@ -374,7 +374,7 @@
             // lbWifiPassWord
             // 
             this.lbWifiPassWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbWifiPassWord.Location = new System.Drawing.Point(1, 157);
+            this.lbWifiPassWord.Location = new System.Drawing.Point(2, 185);
             this.lbWifiPassWord.Name = "lbWifiPassWord";
             this.lbWifiPassWord.Size = new System.Drawing.Size(486, 23);
             this.lbWifiPassWord.TabIndex = 19;
@@ -384,7 +384,7 @@
             // lbWifi
             // 
             this.lbWifi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbWifi.Location = new System.Drawing.Point(0, 134);
+            this.lbWifi.Location = new System.Drawing.Point(1, 162);
             this.lbWifi.Name = "lbWifi";
             this.lbWifi.Size = new System.Drawing.Size(489, 23);
             this.lbWifi.TabIndex = 18;
@@ -395,7 +395,7 @@
             // lbSlogan
             // 
             this.lbSlogan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbSlogan.Location = new System.Drawing.Point(4, 111);
+            this.lbSlogan.Location = new System.Drawing.Point(5, 139);
             this.lbSlogan.Name = "lbSlogan";
             this.lbSlogan.Size = new System.Drawing.Size(483, 23);
             this.lbSlogan.TabIndex = 17;
@@ -404,7 +404,7 @@
             // 
             // label15
             // 
-            this.label15.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.Location = new System.Drawing.Point(8, 86);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(163, 23);
@@ -422,7 +422,7 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(8, 14);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(174, 23);
@@ -495,7 +495,7 @@
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(240, 30);
             this.label17.TabIndex = 30;
-            this.label17.Text = "Tiền phòng";
+            this.label17.Text = "Phụ Thu Máy Lạnh";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lbType
@@ -531,7 +531,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnPrint);
-            this.panel3.Location = new System.Drawing.Point(2, 662);
+            this.panel3.Location = new System.Drawing.Point(1, 679);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(493, 25);
             this.panel3.TabIndex = 31;
@@ -556,7 +556,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(497, 691);
+            this.ClientSize = new System.Drawing.Size(497, 704);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flpAdd);
             this.Controls.Add(this.flpBillInfo);
@@ -564,7 +564,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fBill";
-            this.Text = "fBill";
+            this.Text = "Hoá Đơn";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

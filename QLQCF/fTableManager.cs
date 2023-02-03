@@ -172,7 +172,7 @@ namespace QLQCF
         private void btnAdmin_Click(object sender, EventArgs e)
         {
             fAdmin fadmin = new fAdmin(this);
-            fadmin.Show();
+            fadmin.ShowDialog();
             fadmin.acc = acc;
         }
 

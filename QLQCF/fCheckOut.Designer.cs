@@ -39,7 +39,7 @@
             this.btnCheckCode = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbNumSurcharge = new System.Windows.Forms.TextBox();
             this.btnNumSurcharge = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,7 +56,7 @@
             this.label1.Size = new System.Drawing.Size(428, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Số Tiền Khách Trả";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txbMoney
             // 
@@ -71,9 +71,9 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckOut.Location = new System.Drawing.Point(139, 223);
+            this.btnCheckOut.Location = new System.Drawing.Point(202, 212);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(149, 68);
+            this.btnCheckOut.Size = new System.Drawing.Size(225, 45);
             this.btnCheckOut.TabIndex = 2;
             this.btnCheckOut.Text = "Xác Nhận Thanh Toán";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -103,7 +103,7 @@
             this.label2.Size = new System.Drawing.Size(428, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nhập Mã Giảm Giá";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txbCode
             // 
@@ -123,7 +123,7 @@
             this.lbMoney.Size = new System.Drawing.Size(428, 29);
             this.lbMoney.TabIndex = 6;
             this.lbMoney.Text = "Nhập Mã Giảm Giá";
-            this.lbMoney.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
             // 
@@ -133,7 +133,7 @@
             this.label4.Size = new System.Drawing.Size(428, 31);
             this.label4.TabIndex = 7;
             this.label4.Text = "Số Tiền Cần Phải Trả";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCheckCode
             // 
@@ -155,7 +155,7 @@
             this.panel1.Controls.Add(this.cbTypeMoney);
             this.panel1.Location = new System.Drawing.Point(1, 121);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 318);
+            this.panel1.Size = new System.Drawing.Size(430, 265);
             this.panel1.TabIndex = 10;
             // 
             // label3
@@ -167,15 +167,15 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Số Lượng Phụ Thu:";
             // 
-            // textBox1
+            // txbNumSurcharge
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(183, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(235, 29);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "0";
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMoney_KeyPress);
+            this.txbNumSurcharge.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txbNumSurcharge.Location = new System.Drawing.Point(183, 29);
+            this.txbNumSurcharge.Name = "txbNumSurcharge";
+            this.txbNumSurcharge.Size = new System.Drawing.Size(235, 29);
+            this.txbNumSurcharge.TabIndex = 1;
+            this.txbNumSurcharge.Text = "0";
+            this.txbNumSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMoney_KeyPress);
             // 
             // btnNumSurcharge
             // 
@@ -185,7 +185,7 @@
             this.btnNumSurcharge.TabIndex = 11;
             this.btnNumSurcharge.Text = "Xong";
             this.btnNumSurcharge.UseVisualStyleBackColor = true;
-            this.btnNumSurcharge.Click += new System.EventHandler(this.button1_Click);
+            this.btnNumSurcharge.Click += new System.EventHandler(this.btnNumSurcharge_Click);
             // 
             // panel2
             // 
@@ -201,7 +201,7 @@
             // 
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.btnNumSurcharge);
-            this.panel3.Controls.Add(this.textBox1);
+            this.panel3.Controls.Add(this.txbNumSurcharge);
             this.panel3.Location = new System.Drawing.Point(-1, 6);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(429, 146);
@@ -212,12 +212,12 @@
             this.AcceptButton = this.btnCheckOut;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 445);
+            this.ClientSize = new System.Drawing.Size(433, 391);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fCheckOut";
-            this.Text = "fCheckOut";
+            this.Text = "Thanh Toán";
             this.Load += new System.EventHandler(this.fCheckOut_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -242,7 +242,7 @@
         private Button btnCheckCode;
         private Panel panel1;
         private Label label3;
-        private TextBox textBox1;
+        private TextBox txbNumSurcharge;
         private Button btnNumSurcharge;
         private Panel panel2;
         private Panel panel3;

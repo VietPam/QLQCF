@@ -98,7 +98,7 @@
             this.KeyPreview = true;
             this.Name = "fSwitchTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fSwitchTable";
+            this.Text = "Đổi Bàn";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fSwitchTable_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

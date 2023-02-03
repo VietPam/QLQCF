@@ -355,10 +355,9 @@
             this.Controls.Add(this.panel1);
             this.Name = "fOrderFood";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fOrderFood";
+            this.Text = "Gọi Món";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fOrderFood_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fOrderFood_FormClosed);
-            
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

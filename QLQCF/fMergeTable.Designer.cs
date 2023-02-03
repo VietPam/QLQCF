@@ -110,7 +110,7 @@
             this.Controls.Add(this.lbNameTable);
             this.Name = "fMergeTable";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fMergeTable";
+            this.Text = "Gộp Bàn";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fMergeTable_FormClosed);
             this.ResumeLayout(false);
             this.PerformLayout();

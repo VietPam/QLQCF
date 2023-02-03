@@ -31,10 +31,10 @@
             this.components = new System.ComponentModel.Container();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnNotification = new System.Windows.Forms.Button();
+            this.btnAccount = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.ptbAvatarUser = new System.Windows.Forms.PictureBox();
-            this.btnAccount = new System.Windows.Forms.Button();
-            this.btnNotification = new System.Windows.Forms.Button();
             this.lbDisplayUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
@@ -79,7 +79,7 @@
             this.btnAdmin.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnAdmin.Location = new System.Drawing.Point(-1, 171);
             this.btnAdmin.Name = "btnAdmin";
-            this.btnAdmin.Size = new System.Drawing.Size(200, 150);
+            this.btnAdmin.Size = new System.Drawing.Size(200, 115);
             this.btnAdmin.TabIndex = 2;
             this.btnAdmin.Text = "Admin";
             this.btnAdmin.UseVisualStyleBackColor = false;
@@ -89,11 +89,11 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.ptbAvatarUser);
+            this.panel1.Controls.Add(this.btnNotification);
             this.panel1.Controls.Add(this.btnAccount);
             this.panel1.Controls.Add(this.btnAdmin);
-            this.panel1.Controls.Add(this.btnNotification);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.ptbAvatarUser);
             this.panel1.Controls.Add(this.lbDisplayUser);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(2, 1);
@@ -101,11 +101,35 @@
             this.panel1.Size = new System.Drawing.Size(200, 745);
             this.panel1.TabIndex = 3;
             // 
+            // btnNotification
+            // 
+            this.btnNotification.BackColor = System.Drawing.Color.White;
+            this.btnNotification.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnNotification.Location = new System.Drawing.Point(-1, 387);
+            this.btnNotification.Name = "btnNotification";
+            this.btnNotification.Size = new System.Drawing.Size(200, 115);
+            this.btnNotification.TabIndex = 9;
+            this.btnNotification.Text = "Thông báo ";
+            this.btnNotification.UseVisualStyleBackColor = false;
+            this.btnNotification.Click += new System.EventHandler(this.btnNotification_Click);
+            // 
+            // btnAccount
+            // 
+            this.btnAccount.BackColor = System.Drawing.Color.White;
+            this.btnAccount.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnAccount.Location = new System.Drawing.Point(-1, 281);
+            this.btnAccount.Name = "btnAccount";
+            this.btnAccount.Size = new System.Drawing.Size(200, 115);
+            this.btnAccount.TabIndex = 8;
+            this.btnAccount.Text = "Tài Khoản";
+            this.btnAccount.UseVisualStyleBackColor = false;
+            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
+            // 
             // btnExit
             // 
             this.btnExit.BackColor = System.Drawing.Color.Red;
             this.btnExit.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnExit.Location = new System.Drawing.Point(-1, 597);
+            this.btnExit.Location = new System.Drawing.Point(-2, 498);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(200, 140);
             this.btnExit.TabIndex = 11;
@@ -120,30 +144,6 @@
             this.ptbAvatarUser.Size = new System.Drawing.Size(100, 86);
             this.ptbAvatarUser.TabIndex = 10;
             this.ptbAvatarUser.TabStop = false;
-            // 
-            // btnAccount
-            // 
-            this.btnAccount.BackColor = System.Drawing.Color.White;
-            this.btnAccount.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAccount.Location = new System.Drawing.Point(0, 319);
-            this.btnAccount.Name = "btnAccount";
-            this.btnAccount.Size = new System.Drawing.Size(200, 150);
-            this.btnAccount.TabIndex = 8;
-            this.btnAccount.Text = "Tài Khoản";
-            this.btnAccount.UseVisualStyleBackColor = false;
-            this.btnAccount.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnNotification
-            // 
-            this.btnNotification.BackColor = System.Drawing.Color.White;
-            this.btnNotification.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnNotification.Location = new System.Drawing.Point(0, 461);
-            this.btnNotification.Name = "btnNotification";
-            this.btnNotification.Size = new System.Drawing.Size(200, 140);
-            this.btnNotification.TabIndex = 9;
-            this.btnNotification.Text = "Thông báo ";
-            this.btnNotification.UseVisualStyleBackColor = false;
-            this.btnNotification.Click += new System.EventHandler(this.btnNotification_Click);
             // 
             // lbDisplayUser
             // 
@@ -171,7 +171,7 @@
             this.flpTable.Controls.Add(this.tabControl1);
             this.flpTable.Location = new System.Drawing.Point(200, 173);
             this.flpTable.Name = "flpTable";
-            this.flpTable.Size = new System.Drawing.Size(694, 573);
+            this.flpTable.Size = new System.Drawing.Size(672, 573);
             this.flpTable.TabIndex = 6;
             // 
             // tabControl1
@@ -179,6 +179,7 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -189,10 +190,10 @@
             // 
             this.tabPage1.Controls.Add(this.flpAll);
             this.tabPage1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(660, 542);
+            this.tabPage1.Size = new System.Drawing.Size(660, 538);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Tất Cả";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -202,17 +203,17 @@
             this.flpAll.AutoScroll = true;
             this.flpAll.Location = new System.Drawing.Point(6, 6);
             this.flpAll.Name = "flpAll";
-            this.flpAll.Size = new System.Drawing.Size(648, 536);
+            this.flpAll.Size = new System.Drawing.Size(648, 443);
             this.flpAll.TabIndex = 0;
             // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.flpUnEmpty);
             this.tabPage2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(660, 542);
+            this.tabPage2.Size = new System.Drawing.Size(660, 538);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Có Người";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -229,9 +230,9 @@
             // 
             this.tabPage3.Controls.Add(this.flpEmpty);
             this.tabPage3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tabPage3.Location = new System.Drawing.Point(4, 24);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(660, 542);
+            this.tabPage3.Size = new System.Drawing.Size(660, 538);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Trống";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -252,7 +253,7 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Location = new System.Drawing.Point(200, 1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1168, 172);
+            this.panel2.Size = new System.Drawing.Size(1047, 172);
             this.panel2.TabIndex = 0;
             // 
             // lbEncouragement
@@ -272,9 +273,9 @@
             this.lbShopName.BackColor = System.Drawing.Color.MediumSpringGreen;
             this.lbShopName.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbShopName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbShopName.Location = new System.Drawing.Point(0, 40);
+            this.lbShopName.Location = new System.Drawing.Point(0, 19);
             this.lbShopName.Name = "lbShopName";
-            this.lbShopName.Size = new System.Drawing.Size(1168, 40);
+            this.lbShopName.Size = new System.Drawing.Size(1047, 40);
             this.lbShopName.TabIndex = 2;
             this.lbShopName.Text = "Coffe Shop";
             this.lbShopName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -295,9 +296,9 @@
             this.TotalPrice.Controls.Add(this.lbTableName);
             this.TotalPrice.Controls.Add(this.btnSwitch);
             this.TotalPrice.Controls.Add(this.lsvBillTBMNG);
-            this.TotalPrice.Location = new System.Drawing.Point(894, 173);
+            this.TotalPrice.Location = new System.Drawing.Point(873, 176);
             this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(474, 543);
+            this.TotalPrice.Size = new System.Drawing.Size(374, 543);
             this.TotalPrice.TabIndex = 7;
             // 
             // btnCheckOut
@@ -309,9 +310,9 @@
             this.btnCheckOut.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCheckOut.IconSize = 30;
             this.btnCheckOut.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCheckOut.Location = new System.Drawing.Point(243, 468);
+            this.btnCheckOut.Location = new System.Drawing.Point(159, 393);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(228, 71);
+            this.btnCheckOut.Size = new System.Drawing.Size(210, 71);
             this.btnCheckOut.TabIndex = 17;
             this.btnCheckOut.Text = "Thanh Toán";
             this.btnCheckOut.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -323,9 +324,9 @@
             this.txtTotalPrice.BackColor = System.Drawing.Color.Red;
             this.txtTotalPrice.Enabled = false;
             this.txtTotalPrice.Font = new System.Drawing.Font("Segoe UI", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTotalPrice.Location = new System.Drawing.Point(0, 468);
+            this.txtTotalPrice.Location = new System.Drawing.Point(0, 393);
             this.txtTotalPrice.Name = "txtTotalPrice";
-            this.txtTotalPrice.Size = new System.Drawing.Size(244, 71);
+            this.txtTotalPrice.Size = new System.Drawing.Size(188, 71);
             this.txtTotalPrice.TabIndex = 16;
             this.txtTotalPrice.Text = "0";
             this.txtTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -333,7 +334,7 @@
             // btnMerge
             // 
             this.btnMerge.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnMerge.Location = new System.Drawing.Point(324, 86);
+            this.btnMerge.Location = new System.Drawing.Point(264, 67);
             this.btnMerge.Name = "btnMerge";
             this.btnMerge.Size = new System.Drawing.Size(90, 55);
             this.btnMerge.TabIndex = 14;
@@ -344,7 +345,7 @@
             // btnOrder
             // 
             this.btnOrder.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnOrder.Location = new System.Drawing.Point(72, 86);
+            this.btnOrder.Location = new System.Drawing.Point(12, 67);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(90, 55);
             this.btnOrder.TabIndex = 10;
@@ -356,9 +357,9 @@
             // 
             this.lbTableName.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbTableName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbTableName.Location = new System.Drawing.Point(0, 27);
+            this.lbTableName.Location = new System.Drawing.Point(-1, 3);
             this.lbTableName.Name = "lbTableName";
-            this.lbTableName.Size = new System.Drawing.Size(471, 38);
+            this.lbTableName.Size = new System.Drawing.Size(432, 38);
             this.lbTableName.TabIndex = 12;
             this.lbTableName.Text = "Tên Bàn";
             this.lbTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -366,7 +367,7 @@
             // btnSwitch
             // 
             this.btnSwitch.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSwitch.Location = new System.Drawing.Point(197, 86);
+            this.btnSwitch.Location = new System.Drawing.Point(137, 67);
             this.btnSwitch.Name = "btnSwitch";
             this.btnSwitch.Size = new System.Drawing.Size(90, 55);
             this.btnSwitch.TabIndex = 11;
@@ -384,9 +385,9 @@
             this.lsvBillTBMNG.Enabled = false;
             this.lsvBillTBMNG.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lsvBillTBMNG.GridLines = true;
-            this.lsvBillTBMNG.Location = new System.Drawing.Point(3, 147);
+            this.lsvBillTBMNG.Location = new System.Drawing.Point(0, 128);
             this.lsvBillTBMNG.Name = "lsvBillTBMNG";
-            this.lsvBillTBMNG.Size = new System.Drawing.Size(468, 297);
+            this.lsvBillTBMNG.Size = new System.Drawing.Size(369, 259);
             this.lsvBillTBMNG.TabIndex = 0;
             this.lsvBillTBMNG.UseCompatibleStateImageBehavior = false;
             this.lsvBillTBMNG.View = System.Windows.Forms.View.Details;
@@ -394,25 +395,25 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Tên Món";
-            this.columnHeader1.Width = 119;
+            this.columnHeader1.Width = 105;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Giá";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 119;
+            this.columnHeader2.Width = 100;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Số Lượng";
+            this.columnHeader3.Text = "SL";
             this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 119;
+            this.columnHeader3.Width = 40;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Thành Tiền";
             this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 119;
+            this.columnHeader4.Width = 115;
             // 
             // timer1
             // 
@@ -428,16 +429,16 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.CancelButton = this.btnExit;
-            this.ClientSize = new System.Drawing.Size(1370, 742);
+            this.ClientSize = new System.Drawing.Size(1250, 650);
             this.Controls.Add(this.TotalPrice);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.flpTable);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "fTableManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fTableManager";
+            this.Text = "Quản Lý";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fTableManager_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

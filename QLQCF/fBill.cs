@@ -66,7 +66,7 @@ namespace QLQCFTest
             AddLabelMoneyBack(bill);
             if (table.Type == 1)
             {
-                lbType.Text = (shop.VipCost / 1000).ToString() + "k";
+                lbType.Text = ChangeMoneytoString(shop.VipCost);
             }
             else
             {
@@ -85,7 +85,7 @@ namespace QLQCFTest
                 lb1.Text = "Phụ Thu";
                 Label lb2=new Label();
                 lb2.Size =new Size(lbType.Width,lbType.Height);
-                lb2.Text=((shop.SurCharge*surCharge)/1000).ToString()+"k";
+                lb2.Text= ChangeMoneytoString(shop.SurCharge);
                 lb2.TextAlign = lbType.TextAlign;
                 Label lb3=new Label();
                 lb3.Size = lbVND.Size;
@@ -99,9 +99,9 @@ namespace QLQCFTest
                 panel4.Location=new Point(panel4.Location.X,panel4.Location.Y+lb1.Height);
                 panel3.Location= new Point(panel3.Location.X, panel3.Location.Y + lb1.Height);
             }
-            lbMoneyReceive.Text = ((float)moneyReceive/1000).ToString()+"k";
+            lbMoneyReceive.Text = ChangeMoneytoString(moneyReceive);
             lbMoneyType.Text = type.ToString();
-            lbTotalPrice.Text = ((float)bill.TotalPrice / 1000).ToString() + "k";
+            lbTotalPrice.Text = ChangeMoneytoString(bill.TotalPrice);
             
             BillDAO.Instance.UpdateBillChecked(bill);
             
@@ -114,7 +114,7 @@ namespace QLQCFTest
                 lbWifi.Text = "Wifi:"+shop.Wifi;
                 lbWifiPassWord.Text = "Password:"+shop.PassWifi;
                 lbAddress.Text = "Địa Chỉ:"+shop.ShopAddress;
-                lbPhoneNumber.Text = "SĐT:"+shop.PhoneNumber;
+                lbPhoneNumber.Text = "Mọi góp ý xin vui lòng liên hệ :" + shop.PhoneNumber;
             }
         }
         
@@ -211,10 +211,10 @@ namespace QLQCFTest
                 money = (moneyReceive * 177);
             }
             double rate=DiscountDAO.Instance.GetDiscount(money);
-            if (rate != -1) { lbCode.Text = DiscountDAO.Instance.CreateCode(rate); }
+            if (rate != -1) { lbCode.Text = "Giữ Hoá Đơn Để được giảm giá vào lần sau: " + DiscountDAO.Instance.CreateCode(rate); }
                 
             
-            lbMoneyBack.Text = ((float)(money-bill.TotalPrice)/1000).ToString() + "k";
+            lbMoneyBack.Text = ChangeMoneytoString((money - bill.TotalPrice));
         }
 
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
@@ -232,6 +232,15 @@ namespace QLQCFTest
             printPreviewDialog1.ShowDialog();
         }
 
-       
+        private string ChangeMoneytoString(int money)
+        {
+            string befdot = (money / 1000).ToString();
+            string aftdot = (money - (money / 1000) * 1000).ToString();
+            while(aftdot.Length<3)
+            {
+                aftdot += "0";
+            }
+            return (befdot + "." + aftdot);
+        }
     }
 }
