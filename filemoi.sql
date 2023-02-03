@@ -79,10 +79,11 @@ Encouragement Nvarchar(100) not null default N'Hãy Hết Mình Về Công Việ
 ShopAddress Nvarchar(100) default N'Chưa Có',
 PhoneNumber Varchar(10) not null default '0000000000',
 GoodByeSentence Nvarchar(100) default N'Xin Chào Và Hẹn Gặp Lại',
-TimeStart int default 0,
-TimeEnd int default 0,
-SurCharge int default 0
+SurCharge int default 0,
+VipCost int default 5000
 )
+
+
 Create Table Discount
 (
 Rate float primary key,
@@ -293,10 +294,10 @@ END
 go
 --cai dat shop
 CREATE PROC USP_InsertShop
-@nameShop nvarchar(100), @wifi nvarchar(100), @passwifi nvarchar(100),@numberTable int,@slogan nvarchar(100),@encouragement nvarchar(100),@shopAddress nvarchar(100),@phoneNumber nvarchar(100),@goodByeSentence nvarchar(100),@timestart int,@timeend int,@sucharge int
+@nameShop nvarchar(100), @wifi nvarchar(100), @passwifi nvarchar(100),@numberTable int,@slogan nvarchar(100),@encouragement nvarchar(100),@shopAddress nvarchar(100),@phoneNumber nvarchar(100),@goodByeSentence nvarchar(100),@sucharge int,@vipcost int
 AS
 BEGIN
-	Update dbo.Shop set NameShop=@nameShop,Wifi=@wifi,PassWifi=@passwifi,NumberTable=@numberTable,Slogan=@slogan,Encouragement=@encouragement,ShopAddress=@shopAddress,PhoneNumber=@phoneNumber,GoodByeSentence=@goodByeSentence,TimeStart=@timestart,TimeEnd=@timeend,SurCharge=@sucharge
+	Update dbo.Shop set NameShop=@nameShop,Wifi=@wifi,PassWifi=@passwifi,NumberTable=@numberTable,Slogan=@slogan,Encouragement=@encouragement,ShopAddress=@shopAddress,PhoneNumber=@phoneNumber,GoodByeSentence=@goodByeSentence,SurCharge=@sucharge,VipCost=@vipcost
 END
 go
 
@@ -364,4 +365,5 @@ as begin
 	update SurCharge set DayStart=@datestart, DayEnd=@dateend
 end
 go
+
 
