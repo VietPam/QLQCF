@@ -51,9 +51,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(2, 101);
+            this.label1.Location = new System.Drawing.Point(2, 135);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(428, 29);
+            this.label1.Size = new System.Drawing.Size(489, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nhập Số Tiền Khách Trả";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -61,9 +61,10 @@
             // txbMoney
             // 
             this.txbMoney.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbMoney.Location = new System.Drawing.Point(11, 158);
+            this.txbMoney.Location = new System.Drawing.Point(13, 211);
+            this.txbMoney.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbMoney.Name = "txbMoney";
-            this.txbMoney.Size = new System.Drawing.Size(315, 29);
+            this.txbMoney.Size = new System.Drawing.Size(359, 35);
             this.txbMoney.TabIndex = 1;
             this.txbMoney.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txbMoney.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMoney_KeyPress);
@@ -71,9 +72,10 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckOut.Location = new System.Drawing.Point(202, 212);
+            this.btnCheckOut.Location = new System.Drawing.Point(231, 283);
+            this.btnCheckOut.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckOut.Name = "btnCheckOut";
-            this.btnCheckOut.Size = new System.Drawing.Size(225, 45);
+            this.btnCheckOut.Size = new System.Drawing.Size(257, 60);
             this.btnCheckOut.TabIndex = 2;
             this.btnCheckOut.Text = "Xác Nhận Thanh Toán";
             this.btnCheckOut.UseVisualStyleBackColor = true;
@@ -89,18 +91,19 @@
             "BẢNG",
             "NDT",
             "YÊN"});
-            this.cbTypeMoney.Location = new System.Drawing.Point(345, 156);
+            this.cbTypeMoney.Location = new System.Drawing.Point(394, 208);
+            this.cbTypeMoney.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbTypeMoney.Name = "cbTypeMoney";
-            this.cbTypeMoney.Size = new System.Drawing.Size(75, 31);
+            this.cbTypeMoney.Size = new System.Drawing.Size(85, 37);
             this.cbTypeMoney.TabIndex = 3;
             this.cbTypeMoney.Text = "VND";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(0, 6);
+            this.label2.Location = new System.Drawing.Point(0, 8);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(428, 29);
+            this.label2.Size = new System.Drawing.Size(489, 39);
             this.label2.TabIndex = 4;
             this.label2.Text = "Nhập Mã Giảm Giá";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -108,9 +111,10 @@
             // txbCode
             // 
             this.txbCode.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbCode.Location = new System.Drawing.Point(3, 38);
+            this.txbCode.Location = new System.Drawing.Point(3, 51);
+            this.txbCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbCode.Name = "txbCode";
-            this.txbCode.Size = new System.Drawing.Size(315, 29);
+            this.txbCode.Size = new System.Drawing.Size(359, 35);
             this.txbCode.TabIndex = 5;
             this.txbCode.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbCode_KeyPress);
             // 
@@ -118,9 +122,9 @@
             // 
             this.lbMoney.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lbMoney.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.lbMoney.Location = new System.Drawing.Point(2, 55);
+            this.lbMoney.Location = new System.Drawing.Point(2, 73);
             this.lbMoney.Name = "lbMoney";
-            this.lbMoney.Size = new System.Drawing.Size(428, 29);
+            this.lbMoney.Size = new System.Drawing.Size(489, 39);
             this.lbMoney.TabIndex = 6;
             this.lbMoney.Text = "Nhập Mã Giảm Giá";
             this.lbMoney.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,18 +132,19 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(3, 12);
+            this.label4.Location = new System.Drawing.Point(3, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(428, 31);
+            this.label4.Size = new System.Drawing.Size(489, 41);
             this.label4.TabIndex = 7;
             this.label4.Text = "Số Tiền Cần Phải Trả";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnCheckCode
             // 
-            this.btnCheckCode.Location = new System.Drawing.Point(343, 38);
+            this.btnCheckCode.Location = new System.Drawing.Point(392, 51);
+            this.btnCheckCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCheckCode.Name = "btnCheckCode";
-            this.btnCheckCode.Size = new System.Drawing.Size(75, 29);
+            this.btnCheckCode.Size = new System.Drawing.Size(86, 39);
             this.btnCheckCode.TabIndex = 8;
             this.btnCheckCode.Text = "Kiểm Tra";
             this.btnCheckCode.UseVisualStyleBackColor = true;
@@ -153,35 +158,38 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.lbMoney);
             this.panel1.Controls.Add(this.cbTypeMoney);
-            this.panel1.Location = new System.Drawing.Point(1, 121);
+            this.panel1.Location = new System.Drawing.Point(1, 161);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(430, 265);
+            this.panel1.Size = new System.Drawing.Size(491, 353);
             this.panel1.TabIndex = 10;
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(-2, 29);
+            this.label3.Location = new System.Drawing.Point(-2, 39);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(163, 32);
+            this.label3.Size = new System.Drawing.Size(186, 43);
             this.label3.TabIndex = 0;
             this.label3.Text = "Số Lượng Phụ Thu:";
             // 
             // txbNumSurcharge
             // 
             this.txbNumSurcharge.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbNumSurcharge.Location = new System.Drawing.Point(183, 29);
+            this.txbNumSurcharge.Location = new System.Drawing.Point(209, 39);
+            this.txbNumSurcharge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbNumSurcharge.Name = "txbNumSurcharge";
-            this.txbNumSurcharge.Size = new System.Drawing.Size(235, 29);
+            this.txbNumSurcharge.Size = new System.Drawing.Size(268, 35);
             this.txbNumSurcharge.TabIndex = 1;
             this.txbNumSurcharge.Text = "0";
             this.txbNumSurcharge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbMoney_KeyPress);
             // 
             // btnNumSurcharge
             // 
-            this.btnNumSurcharge.Location = new System.Drawing.Point(167, 76);
+            this.btnNumSurcharge.Location = new System.Drawing.Point(191, 101);
+            this.btnNumSurcharge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNumSurcharge.Name = "btnNumSurcharge";
-            this.btnNumSurcharge.Size = new System.Drawing.Size(75, 29);
+            this.btnNumSurcharge.Size = new System.Drawing.Size(86, 39);
             this.btnNumSurcharge.TabIndex = 11;
             this.btnNumSurcharge.Text = "Xong";
             this.btnNumSurcharge.UseVisualStyleBackColor = true;
@@ -192,9 +200,10 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.txbCode);
             this.panel2.Controls.Add(this.btnCheckCode);
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(3, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(428, 122);
+            this.panel2.Size = new System.Drawing.Size(489, 163);
             this.panel2.TabIndex = 12;
             // 
             // panel3
@@ -202,21 +211,24 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.btnNumSurcharge);
             this.panel3.Controls.Add(this.txbNumSurcharge);
-            this.panel3.Location = new System.Drawing.Point(-1, 6);
+            this.panel3.Location = new System.Drawing.Point(-1, 8);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(429, 146);
+            this.panel3.Size = new System.Drawing.Size(490, 195);
             this.panel3.TabIndex = 9;
             // 
             // fCheckOut
             // 
             this.AcceptButton = this.btnCheckOut;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 391);
+            this.ClientSize = new System.Drawing.Size(495, 521);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fCheckOut";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thanh Toán";
             this.Load += new System.EventHandler(this.fCheckOut_Load);
             this.panel1.ResumeLayout(false);
