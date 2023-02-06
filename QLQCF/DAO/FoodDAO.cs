@@ -64,7 +64,7 @@ namespace QLQCF.DAO
         }
         public List<Food> FindListFood(string name)
         {
-            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Food where NameFood like '%" + name + "%'");
+            DataTable data = DataProvider.Instance.ExecuteQuery("Select * from Food where NameFood like N'%" + name + "%'");
             List<Food> foods = new List<Food> { };
             foreach (DataRow row in data.Rows)
             {

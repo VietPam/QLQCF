@@ -21,6 +21,7 @@ namespace QLQCFTest
         Table table;
         fTableManager ftableManager;
         Account acc;
+        int sizeheight;
         public fCheckOut(Table tabel,fTableManager fTable, Account account)
         {
             acc= account;
@@ -28,6 +29,7 @@ namespace QLQCFTest
             table = tabel;
             InitializeComponent();
             this.acc = acc;
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -136,18 +138,19 @@ namespace QLQCFTest
             lbMoney.Text = bill.TotalPrice.ToString();
             txbCode.Tag = null;
             bool flag = CheckSurcharge(sur);
-            if(flag==true)
+            sizeheight = this.Size.Height;
+            if (flag==true)
             {
                 panel3.Visible = true;
                 panel2.Visible = false;
                 panel1.Visible = false;
+                panel5.Visible= false;
                 this.Size = new Size(panel3.Width, panel3.Height+30);
                 this.AcceptButton = btnNumSurcharge;
             }
             else
             {
                 panel3.Visible= false;
-                
             }
         }
 
@@ -160,7 +163,8 @@ namespace QLQCFTest
                 panel3.Visible = false;
                 panel2.Visible = true;
                 panel1.Visible = true;
-                this.Size = new Size(449, 484);
+                panel5.Visible= true;
+                this.Size = new Size(449, sizeheight);
                 Shop shop = ShopDAO.Instance.GetShop();
                 lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
                 this.AcceptButton = btnCheckOut;
@@ -208,6 +212,13 @@ namespace QLQCFTest
             }
             return false;
             
+        }
+
+        
+
+        private void cbTypeMoney_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled= true;
         }
     }
 }
