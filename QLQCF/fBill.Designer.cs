@@ -98,36 +98,35 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.lbShopName);
-            this.panel1.Location = new System.Drawing.Point(2, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(562, 371);
+            this.panel1.Size = new System.Drawing.Size(492, 278);
             this.panel1.TabIndex = 7;
             // 
             // lbDateIn
             // 
             this.lbDateIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDateIn.Location = new System.Drawing.Point(287, 316);
+            this.lbDateIn.Location = new System.Drawing.Point(251, 237);
             this.lbDateIn.Name = "lbDateIn";
-            this.lbDateIn.Size = new System.Drawing.Size(222, 31);
+            this.lbDateIn.Size = new System.Drawing.Size(194, 23);
             this.lbDateIn.TabIndex = 17;
             this.lbDateIn.Text = "Ngày Vào";
             // 
             // lbTableName
             // 
             this.lbTableName.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTableName.Location = new System.Drawing.Point(287, 273);
+            this.lbTableName.Location = new System.Drawing.Point(251, 205);
             this.lbTableName.Name = "lbTableName";
-            this.lbTableName.Size = new System.Drawing.Size(114, 31);
+            this.lbTableName.Size = new System.Drawing.Size(100, 23);
             this.lbTableName.TabIndex = 16;
             this.lbTableName.Text = "Tên Bàn";
             // 
             // lbAddress
             // 
             this.lbAddress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbAddress.Location = new System.Drawing.Point(1, 151);
+            this.lbAddress.Location = new System.Drawing.Point(1, 113);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(555, 31);
+            this.lbAddress.Size = new System.Drawing.Size(486, 23);
             this.lbAddress.TabIndex = 26;
             this.lbAddress.Text = "Địa Chỉ";
             this.lbAddress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -135,63 +134,63 @@
             // lbDisplayAccount
             // 
             this.lbDisplayAccount.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDisplayAccount.Location = new System.Drawing.Point(387, 227);
+            this.lbDisplayAccount.Location = new System.Drawing.Point(339, 170);
             this.lbDisplayAccount.Name = "lbDisplayAccount";
-            this.lbDisplayAccount.Size = new System.Drawing.Size(171, 31);
+            this.lbDisplayAccount.Size = new System.Drawing.Size(150, 23);
             this.lbDisplayAccount.TabIndex = 15;
             this.lbDisplayAccount.Text = "Tên Người Thanh Toán";
             // 
             // lbIDBill
             // 
             this.lbIDBill.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbIDBill.Location = new System.Drawing.Point(134, 227);
+            this.lbIDBill.Location = new System.Drawing.Point(117, 170);
             this.lbIDBill.Name = "lbIDBill";
-            this.lbIDBill.Size = new System.Drawing.Size(146, 31);
+            this.lbIDBill.Size = new System.Drawing.Size(128, 23);
             this.lbIDBill.TabIndex = 14;
             this.lbIDBill.Text = "ID_Bill";
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(15, 316);
+            this.label9.Location = new System.Drawing.Point(13, 237);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(112, 31);
+            this.label9.Size = new System.Drawing.Size(98, 23);
             this.label9.TabIndex = 12;
             this.label9.Text = "Ngày Bán :";
             // 
             // label10
             // 
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(287, 227);
+            this.label10.Location = new System.Drawing.Point(251, 170);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(112, 31);
+            this.label10.Size = new System.Drawing.Size(98, 23);
             this.label10.TabIndex = 11;
             this.label10.Text = "Thu Ngân :";
             // 
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label11.Location = new System.Drawing.Point(15, 273);
+            this.label11.Location = new System.Drawing.Point(13, 205);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(112, 31);
+            this.label11.Size = new System.Drawing.Size(98, 23);
             this.label11.TabIndex = 10;
             this.label11.Text = "Bàn :";
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(15, 227);
+            this.label12.Location = new System.Drawing.Point(13, 170);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 31);
+            this.label12.Size = new System.Drawing.Size(106, 23);
             this.label12.TabIndex = 9;
             this.label12.Text = "Số Hoá Đơn :";
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(3, 65);
+            this.label13.Location = new System.Drawing.Point(3, 49);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(555, 40);
+            this.label13.Size = new System.Drawing.Size(486, 30);
             this.label13.TabIndex = 8;
             this.label13.Text = "Phiếu Thanh Toán";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -199,9 +198,9 @@
             // lbShopName
             // 
             this.lbShopName.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbShopName.Location = new System.Drawing.Point(1, 8);
+            this.lbShopName.Location = new System.Drawing.Point(1, 6);
             this.lbShopName.Name = "lbShopName";
-            this.lbShopName.Size = new System.Drawing.Size(558, 57);
+            this.lbShopName.Size = new System.Drawing.Size(488, 43);
             this.lbShopName.TabIndex = 7;
             this.lbShopName.Text = "Coffe Shop";
             this.lbShopName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -209,9 +208,9 @@
             // lbPhoneNumber
             // 
             this.lbPhoneNumber.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbPhoneNumber.Location = new System.Drawing.Point(3, 308);
+            this.lbPhoneNumber.Location = new System.Drawing.Point(3, 231);
             this.lbPhoneNumber.Name = "lbPhoneNumber";
-            this.lbPhoneNumber.Size = new System.Drawing.Size(555, 31);
+            this.lbPhoneNumber.Size = new System.Drawing.Size(486, 23);
             this.lbPhoneNumber.TabIndex = 25;
             this.lbPhoneNumber.Text = "Mọi Góp Ý Xin Vui Lòng Liên Hệ";
             this.lbPhoneNumber.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,54 +222,53 @@
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(6, 383);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel2.Location = new System.Drawing.Point(5, 287);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(561, 55);
+            this.panel2.Size = new System.Drawing.Size(491, 41);
             this.panel2.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(449, 12);
+            this.label5.Location = new System.Drawing.Point(393, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 31);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 17;
             this.label5.Text = "T.Tiền";
             // 
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(335, 12);
+            this.label4.Location = new System.Drawing.Point(293, 9);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 31);
+            this.label4.Size = new System.Drawing.Size(98, 23);
             this.label4.TabIndex = 16;
             this.label4.Text = "Đơn Giá";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(216, 12);
+            this.label3.Location = new System.Drawing.Point(189, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 31);
+            this.label3.Size = new System.Drawing.Size(98, 23);
             this.label3.TabIndex = 15;
             this.label3.Text = "S.Lượng";
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(97, 12);
+            this.label2.Location = new System.Drawing.Point(85, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(112, 31);
+            this.label2.Size = new System.Drawing.Size(98, 23);
             this.label2.TabIndex = 14;
             this.label2.Text = "Tên Món";
             // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Location = new System.Drawing.Point(9, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(112, 31);
+            this.label1.Size = new System.Drawing.Size(98, 23);
             this.label1.TabIndex = 13;
             this.label1.Text = "TT";
             // 
@@ -291,36 +289,35 @@
             this.panel4.Controls.Add(this.label15);
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(5, 533);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(4, 400);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(562, 367);
+            this.panel4.Size = new System.Drawing.Size(492, 275);
             this.panel4.TabIndex = 10;
             // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label16.Location = new System.Drawing.Point(483, 19);
+            this.label16.Location = new System.Drawing.Point(423, 14);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(73, 31);
+            this.label16.Size = new System.Drawing.Size(64, 23);
             this.label16.TabIndex = 28;
             this.label16.Text = "VND";
             // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(483, 115);
+            this.label14.Location = new System.Drawing.Point(423, 86);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(73, 31);
+            this.label14.Size = new System.Drawing.Size(64, 23);
             this.label14.TabIndex = 27;
             this.label14.Text = "VND";
             // 
             // lbCode
             // 
             this.lbCode.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbCode.Location = new System.Drawing.Point(0, 336);
+            this.lbCode.Location = new System.Drawing.Point(0, 252);
             this.lbCode.Name = "lbCode";
-            this.lbCode.Size = new System.Drawing.Size(561, 31);
+            this.lbCode.Size = new System.Drawing.Size(491, 23);
             this.lbCode.TabIndex = 19;
             this.lbCode.Text = "Code :";
             this.lbCode.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -328,18 +325,18 @@
             // lbMoneyType
             // 
             this.lbMoneyType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbMoneyType.Location = new System.Drawing.Point(483, 67);
+            this.lbMoneyType.Location = new System.Drawing.Point(423, 50);
             this.lbMoneyType.Name = "lbMoneyType";
-            this.lbMoneyType.Size = new System.Drawing.Size(73, 31);
+            this.lbMoneyType.Size = new System.Drawing.Size(64, 23);
             this.lbMoneyType.TabIndex = 24;
             this.lbMoneyType.Text = "Type";
             // 
             // lbMoneyBack
             // 
             this.lbMoneyBack.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbMoneyBack.Location = new System.Drawing.Point(240, 112);
+            this.lbMoneyBack.Location = new System.Drawing.Point(210, 84);
             this.lbMoneyBack.Name = "lbMoneyBack";
-            this.lbMoneyBack.Size = new System.Drawing.Size(237, 31);
+            this.lbMoneyBack.Size = new System.Drawing.Size(207, 23);
             this.lbMoneyBack.TabIndex = 23;
             this.lbMoneyBack.Text = "Tiền Trả Lại ";
             this.lbMoneyBack.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -347,9 +344,9 @@
             // lbMoneyReceive
             // 
             this.lbMoneyReceive.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbMoneyReceive.Location = new System.Drawing.Point(278, 61);
+            this.lbMoneyReceive.Location = new System.Drawing.Point(243, 46);
             this.lbMoneyReceive.Name = "lbMoneyReceive";
-            this.lbMoneyReceive.Size = new System.Drawing.Size(199, 31);
+            this.lbMoneyReceive.Size = new System.Drawing.Size(174, 23);
             this.lbMoneyReceive.TabIndex = 22;
             this.lbMoneyReceive.Text = "Tiền Khách Đưa";
             this.lbMoneyReceive.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -357,9 +354,9 @@
             // lbTotalPrice
             // 
             this.lbTotalPrice.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbTotalPrice.Location = new System.Drawing.Point(240, 16);
+            this.lbTotalPrice.Location = new System.Drawing.Point(210, 12);
             this.lbTotalPrice.Name = "lbTotalPrice";
-            this.lbTotalPrice.Size = new System.Drawing.Size(237, 31);
+            this.lbTotalPrice.Size = new System.Drawing.Size(207, 23);
             this.lbTotalPrice.TabIndex = 21;
             this.lbTotalPrice.Text = "Tổng Tiền Thanh Toán";
             this.lbTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -367,9 +364,9 @@
             // lbByeText
             // 
             this.lbByeText.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbByeText.Location = new System.Drawing.Point(5, 277);
+            this.lbByeText.Location = new System.Drawing.Point(4, 208);
             this.lbByeText.Name = "lbByeText";
-            this.lbByeText.Size = new System.Drawing.Size(553, 31);
+            this.lbByeText.Size = new System.Drawing.Size(484, 23);
             this.lbByeText.TabIndex = 20;
             this.lbByeText.Text = "Cảm Ơn Và Hẹn Gặp Lại Quý Khách";
             this.lbByeText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -377,9 +374,9 @@
             // lbWifiPassWord
             // 
             this.lbWifiPassWord.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbWifiPassWord.Location = new System.Drawing.Point(2, 247);
+            this.lbWifiPassWord.Location = new System.Drawing.Point(2, 185);
             this.lbWifiPassWord.Name = "lbWifiPassWord";
-            this.lbWifiPassWord.Size = new System.Drawing.Size(555, 31);
+            this.lbWifiPassWord.Size = new System.Drawing.Size(486, 23);
             this.lbWifiPassWord.TabIndex = 19;
             this.lbWifiPassWord.Text = "Pass: tuanvietdongtridzvclluon";
             this.lbWifiPassWord.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -387,9 +384,9 @@
             // lbWifi
             // 
             this.lbWifi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbWifi.Location = new System.Drawing.Point(1, 216);
+            this.lbWifi.Location = new System.Drawing.Point(1, 162);
             this.lbWifi.Name = "lbWifi";
-            this.lbWifi.Size = new System.Drawing.Size(559, 31);
+            this.lbWifi.Size = new System.Drawing.Size(489, 23);
             this.lbWifi.TabIndex = 18;
             this.lbWifi.Text = "Wifi: solo yasuo k ٩( ‘ω’ )و";
             this.lbWifi.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -398,9 +395,9 @@
             // lbSlogan
             // 
             this.lbSlogan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbSlogan.Location = new System.Drawing.Point(6, 185);
+            this.lbSlogan.Location = new System.Drawing.Point(5, 139);
             this.lbSlogan.Name = "lbSlogan";
-            this.lbSlogan.Size = new System.Drawing.Size(552, 31);
+            this.lbSlogan.Size = new System.Drawing.Size(483, 23);
             this.lbSlogan.TabIndex = 17;
             this.lbSlogan.Text = "Coffe Shop Cà Là Phải Phê";
             this.lbSlogan.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -408,27 +405,27 @@
             // label15
             // 
             this.label15.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(9, 115);
+            this.label15.Location = new System.Drawing.Point(8, 86);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(186, 31);
+            this.label15.Size = new System.Drawing.Size(163, 23);
             this.label15.TabIndex = 16;
             this.label15.Text = "Trả Lại :";
             // 
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(9, 67);
+            this.label7.Location = new System.Drawing.Point(8, 50);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(186, 31);
+            this.label7.Size = new System.Drawing.Size(163, 23);
             this.label7.TabIndex = 15;
             this.label7.Text = "Khách Đưa :";
             // 
             // label6
             // 
             this.label6.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(9, 19);
+            this.label6.Location = new System.Drawing.Point(8, 14);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 31);
+            this.label6.Size = new System.Drawing.Size(174, 23);
             this.label6.TabIndex = 14;
             this.label6.Text = "Tổng Thanh Toán :";
             // 
@@ -440,50 +437,44 @@
             this.flpBillInfo.Controls.Add(this.flpPrice);
             this.flpBillInfo.Controls.Add(this.flpTotal);
             this.flpBillInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.flpBillInfo.Location = new System.Drawing.Point(6, 445);
-            this.flpBillInfo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpBillInfo.Location = new System.Drawing.Point(5, 334);
             this.flpBillInfo.Name = "flpBillInfo";
-            this.flpBillInfo.Size = new System.Drawing.Size(555, 52);
+            this.flpBillInfo.Size = new System.Drawing.Size(486, 39);
             this.flpBillInfo.TabIndex = 11;
             // 
             // flpNumber
             // 
-            this.flpNumber.Location = new System.Drawing.Point(3, 4);
-            this.flpNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpNumber.Location = new System.Drawing.Point(3, 3);
             this.flpNumber.Name = "flpNumber";
-            this.flpNumber.Size = new System.Drawing.Size(42, 41);
+            this.flpNumber.Size = new System.Drawing.Size(37, 31);
             this.flpNumber.TabIndex = 10;
             // 
             // flpFoodName
             // 
-            this.flpFoodName.Location = new System.Drawing.Point(51, 4);
-            this.flpFoodName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpFoodName.Location = new System.Drawing.Point(46, 3);
             this.flpFoodName.Name = "flpFoodName";
-            this.flpFoodName.Size = new System.Drawing.Size(157, 41);
+            this.flpFoodName.Size = new System.Drawing.Size(137, 31);
             this.flpFoodName.TabIndex = 11;
             // 
             // flpAmount
             // 
-            this.flpAmount.Location = new System.Drawing.Point(214, 4);
-            this.flpAmount.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpAmount.Location = new System.Drawing.Point(189, 3);
             this.flpAmount.Name = "flpAmount";
-            this.flpAmount.Size = new System.Drawing.Size(91, 41);
+            this.flpAmount.Size = new System.Drawing.Size(80, 31);
             this.flpAmount.TabIndex = 12;
             // 
             // flpPrice
             // 
-            this.flpPrice.Location = new System.Drawing.Point(311, 4);
-            this.flpPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpPrice.Location = new System.Drawing.Point(275, 3);
             this.flpPrice.Name = "flpPrice";
-            this.flpPrice.Size = new System.Drawing.Size(102, 41);
+            this.flpPrice.Size = new System.Drawing.Size(89, 31);
             this.flpPrice.TabIndex = 11;
             // 
             // flpTotal
             // 
-            this.flpTotal.Location = new System.Drawing.Point(419, 4);
-            this.flpTotal.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpTotal.Location = new System.Drawing.Point(370, 3);
             this.flpTotal.Name = "flpTotal";
-            this.flpTotal.Size = new System.Drawing.Size(128, 41);
+            this.flpTotal.Size = new System.Drawing.Size(112, 31);
             this.flpTotal.TabIndex = 11;
             // 
             // flpAdd
@@ -492,10 +483,9 @@
             this.flpAdd.Controls.Add(this.lbType);
             this.flpAdd.Controls.Add(this.lbVND);
             this.flpAdd.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.flpAdd.Location = new System.Drawing.Point(7, 499);
-            this.flpAdd.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.flpAdd.Location = new System.Drawing.Point(6, 374);
             this.flpAdd.Name = "flpAdd";
-            this.flpAdd.Size = new System.Drawing.Size(557, 33);
+            this.flpAdd.Size = new System.Drawing.Size(487, 25);
             this.flpAdd.TabIndex = 30;
             // 
             // label17
@@ -503,7 +493,7 @@
             this.label17.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label17.Location = new System.Drawing.Point(3, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(274, 40);
+            this.label17.Size = new System.Drawing.Size(240, 30);
             this.label17.TabIndex = 30;
             this.label17.Text = "Phụ Thu Máy Lạnh";
             this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -511,9 +501,9 @@
             // lbType
             // 
             this.lbType.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbType.Location = new System.Drawing.Point(283, 0);
+            this.lbType.Location = new System.Drawing.Point(249, 0);
             this.lbType.Name = "lbType";
-            this.lbType.Size = new System.Drawing.Size(184, 40);
+            this.lbType.Size = new System.Drawing.Size(161, 30);
             this.lbType.TabIndex = 31;
             this.lbType.Text = "Phụ Thu Máy Lạnh";
             this.lbType.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -521,19 +511,18 @@
             // lbVND
             // 
             this.lbVND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbVND.Location = new System.Drawing.Point(473, 0);
+            this.lbVND.Location = new System.Drawing.Point(416, 0);
             this.lbVND.Name = "lbVND";
-            this.lbVND.Size = new System.Drawing.Size(64, 40);
+            this.lbVND.Size = new System.Drawing.Size(56, 30);
             this.lbVND.TabIndex = 32;
             this.lbVND.Text = "VND";
             this.lbVND.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(454, 3);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnPrint.Location = new System.Drawing.Point(397, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(105, 31);
+            this.btnPrint.Size = new System.Drawing.Size(92, 23);
             this.btnPrint.TabIndex = 27;
             this.btnPrint.Text = "In Hoá Đơn";
             this.btnPrint.UseVisualStyleBackColor = true;
@@ -542,10 +531,9 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.btnPrint);
-            this.panel3.Location = new System.Drawing.Point(1, 905);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel3.Location = new System.Drawing.Point(1, 679);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(563, 33);
+            this.panel3.Size = new System.Drawing.Size(493, 25);
             this.panel3.TabIndex = 31;
             // 
             // printDocument1
@@ -565,17 +553,16 @@
             // 
             // fBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(568, 939);
+            this.ClientSize = new System.Drawing.Size(505, 562);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flpAdd);
             this.Controls.Add(this.flpBillInfo);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "fBill";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hoá Đơn";
