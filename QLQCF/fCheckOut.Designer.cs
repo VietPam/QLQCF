@@ -45,6 +45,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,7 +68,7 @@
             // btnCheckOut
             // 
             this.btnCheckOut.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCheckOut.Location = new System.Drawing.Point(109, 14);
+            this.btnCheckOut.Location = new System.Drawing.Point(109, 3);
             this.btnCheckOut.Name = "btnCheckOut";
             this.btnCheckOut.Size = new System.Drawing.Size(219, 55);
             this.btnCheckOut.TabIndex = 2;
@@ -146,7 +148,7 @@
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.btnNumSurcharge);
             this.panel3.Controls.Add(this.txbNumSurcharge);
-            this.panel3.Location = new System.Drawing.Point(3, 3);
+            this.panel3.Location = new System.Drawing.Point(2, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(429, 139);
             this.panel3.TabIndex = 9;
@@ -204,12 +206,12 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(0, 3);
+            this.label1.Location = new System.Drawing.Point(3, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 43);
+            this.label1.Size = new System.Drawing.Size(210, 43);
             this.label1.TabIndex = 7;
             this.label1.Text = "Số Tiền Cần Phải Trả";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel5
             // 
@@ -224,12 +226,30 @@
             // label5
             // 
             this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Location = new System.Drawing.Point(3, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(299, 29);
+            this.label5.Size = new System.Drawing.Size(296, 29);
             this.label5.TabIndex = 4;
             this.label5.Text = "Nhập Số Tiền Khách Trả";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label4.Location = new System.Drawing.Point(3, 91);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(429, 2);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "label4";
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label6.Location = new System.Drawing.Point(3, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(429, 2);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "label6";
             // 
             // fCheckOut
             // 
@@ -238,6 +258,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 371);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -276,5 +298,7 @@
         private Panel panel5;
         private Label label5;
         private Label label1;
+        private Label label4;
+        private Label label6;
     }
 }
