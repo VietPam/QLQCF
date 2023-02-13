@@ -334,8 +334,11 @@ namespace QLQCFTest
 
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
                 btn.BackColor = Color.White;
-
-
+                if(tabel.Type== 0 ) { }
+                else
+                {
+                    btn.BackColor = Color.Yellow;
+                }
                 btn.Text = tabel.Name + "\n" + tabel.Status;
                 btn.Width = TableDAO.TableWidth;
                 btn.Height = TableDAO.TableHeight;
@@ -380,36 +383,46 @@ namespace QLQCFTest
 
         private void buttonDone_Click(object sender, EventArgs e)
         {
-
-            if (Convert.ToInt32(txbTableNumber.Text) <= 0 || int.TryParse(txbTableNumber.Text, out int value) == false)
-            { MessageBox.Show("Số Lượng Bàn phải là số Nguyên >0"); }
-            else
+            int money;
+            bool flag1 = int.TryParse(txbMoneyDiscount.Text, out money);
+            if (flag1 == true && (money == -1 || money > 0))
             {
-                if (txbPhoneNumber.Text.Length != 10 || int.TryParse(txbPhoneNumber.Text, out int values) == false)
-                {
-                    MessageBox.Show("Số Điện Thoại Phải là 10 số");
-                }
+
+
+                if (Convert.ToInt32(txbTableNumber.Text) <= 0 || int.TryParse(txbTableNumber.Text, out int value) == false)
+                { MessageBox.Show("Số Lượng Bàn phải là số Nguyên >0"); }
                 else
                 {
-                    
-                    bool flag = ShopDAO.Instance.SetShopProperties(txbShopName.Text, txbWifi.Text, txbWifiPassword.Text, Convert.ToInt32(txbTableNumber.Text), txbSlogan.Text, txbEncouragement.Text, txbAddress.Text, txbPhoneNumber.Text, txbByeText.Text,  Convert.ToInt32(txbSurcharge.Text),Convert.ToInt32(txbVipCost.Text));
-                    if (cbDiscount.Text == "0%")
+                    if (txbPhoneNumber.Text.Length != 10 || int.TryParse(txbPhoneNumber.Text, out int values) == false)
                     {
-                        cbDiscount.Tag = "0";
+                        MessageBox.Show("Số Điện Thoại Phải là 10 số");
                     }
-                    if (txbMoneyDiscount.Text != "")
+                    else
                     {
-                        bool flag2 = DiscountDAO.Instance.SetDiscount(cbDiscount.Tag.ToString(), Convert.ToInt32(txbMoneyDiscount.Text));
-                    }
-                    if (flag)
-                    {
-                        MessageBox.Show("Cài Đặt Thành Công!");
 
-                        this.Close();
+                        bool flag = ShopDAO.Instance.SetShopProperties(txbShopName.Text, txbWifi.Text, txbWifiPassword.Text, Convert.ToInt32(txbTableNumber.Text), txbSlogan.Text, txbEncouragement.Text, txbAddress.Text, txbPhoneNumber.Text, txbByeText.Text, Convert.ToInt32(txbSurcharge.Text), Convert.ToInt32(txbVipCost.Text));
+                        if (cbDiscount.Text == "0%")
+                        {
+                            cbDiscount.Tag = "0";
+                        }
+                        if (txbMoneyDiscount.Text != "")
+                        {
+                            bool flag2 = DiscountDAO.Instance.SetDiscount(cbDiscount.Tag.ToString(), Convert.ToInt32(txbMoneyDiscount.Text));
+                        }
+                        if (flag)
+                        {
+                            MessageBox.Show("Cài Đặt Thành Công!");
 
+                            this.Close();
+
+                        }
+                        else { }
                     }
-                    else { }
                 }
+            }
+            else
+            {
+                MessageBox.Show("Số tiền bị sai!");
             }
 
         }
@@ -950,7 +963,10 @@ namespace QLQCFTest
                 MessageBox.Show("Cập Nhật Thứ Phụ Thu Không Thành Công");
         }
 
-        
+        private void txbMin2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
        
 }

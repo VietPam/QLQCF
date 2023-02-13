@@ -46,6 +46,8 @@ namespace QLQCF
             {
                 BillDAO.Instance.SwitchTableBill(tabel.Id, tableChangeTo.Id);
                 MessageBox.Show("Chuyển bàn thành công!");
+                this.Hide();
+                ftableManager.LoadForm();
             }
             
         }

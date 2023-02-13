@@ -136,6 +136,9 @@ namespace QLQCF
             flpUnEmpty.Controls.Add(btn);
             btn.Click += btn_CLick;
         }
+
+        
+
         private void btn_CLick(object sender, EventArgs e)
         {
             txtTotalPrice.Text = "0";
@@ -163,6 +166,8 @@ namespace QLQCF
             }
         }
 
+
+
         void UpdateTotalPricetxt()
         {
             Table table = lbTableName.Tag as Table;
@@ -186,7 +191,7 @@ namespace QLQCF
             {
                 Table tabel = lbTableName.Tag as Table;
                 fOrderFood fOrder = new fOrderFood(tabel, this);
-                fOrder.Show();
+                fOrder.ShowDialog(this);
             }
         }
 
@@ -208,7 +213,7 @@ namespace QLQCF
         private void btnSwitch_Click(object sender, EventArgs e)
         {
             fSwitchTable fSwitchTabel = new fSwitchTable(lbTableName.Tag as Table, this);
-            fSwitchTabel.Show();
+            fSwitchTabel.ShowDialog(this);
         }
 
         private void btnMerge_Click(object sender, EventArgs e)
@@ -224,7 +229,7 @@ namespace QLQCF
                 if (lTable.Count > 0)
                 {
                     fMergeTable fmergeTable = new fMergeTable(table, this);
-                    fmergeTable.Show();
+                    fmergeTable.ShowDialog(this);
                 }
                 else
                 {

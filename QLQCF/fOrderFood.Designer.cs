@@ -232,10 +232,21 @@
             // 
             this.txbFoodCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txbFoodCount.Location = new System.Drawing.Point(72, 364);
+            this.txbFoodCount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.txbFoodCount.Name = "txbFoodCount";
             this.txbFoodCount.Size = new System.Drawing.Size(144, 39);
             this.txbFoodCount.TabIndex = 3;
             this.txbFoodCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txbFoodCount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txbFoodCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumOnly);
             // 
             // cbFood
             // 

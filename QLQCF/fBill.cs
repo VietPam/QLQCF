@@ -62,7 +62,6 @@ namespace QLQCFTest
                 count++;
                 FoodDAO.Instance.IncreaseFoodTotalCount(billinfo);
             }
-            AddLabelType();
             AddLabelMoneyBack(bill);
             if (table.Type == 1)
             {
@@ -89,8 +88,9 @@ namespace QLQCFTest
                 lb2.TextAlign = lbType.TextAlign;
                 Label lb3=new Label();
                 lb3.Size = lbVND.Size;
+                lb3.TextAlign = ContentAlignment.MiddleCenter;
                 lb3.Text = "VND";
-                lb3.Font = new Font(lb3.Font,FontStyle.Bold);
+                lb3.Font = new Font(lbVND.Font,FontStyle.Bold);
                 flpAdd.Controls.Add(lb1);
                 flpAdd.Controls.Add(lb2);
                 flpAdd.Controls.Add(lb3);
@@ -99,7 +99,14 @@ namespace QLQCFTest
                 panel4.Location=new Point(panel4.Location.X,panel4.Location.Y+lb1.Height);
                 panel3.Location= new Point(panel3.Location.X, panel3.Location.Y + lb1.Height);
             }
-            lbMoneyReceive.Text = ChangeMoneytoString(moneyReceive);
+            if (type != "VND")
+            {
+                lbMoneyReceive.Text = moneyReceive.ToString();
+            }
+            else
+            {
+                lbMoneyReceive.Text = ChangeMoneytoString(moneyReceive);
+            }
             lbMoneyType.Text = type.ToString();
             lbTotalPrice.Text = ChangeMoneytoString(bill.TotalPrice);
             
@@ -176,16 +183,7 @@ namespace QLQCFTest
             flpTotal.Height = 30 * i;
         }
 
-        private void AddLabelType()
-        {
-            Label label = new Label();
-            label.Text = "5000";
-            label.Height = 30;
-            label.Width = 107;
-            label.TextAlign = ContentAlignment.MiddleCenter;
-            flpTotal.Controls.Add(label);
-            flpTotal.Height = 30;
-        }
+        
 
         private void AddLabelMoneyBack(Bill bill)
         {
@@ -212,15 +210,19 @@ namespace QLQCFTest
             }
             double rate=DiscountDAO.Instance.GetDiscount(money);
             if (rate != -1) { lbCode.Text = "Giữ Hoá Đơn Để được giảm giá vào lần sau: " + DiscountDAO.Instance.CreateCode(rate); }
-                
+            else
+            {
+                lbCode.Visible=false;
+            }    
             
             lbMoneyBack.Text = ChangeMoneytoString((money - bill.TotalPrice));
         }
 
         #region print
+        
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            e.Graphics.DrawImage(bmp, -6, 0);
+            e.Graphics.DrawImage(bmp, -6, -30);
         }
 
         Bitmap bmp;
@@ -230,10 +232,9 @@ namespace QLQCFTest
             bmp = new Bitmap(this.Size.Width, this.Size.Height, g);
             Graphics mg = Graphics.FromImage(bmp);
             mg.CopyFromScreen(this.Location.X, this.Location.Y, 0, 0, this.Size);
-            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Bill", 474, this.Size.Height - 177);
+            printDocument1.DefaultPageSettings.PaperSize = new System.Drawing.Printing.PaperSize("Bill", this.Size.Width-7, this.Size.Height-35);
             printPreviewDialog1.ShowDialog();
         }
-
         #endregion
         private string ChangeMoneytoString(int money)
         {
@@ -244,6 +245,11 @@ namespace QLQCFTest
                 aftdot += "0";
             }
             return (befdot + "." + aftdot);
+        }
+
+        private void flpTotal_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

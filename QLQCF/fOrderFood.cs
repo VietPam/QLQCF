@@ -243,12 +243,14 @@ namespace QLQCF
                 if (lsvHotFood.Items[i].Checked == true)
                 {
                     cbFood.Text = lsvHotFood.Items[i].Text;
+
                     if (FoodDAO.Instance.GetFoodwithName(cbFood.Text) == null)
                     { }
                     else
                     {
                         cbCategoryFood.Text = CategoryDAO.Instance.GetCateWithFood(FoodDAO.Instance.GetFoodwithName(cbFood.Text)).Name;
                     }
+                    cbFood.Text= lsvHotFood.Items[i].Text;
                     lsvHotFood.Items[i].Checked = false;
                     break;
                 }
@@ -296,6 +298,10 @@ namespace QLQCF
             e.Handled= true;
         }
 
-        
+        private void NumOnly(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

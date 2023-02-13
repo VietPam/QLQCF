@@ -19,7 +19,7 @@ namespace QLQCFTest
             LoadComboBox();
         }
 
-        public string FolderDir = @"D:\ADaiHoc\[Nhom13 LTTQ] Quan ly quan coffee\TestingGit\sound";
+        public string FolderDir = @"D:\hoc\C#\Sound\New Sound Audio";
 
         public void LoadComboBox()
         {
@@ -66,6 +66,7 @@ namespace QLQCFTest
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             FolderDir = txbFolderDir.Text;
+            MessageBox.Show("Bạn đã xác nhận thành công!");
         }
 
         private void btnOpenFolder_Click(object sender, EventArgs e)

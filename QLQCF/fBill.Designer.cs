@@ -99,6 +99,7 @@
             this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.lbShopName);
             this.panel1.Location = new System.Drawing.Point(2, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(492, 278);
             this.panel1.TabIndex = 7;
@@ -439,7 +440,7 @@
             this.flpBillInfo.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.flpBillInfo.Location = new System.Drawing.Point(5, 334);
             this.flpBillInfo.Name = "flpBillInfo";
-            this.flpBillInfo.Size = new System.Drawing.Size(486, 39);
+            this.flpBillInfo.Size = new System.Drawing.Size(491, 39);
             this.flpBillInfo.TabIndex = 11;
             // 
             // flpNumber
@@ -474,8 +475,9 @@
             // 
             this.flpTotal.Location = new System.Drawing.Point(370, 3);
             this.flpTotal.Name = "flpTotal";
-            this.flpTotal.Size = new System.Drawing.Size(112, 31);
+            this.flpTotal.Size = new System.Drawing.Size(114, 31);
             this.flpTotal.TabIndex = 11;
+            this.flpTotal.Paint += new System.Windows.Forms.PaintEventHandler(this.flpTotal_Paint);
             // 
             // flpAdd
             // 
@@ -556,7 +558,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(505, 562);
+            this.ClientSize = new System.Drawing.Size(520, 562);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.flpAdd);
             this.Controls.Add(this.flpBillInfo);
