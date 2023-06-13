@@ -334,7 +334,7 @@ namespace QLQCFTest
 
                 System.Windows.Forms.Button btn = new System.Windows.Forms.Button();
                 btn.BackColor = Color.White;
-                if(tabel.Type== 0 ) { }
+                if (tabel.Type == 0) { }
                 else
                 {
                     btn.BackColor = Color.Yellow;
@@ -378,7 +378,7 @@ namespace QLQCFTest
             txbAddress.Text = shop.ShopAddress;
             txbPhoneNumber.Text = shop.PhoneNumber;
             txbSurcharge.Text = shop.SurCharge.ToString();
-            txbVipCost.Text=shop.VipCost.ToString();
+            txbVipCost.Text = shop.VipCost.ToString();
         }
 
         private void buttonDone_Click(object sender, EventArgs e)
@@ -551,7 +551,7 @@ namespace QLQCFTest
 
         }
 
-        
+
 
         int ChangTimeToMin(int h, int m)
         {
@@ -756,7 +756,8 @@ namespace QLQCFTest
             System.Windows.Forms.TextBox txb = sender as System.Windows.Forms.TextBox;
             if (!Char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             { e.Handled = true; }
-            else { 
+            else
+            {
                 string flag = txb.Text;
                 if (!Char.IsControl(e.KeyChar))
                 {
@@ -765,8 +766,8 @@ namespace QLQCFTest
                 }
                 if (flag.Length > 2 || Convert.ToInt32(flag) > 23)
                 {
-                    
-                        e.Handled= true;
+
+                    e.Handled = true;
                 }
             }
         }
@@ -794,8 +795,9 @@ namespace QLQCFTest
         private void LoadSurcharge()
         {
             Surcharge sur = SurchargeDAO.Instance.GetSurcharge();
-            if( sur != null) {
-                CheckSurcharge( sur );
+            if (sur != null)
+            {
+                CheckSurcharge(sur);
                 LoadHour(sur);
                 LoadDay(sur);
                 LoadDayofWeek(sur);
@@ -808,17 +810,17 @@ namespace QLQCFTest
                 cbHour.Checked = true;
             else
                 cbHour.Checked = false;
-        
+
             if (sur.Day == 1)
                 cbDay.Checked = true;
             else
                 cbDay.Checked = false;
 
-            if(sur.DayofWeek==1)
+            if (sur.DayofWeek == 1)
                 cbDayofWeek.Checked = true;
             else
                 cbDayofWeek.Checked = false;
-         }
+        }
 
         private void btnChooseSurCharge_Click(object sender, EventArgs e)
         {
@@ -855,8 +857,8 @@ namespace QLQCFTest
         {
             int timeStart = ChangTimeToMin(Convert.ToInt32(txbHour1.Text), Convert.ToInt32(txbMin1.Text));
             int timeEnd = ChangTimeToMin(Convert.ToInt32(txbHour2.Text), Convert.ToInt32(txbMin2.Text));
-            bool flag=SurchargeDAO.Instance.ChangeHour(timeStart, timeEnd);
-            if(flag)
+            bool flag = SurchargeDAO.Instance.ChangeHour(timeStart, timeEnd);
+            if (flag)
                 MessageBox.Show("Cập Nhật Giờ Phụ Thu Thành Công");
             else
                 MessageBox.Show("Cập Nhật Giờ Phụ Thu Không Thành Công");
@@ -968,5 +970,5 @@ namespace QLQCFTest
 
         }
     }
-       
+
 }
