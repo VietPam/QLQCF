@@ -28,356 +28,361 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lsvBill = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txbFindFood = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnSubtractFood = new System.Windows.Forms.Button();
-            this.btnAddFood = new System.Windows.Forms.Button();
-            this.txbFoodCount = new System.Windows.Forms.NumericUpDown();
-            this.cbFood = new System.Windows.Forms.ComboBox();
-            this.cbCategoryFood = new System.Windows.Forms.ComboBox();
-            this.lbTableName = new System.Windows.Forms.Label();
-            this.pictureFood = new System.Windows.Forms.PictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lsvHotFood = new System.Windows.Forms.ListView();
-            this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
-            this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbHot = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txbFoodCount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFood)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.SuspendLayout();
+            components = new System.ComponentModel.Container();
+            panel1 = new Panel();
+            panel4 = new Panel();
+            lsvBill = new ListView();
+            columnHeader1 = new ColumnHeader();
+            columnHeader2 = new ColumnHeader();
+            columnHeader3 = new ColumnHeader();
+            columnHeader4 = new ColumnHeader();
+            panel2 = new Panel();
+            label1 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            txbFindFood = new TextBox();
+            button1 = new Button();
+            btnCancel = new Button();
+            btnSubtractFood = new Button();
+            btnAddFood = new Button();
+            txbFoodCount = new NumericUpDown();
+            cbFood = new ComboBox();
+            cbCategoryFood = new ComboBox();
+            lbTableName = new Label();
+            pictureFood = new PictureBox();
+            panel3 = new Panel();
+            lsvHotFood = new ListView();
+            columnHeader6 = new ColumnHeader();
+            columnHeader5 = new ColumnHeader();
+            timer1 = new System.Windows.Forms.Timer(components);
+            panel5 = new Panel();
+            lbHot = new Label();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)txbFoodCount).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureFood).BeginInit();
+            panel3.SuspendLayout();
+            panel5.SuspendLayout();
+            SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.lsvBill);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(1, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(823, 642);
-            this.panel1.TabIndex = 0;
+            panel1.Controls.Add(panel4);
+            panel1.Controls.Add(lsvBill);
+            panel1.Controls.Add(panel2);
+            panel1.Location = new Point(1, 1);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(941, 856);
+            panel1.TabIndex = 0;
             // 
             // panel4
             // 
-            this.panel4.Location = new System.Drawing.Point(829, 215);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 426);
-            this.panel4.TabIndex = 2;
+            panel4.Location = new Point(947, 287);
+            panel4.Margin = new Padding(3, 4, 3, 4);
+            panel4.Name = "panel4";
+            panel4.Size = new Size(232, 568);
+            panel4.TabIndex = 2;
             // 
             // lsvBill
             // 
-            this.lsvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lsvBill.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lsvBill.GridLines = true;
-            this.lsvBill.Location = new System.Drawing.Point(289, 0);
-            this.lsvBill.Name = "lsvBill";
-            this.lsvBill.Size = new System.Drawing.Size(534, 641);
-            this.lsvBill.TabIndex = 6;
-            this.lsvBill.UseCompatibleStateImageBehavior = false;
-            this.lsvBill.View = System.Windows.Forms.View.Details;
+            lsvBill.CheckBoxes = true;
+            lsvBill.Columns.AddRange(new ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            lsvBill.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
+            lsvBill.GridLines = true;
+            lsvBill.Location = new Point(330, 0);
+            lsvBill.Margin = new Padding(3, 4, 3, 4);
+            lsvBill.Name = "lsvBill";
+            lsvBill.Size = new Size(610, 853);
+            lsvBill.TabIndex = 6;
+            lsvBill.UseCompatibleStateImageBehavior = false;
+            lsvBill.View = View.Details;
+            lsvBill.ItemCheck += lsvBill_ItemCheck;
+            lsvBill.ItemChecked += lsvBill_ItemChecked;
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Tên Món";
-            this.columnHeader1.Width = 150;
+            columnHeader1.Text = "Tên Món";
+            columnHeader1.Width = 150;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Giá";
-            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 150;
+            columnHeader2.Text = "Giá";
+            columnHeader2.TextAlign = HorizontalAlignment.Center;
+            columnHeader2.Width = 150;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Số Lượng";
-            this.columnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader3.Width = 100;
+            columnHeader3.Text = "Số Lượng";
+            columnHeader3.TextAlign = HorizontalAlignment.Center;
+            columnHeader3.Width = 100;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Thành Tiền";
-            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader4.Width = 134;
+            columnHeader4.Text = "Thành Tiền";
+            columnHeader4.TextAlign = HorizontalAlignment.Center;
+            columnHeader4.Width = 134;
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.txbFindFood);
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnSubtractFood);
-            this.panel2.Controls.Add(this.btnAddFood);
-            this.panel2.Controls.Add(this.txbFoodCount);
-            this.panel2.Controls.Add(this.cbFood);
-            this.panel2.Controls.Add(this.cbCategoryFood);
-            this.panel2.Controls.Add(this.lbTableName);
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(292, 641);
-            this.panel2.TabIndex = 0;
+            panel2.BackColor = Color.White;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(txbFindFood);
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(btnCancel);
+            panel2.Controls.Add(btnSubtractFood);
+            panel2.Controls.Add(btnAddFood);
+            panel2.Controls.Add(txbFoodCount);
+            panel2.Controls.Add(cbFood);
+            panel2.Controls.Add(cbCategoryFood);
+            panel2.Controls.Add(lbTableName);
+            panel2.Location = new Point(0, 0);
+            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(334, 855);
+            panel2.TabIndex = 0;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(3, 122);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 23);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Tìm";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(3, 163);
+            label1.Name = "label1";
+            label1.Size = new Size(93, 31);
+            label1.TabIndex = 10;
+            label1.Text = "Tìm";
+            label1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(3, 292);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 23);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Món";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label3.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(3, 389);
+            label3.Name = "label3";
+            label3.Size = new Size(93, 31);
+            label3.TabIndex = 9;
+            label3.Text = "Món";
+            label3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(3, 205);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 23);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Loại";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            label2.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(3, 273);
+            label2.Name = "label2";
+            label2.Size = new Size(93, 31);
+            label2.TabIndex = 8;
+            label2.Text = "Loại";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txbFindFood
             // 
-            this.txbFindFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbFindFood.Location = new System.Drawing.Point(101, 119);
-            this.txbFindFood.Name = "txbFindFood";
-            this.txbFindFood.Size = new System.Drawing.Size(166, 32);
-            this.txbFindFood.TabIndex = 0;
-            this.txbFindFood.TextChanged += new System.EventHandler(this.txbFindFood_TextChanged);
+            txbFindFood.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            txbFindFood.Location = new Point(115, 159);
+            txbFindFood.Margin = new Padding(3, 4, 3, 4);
+            txbFindFood.Name = "txbFindFood";
+            txbFindFood.Size = new Size(189, 38);
+            txbFindFood.TabIndex = 0;
+            txbFindFood.TextChanged += txbFindFood_TextChanged;
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Yellow;
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(35, 573);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(102, 47);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Xong";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            button1.BackColor = Color.Yellow;
+            button1.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(40, 764);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(117, 63);
+            button1.TabIndex = 7;
+            button1.Text = "Xong";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Yellow;
-            this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(155, 573);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(102, 47);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Huỷ Bill";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            btnCancel.BackColor = Color.Yellow;
+            btnCancel.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnCancel.Location = new Point(177, 764);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(117, 63);
+            btnCancel.TabIndex = 6;
+            btnCancel.Text = "Huỷ Bill";
+            btnCancel.UseVisualStyleBackColor = false;
+            btnCancel.Click += btnCancel_Click;
             // 
             // btnSubtractFood
             // 
-            this.btnSubtractFood.BackColor = System.Drawing.Color.Red;
-            this.btnSubtractFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSubtractFood.Location = new System.Drawing.Point(35, 512);
-            this.btnSubtractFood.Name = "btnSubtractFood";
-            this.btnSubtractFood.Size = new System.Drawing.Size(221, 47);
-            this.btnSubtractFood.TabIndex = 5;
-            this.btnSubtractFood.Text = "-";
-            this.btnSubtractFood.UseVisualStyleBackColor = false;
-            this.btnSubtractFood.Click += new System.EventHandler(this.btnSubtractFood_Click);
+            btnSubtractFood.BackColor = Color.Red;
+            btnSubtractFood.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSubtractFood.Location = new Point(40, 683);
+            btnSubtractFood.Margin = new Padding(3, 4, 3, 4);
+            btnSubtractFood.Name = "btnSubtractFood";
+            btnSubtractFood.Size = new Size(253, 63);
+            btnSubtractFood.TabIndex = 5;
+            btnSubtractFood.Text = "-";
+            btnSubtractFood.UseVisualStyleBackColor = false;
+            btnSubtractFood.Click += btnSubtractFood_Click;
             // 
             // btnAddFood
             // 
-            this.btnAddFood.BackColor = System.Drawing.Color.Lime;
-            this.btnAddFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnAddFood.Location = new System.Drawing.Point(35, 448);
-            this.btnAddFood.Name = "btnAddFood";
-            this.btnAddFood.Size = new System.Drawing.Size(221, 47);
-            this.btnAddFood.TabIndex = 4;
-            this.btnAddFood.Text = "+";
-            this.btnAddFood.UseVisualStyleBackColor = false;
-            this.btnAddFood.Click += new System.EventHandler(this.btnAddFood_Click);
+            btnAddFood.BackColor = Color.Lime;
+            btnAddFood.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAddFood.Location = new Point(40, 597);
+            btnAddFood.Margin = new Padding(3, 4, 3, 4);
+            btnAddFood.Name = "btnAddFood";
+            btnAddFood.Size = new Size(253, 63);
+            btnAddFood.TabIndex = 4;
+            btnAddFood.Text = "+";
+            btnAddFood.UseVisualStyleBackColor = false;
+            btnAddFood.Click += btnAddFood_Click;
             // 
             // txbFoodCount
             // 
-            this.txbFoodCount.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txbFoodCount.Location = new System.Drawing.Point(72, 364);
-            this.txbFoodCount.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txbFoodCount.Name = "txbFoodCount";
-            this.txbFoodCount.Size = new System.Drawing.Size(144, 39);
-            this.txbFoodCount.TabIndex = 3;
-            this.txbFoodCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.txbFoodCount.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txbFoodCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.NumOnly);
+            txbFoodCount.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            txbFoodCount.Location = new Point(82, 485);
+            txbFoodCount.Margin = new Padding(3, 4, 3, 4);
+            txbFoodCount.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            txbFoodCount.Name = "txbFoodCount";
+            txbFoodCount.Size = new Size(165, 47);
+            txbFoodCount.TabIndex = 3;
+            txbFoodCount.TextAlign = HorizontalAlignment.Right;
+            txbFoodCount.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            txbFoodCount.KeyPress += NumOnly;
             // 
             // cbFood
             // 
-            this.cbFood.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbFood.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbFood.FormattingEnabled = true;
-            this.cbFood.Location = new System.Drawing.Point(101, 284);
-            this.cbFood.Name = "cbFood";
-            this.cbFood.Size = new System.Drawing.Size(166, 31);
-            this.cbFood.TabIndex = 2;
-            this.cbFood.SelectedIndexChanged += new System.EventHandler(this.cbFood_SelectedIndexChanged);
-            this.cbFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbPress);
+            cbFood.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbFood.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbFood.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cbFood.FormattingEnabled = true;
+            cbFood.Location = new Point(115, 379);
+            cbFood.Margin = new Padding(3, 4, 3, 4);
+            cbFood.Name = "cbFood";
+            cbFood.Size = new Size(189, 37);
+            cbFood.TabIndex = 2;
+            cbFood.SelectedIndexChanged += cbFood_SelectedIndexChanged;
+            cbFood.KeyPress += cbPress;
             // 
             // cbCategoryFood
             // 
-            this.cbCategoryFood.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCategoryFood.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.cbCategoryFood.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbCategoryFood.FormattingEnabled = true;
-            this.cbCategoryFood.Location = new System.Drawing.Point(101, 202);
-            this.cbCategoryFood.Name = "cbCategoryFood";
-            this.cbCategoryFood.Size = new System.Drawing.Size(166, 31);
-            this.cbCategoryFood.TabIndex = 1;
-            this.cbCategoryFood.SelectedIndexChanged += new System.EventHandler(this.cbCategoryFood_SelectedIndexChanged);
-            this.cbCategoryFood.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbPress);
+            cbCategoryFood.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            cbCategoryFood.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            cbCategoryFood.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
+            cbCategoryFood.FormattingEnabled = true;
+            cbCategoryFood.Location = new Point(115, 269);
+            cbCategoryFood.Margin = new Padding(3, 4, 3, 4);
+            cbCategoryFood.Name = "cbCategoryFood";
+            cbCategoryFood.Size = new Size(189, 37);
+            cbCategoryFood.TabIndex = 1;
+            cbCategoryFood.SelectedIndexChanged += cbCategoryFood_SelectedIndexChanged;
+            cbCategoryFood.KeyPress += cbPress;
             // 
             // lbTableName
             // 
-            this.lbTableName.Font = new System.Drawing.Font("Showcard Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbTableName.Location = new System.Drawing.Point(0, 26);
-            this.lbTableName.Name = "lbTableName";
-            this.lbTableName.Size = new System.Drawing.Size(289, 40);
-            this.lbTableName.TabIndex = 0;
-            this.lbTableName.Text = "Tên Bàn";
-            this.lbTableName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbTableName.Font = new Font("Showcard Gothic", 24F, FontStyle.Regular, GraphicsUnit.Point);
+            lbTableName.Location = new Point(0, 35);
+            lbTableName.Name = "lbTableName";
+            lbTableName.Size = new Size(330, 53);
+            lbTableName.TabIndex = 0;
+            lbTableName.Text = "Tên Bàn";
+            lbTableName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pictureFood
             // 
-            this.pictureFood.Location = new System.Drawing.Point(0, 0);
-            this.pictureFood.Name = "pictureFood";
-            this.pictureFood.Size = new System.Drawing.Size(221, 161);
-            this.pictureFood.TabIndex = 1;
-            this.pictureFood.TabStop = false;
+            pictureFood.Location = new Point(0, 0);
+            pictureFood.Margin = new Padding(3, 4, 3, 4);
+            pictureFood.Name = "pictureFood";
+            pictureFood.Size = new Size(253, 215);
+            pictureFood.TabIndex = 1;
+            pictureFood.TabStop = false;
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Controls.Add(this.pictureFood);
-            this.panel3.Location = new System.Drawing.Point(824, 1);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(223, 163);
-            this.panel3.TabIndex = 1;
+            panel3.BackColor = Color.White;
+            panel3.Controls.Add(pictureFood);
+            panel3.Location = new Point(942, 1);
+            panel3.Margin = new Padding(3, 4, 3, 4);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(255, 217);
+            panel3.TabIndex = 1;
             // 
             // lsvHotFood
             // 
-            this.lsvHotFood.CheckBoxes = true;
-            this.lsvHotFood.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader6,
-            this.columnHeader5});
-            this.lsvHotFood.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lsvHotFood.GridLines = true;
-            this.lsvHotFood.Location = new System.Drawing.Point(824, 203);
-            this.lsvHotFood.MultiSelect = false;
-            this.lsvHotFood.Name = "lsvHotFood";
-            this.lsvHotFood.Size = new System.Drawing.Size(223, 439);
-            this.lsvHotFood.TabIndex = 2;
-            this.lsvHotFood.UseCompatibleStateImageBehavior = false;
-            this.lsvHotFood.View = System.Windows.Forms.View.Details;
-            this.lsvHotFood.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lsvHotFood_ItemChecked);
+            lsvHotFood.CheckBoxes = true;
+            lsvHotFood.Columns.AddRange(new ColumnHeader[] { columnHeader6, columnHeader5 });
+            lsvHotFood.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            lsvHotFood.GridLines = true;
+            lsvHotFood.Location = new Point(942, 271);
+            lsvHotFood.Margin = new Padding(3, 4, 3, 4);
+            lsvHotFood.MultiSelect = false;
+            lsvHotFood.Name = "lsvHotFood";
+            lsvHotFood.Size = new Size(254, 584);
+            lsvHotFood.TabIndex = 2;
+            lsvHotFood.UseCompatibleStateImageBehavior = false;
+            lsvHotFood.View = View.Details;
+            lsvHotFood.ItemChecked += lsvHotFood_ItemChecked;
             // 
             // columnHeader6
             // 
-            this.columnHeader6.Text = "Tên Món";
-            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader6.Width = 154;
+            columnHeader6.Text = "Tên Món";
+            columnHeader6.TextAlign = HorizontalAlignment.Center;
+            columnHeader6.Width = 154;
             // 
             // columnHeader5
             // 
-            this.columnHeader5.Text = "SL Gọi";
-            this.columnHeader5.Width = 65;
+            columnHeader5.Text = "SL Gọi";
+            columnHeader5.Width = 65;
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += timer1_Tick;
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.lbHot);
-            this.panel5.Location = new System.Drawing.Point(824, 165);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(221, 39);
-            this.panel5.TabIndex = 4;
+            panel5.Controls.Add(lbHot);
+            panel5.Location = new Point(942, 220);
+            panel5.Margin = new Padding(3, 4, 3, 4);
+            panel5.Name = "panel5";
+            panel5.Size = new Size(253, 52);
+            panel5.TabIndex = 4;
             // 
             // lbHot
             // 
-            this.lbHot.BackColor = System.Drawing.Color.White;
-            this.lbHot.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbHot.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbHot.Location = new System.Drawing.Point(0, 0);
-            this.lbHot.Name = "lbHot";
-            this.lbHot.Size = new System.Drawing.Size(221, 39);
-            this.lbHot.TabIndex = 3;
-            this.lbHot.Text = "Hot";
-            this.lbHot.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lbHot.BackColor = Color.White;
+            lbHot.Font = new Font("Times New Roman", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            lbHot.ForeColor = SystemColors.ControlText;
+            lbHot.Location = new Point(0, 0);
+            lbHot.Name = "lbHot";
+            lbHot.Size = new Size(253, 52);
+            lbHot.TabIndex = 3;
+            lbHot.Text = "Hot";
+            lbHot.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // fOrderFood
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 640);
-            this.Controls.Add(this.panel5);
-            this.Controls.Add(this.lsvHotFood);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
-            this.Name = "fOrderFood";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gọi Món";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.fOrderFood_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.fOrderFood_FormClosed);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txbFoodCount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureFood)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1198, 853);
+            Controls.Add(panel5);
+            Controls.Add(lsvHotFood);
+            Controls.Add(panel3);
+            Controls.Add(panel1);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "fOrderFood";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "Gọi Món";
+            FormClosing += fOrderFood_FormClosing;
+            FormClosed += fOrderFood_FormClosed;
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)txbFoodCount).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureFood).EndInit();
+            panel3.ResumeLayout(false);
+            panel5.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         #endregion
