@@ -19,8 +19,10 @@ namespace QLQCFTest
             LoadComboBox();
         }
 
-        public string FolderDir = @"D:\hoc\C#\Sound\New Sound Audio";
 
+        public string FolderDir_1 = Application.StartupPath+ @"\New Sound Audio";
+        
+        string FolderDir = Path.Combine(Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("\\bin")), "New Sound Audio");
         public void LoadComboBox()
         {
             DirectoryInfo d = new DirectoryInfo(FolderDir);

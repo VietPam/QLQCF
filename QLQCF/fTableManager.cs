@@ -274,9 +274,15 @@ namespace QLQCF
             this.Close();
             
         }
-
+        private void test()
+        {
+            string projectPath = Application.StartupPath.Substring(0, Application.StartupPath.IndexOf("\\bin"));
+            string filePath = Path.Combine(projectPath, "New Sound Audio");
+        }
         private void btnNotification_Click(object sender, EventArgs e)
         {
+            //test();
+
             fNotification fNotification = new fNotification();
             fNotification.ShowDialog();
         }
