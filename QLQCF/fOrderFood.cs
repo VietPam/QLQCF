@@ -91,7 +91,7 @@ namespace QLQCF
                     }
                 }
             }
-
+            
             if (lsvHotFood.Items.Count == 0)
             {
                 List<Food> foods = FoodDAO.Instance.GetListFoodHot();
@@ -143,7 +143,6 @@ namespace QLQCF
                     }
                     BillInfoDAO.Instance.InsertBillInfo(bill.Id, idFood, count);
                 }
-                MessageBox.Show("Thêm thành công");
             }
 
             LoadBillInfo();
@@ -188,11 +187,6 @@ namespace QLQCF
                     if (flag == lsvBill.Items.Count)
                     {
                         MessageBox.Show("Không Tìm Thấy Món Ăn Muốn Trừ");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xóa thành công");
-
                     }
                 }
                 BillInfoDAO.Instance.DeleteCountequal0(tabel);
@@ -256,7 +250,7 @@ namespace QLQCF
                     {
                         cbCategoryFood.Text = CategoryDAO.Instance.GetCateWithFood(FoodDAO.Instance.GetFoodwithName(cbFood.Text)).Name;
                     }
-                    cbFood.Text = lsvHotFood.Items[i].Text;
+                    cbFood.Text= lsvHotFood.Items[i].Text;
                     lsvHotFood.Items[i].Checked = false;
                     break;
                 }
@@ -301,39 +295,13 @@ namespace QLQCF
 
         private void cbPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            e.Handled= true;
         }
 
         private void NumOnly(object sender, KeyPressEventArgs e)
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
-        }
-
-        private void lsvBill_ItemChecked(object sender, ItemCheckedEventArgs e)
-        {
-            for (int i = 0; i < lsvBill.Items.Count; i++)
-            {
-                if (lsvBill.Items[i].Checked == true)
-                {
-                    cbFood.Text = lsvBill.Items[i].Text;
-
-                    if (FoodDAO.Instance.GetFoodwithName(cbFood.Text) == null)
-                    { }
-                    else
-                    {
-                        cbCategoryFood.Text = CategoryDAO.Instance.GetCateWithFood(FoodDAO.Instance.GetFoodwithName(cbFood.Text)).Name;
-                    }
-                    cbFood.Text = lsvBill.Items[i].Text;
-                    lsvBill.Items[i].Checked = false;
-                    break;
-                }
-            }
-        }
-
-        private void lsvBill_ItemCheck(object sender, ItemCheckEventArgs e)
-        {
-
         }
     }
 }

@@ -22,14 +22,14 @@ namespace QLQCFTest
         fTableManager ftableManager;
         Account acc;
         int sizeheight;
-        public fCheckOut(Table tabel, fTableManager fTable, Account account)
+        public fCheckOut(Table tabel,fTableManager fTable, Account account)
         {
-            acc = account;
+            acc= account;
             ftableManager = fTable;
             table = tabel;
             InitializeComponent();
             this.acc = acc;
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -41,71 +41,56 @@ namespace QLQCFTest
         {
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
             int moneyReceive;
-            bool check = int.TryParse(txbMoney.Text, out moneyReceive);
-            if (check)
-            {
-                // xu ly tien giam cho khach
-
-                //Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
-                double money1 = bill.TotalPrice;
-                double rate = DiscountDAO.Instance.GetRate(txbCode.Text);
-                if (rate >= 0)
+                bool check = int.TryParse(txbMoney.Text, out moneyReceive);
+                if (check)
                 {
-                    lbMoney.Text = (money1 - money1 * rate).ToString();
-                    Shop shop = ShopDAO.Instance.GetShop();
-                    //lable tien` mau` vang`
-                    lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
-                    txbCode.Tag = txbCode.Text;
-                }
-                // xu ly tien giam cho khach
-
-                string type;
-                type = cbTypeMoney.Text;
-                int money = 0;
-                if (type == "VND")
-                {
-                    money = moneyReceive;
-                }
-                else if (type == "USD")
-                {
-                    money = (moneyReceive * 24816);
-                }
-                else if (type == "BẢNG")
-                {
-                    money = (moneyReceive * 29513);
-                }
-                else if (type == "NDT")
-                {
-                    money = (moneyReceive * 3481);
-                }
-                else if (type == "YÊN")
-                {
-                    money = (moneyReceive * 177);
-                }
-                if (money >= Convert.ToInt32(lbMoney.Text))
-                {
-                    BillDAO.Instance.UpdatePriceAfterDiscount(bill, Convert.ToInt32(lbMoney.Text));
-                    if (txbCode.Tag != null)
+                    string type;
+                    type = cbTypeMoney.Text;
+                    int money = 0;
+                    if (type == "VND")
                     {
-                        DiscountCodeDAO.Instance.UpdateCode((txbCode.Tag).ToString());
-
+                        money = moneyReceive;
                     }
-                    fBill fbill = new fBill(table, Convert.ToInt32(txbMoney.Text), type, ftableManager, acc, Convert.ToInt32(txbNumSurcharge.Text));
-                    fbill.ShowDialog();
-                    this.Close();
+                    else if (type == "USD")
+                    {
+                        money = (moneyReceive * 24816);
+                    }
+                    else if (type == "BẢNG")
+                    {
+                        money = (moneyReceive * 29513);
+                    }
+                    else if (type == "NDT")
+                    {
+                        money = (moneyReceive * 3481);
+                    }
+                    else if (type == "YÊN")
+                    {
+                        money = (moneyReceive * 177);
+                    }
+                    if (money >=Convert.ToInt32(lbMoney.Text))
+                    {
+                        BillDAO.Instance.UpdatePriceAfterDiscount(bill, Convert.ToInt32(lbMoney.Text));
+                        if (txbCode.Tag != null)
+                        {
+                           DiscountCodeDAO.Instance.UpdateCode((txbCode.Tag).ToString());
+                        
+                        }
+                        fBill fbill = new fBill(table, Convert.ToInt32(txbMoney.Text), type, ftableManager,acc,Convert.ToInt32(txbNumSurcharge.Text));
+                        fbill.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không đủ tiền để thanh toán hoá đơn");
+                    
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Không đủ tiền để thanh toán hoá đơn");
-
+                    MessageBox.Show("vui Lòng nhập vào số tiền hợp lệ!");
                 }
-
-            }
-            else
-            {
-                MessageBox.Show("vui Lòng nhập vào số tiền hợp lệ!");
-            }
-
+            
         }
 
         private void txbMoney_KeyPress(object sender, KeyPressEventArgs e)
@@ -114,39 +99,35 @@ namespace QLQCFTest
                 e.Handled = true;
         }
 
-
+        
 
         private void txbCode_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txbCode.Text.Length >= 10 && !Char.IsControl(e.KeyChar))
-            {
+            if(txbCode.Text.Length >= 10 && !Char.IsControl(e.KeyChar)) { 
 
                 e.Handled = true;
             }
-
+           
         }
 
         private void btnCheckCode_Click(object sender, EventArgs e)
         {
-            // day la nut checkCode ben canh textBox nhap code
-            // nhung do yeu cau ve sequence khong noi nen phai sua code lai
+            
             Bill bill = BillDAO.Instance.GetUnCheckBillwithtable(table);
             double money = bill.TotalPrice;
-            double rate = DiscountDAO.Instance.GetRate(txbCode.Text);
-            /*if (rate == -1)
+            double rate =DiscountDAO.Instance.GetRate(txbCode.Text);
+            if (rate == -1)
             {
                 MessageBox.Show("Mã Có Vấn Đề");
-                txbCode.Tag = null;
+                txbCode.Tag= null;
             }
             else
             {
-                lbMoney.Text = (money - money * rate).ToString();
+                lbMoney.Text = (money - money * rate).ToString();              
                 Shop shop = ShopDAO.Instance.GetShop();
-                //lable tien` mau` vang`
                 lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
-                txbCode.Tag = txbCode.Text;
-            }*/
-
+                txbCode.Tag =txbCode.Text;
+            }
         }
 
         private void fCheckOut_Load(object sender, EventArgs e)
@@ -158,18 +139,18 @@ namespace QLQCFTest
             txbCode.Tag = null;
             bool flag = CheckSurcharge(sur);
             sizeheight = this.Size.Height;
-            if (flag == true)
+            if (flag==true)
             {
                 panel3.Visible = true;
                 panel2.Visible = false;
                 panel1.Visible = false;
-                panel5.Visible = false;
-                this.Size = new Size(panel3.Width, panel3.Height + 30);
+                panel5.Visible= false;
+                this.Size = new Size(panel3.Width, panel3.Height+30);
                 this.AcceptButton = btnNumSurcharge;
             }
             else
             {
-                panel3.Visible = false;
+                panel3.Visible= false;
             }
         }
 
@@ -182,7 +163,7 @@ namespace QLQCFTest
                 panel3.Visible = false;
                 panel2.Visible = true;
                 panel1.Visible = true;
-                panel5.Visible = true;
+                panel5.Visible= true;
                 this.Size = new Size(449, sizeheight);
                 Shop shop = ShopDAO.Instance.GetShop();
                 lbMoney.Text = (Convert.ToInt32(lbMoney.Text) + Convert.ToInt32(shop.SurCharge) * Convert.ToInt32(txbNumSurcharge.Text)).ToString();
@@ -230,14 +211,14 @@ namespace QLQCFTest
                     return true;
             }
             return false;
-
+            
         }
 
-
+        
 
         private void cbTypeMoney_KeyPress(object sender, KeyPressEventArgs e)
         {
-            e.Handled = true;
+            e.Handled= true;
         }
     }
 }
