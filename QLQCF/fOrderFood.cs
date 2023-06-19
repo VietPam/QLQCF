@@ -143,6 +143,7 @@ namespace QLQCF
                     }
                     BillInfoDAO.Instance.InsertBillInfo(bill.Id, idFood, count);
                 }
+                MessageBox.Show("Thêm thành công");
             }
 
             LoadBillInfo();
@@ -187,6 +188,10 @@ namespace QLQCF
                     if (flag == lsvBill.Items.Count)
                     {
                         MessageBox.Show("Không Tìm Thấy Món Ăn Muốn Trừ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thành công");
                     }
                 }
                 BillInfoDAO.Instance.DeleteCountequal0(tabel);
