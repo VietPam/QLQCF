@@ -69,7 +69,7 @@ namespace QLQCF
                     {
                         BillDAO.Instance.Mergetable(table1, table);
                     }
-                    MessageBox.Show("Gộp bàn thành công!");
+                    //MessageBox.Show("Gộp bàn thành công!");
                     ftableManager.LoadForm();
                     this.Hide();
                     
